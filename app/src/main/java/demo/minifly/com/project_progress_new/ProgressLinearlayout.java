@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
+import java.lang.reflect.Field;
+
 import demo.minifly.com.R;
 import demo.minifly.com.entry.Point;
 import demo.minifly.com.utils.DensityUtils;
@@ -181,9 +183,9 @@ public class ProgressLinearlayout extends LinearLayout {
                 float progressTop1 = (unit*(100-progress1));
                 LogUtils.showErrLog("position1[0]  " + position1[0]+ "  progressTop1  " + unit + "unit*(100-progress1)  " + unit*(100-progress1) + "  width   " + width + "  titleBarHeight  " + titleBarHeight);
                 centerX1 = position1[0] + width/2;
-                centerY1 = position1[1]+ progressTop1 -titleBarHeight;
+                centerY1 = position1[1]+ progressTop1 - titleBarHeight;
 
-                LogUtils.showErrLog("position1  " +  position1[0] + "position1  " + position1[1]);
+                LogUtils.showErrLog("centerX1  " +  centerX1 + "centerY1  " + centerY1 + "  titleBarHeight  " +titleBarHeight);
 
 
                 float progressTop2 = (unit*(100-progress2));
@@ -193,12 +195,12 @@ public class ProgressLinearlayout extends LinearLayout {
 
                 float progressTop3 = (unit*(100-progress3));
                 centerX3 = position3[0] + width/2;
-                centerY3 = position3[1]+ progressTop3 -titleBarHeight ;
+                centerY3 = position3[1]+ progressTop3 - titleBarHeight ;
 
 
                 float progressTop4 = (unit*(100-progress4));
                 centerX4 = position4[0] + width/2;
-                centerY4 = position4[1]+ progressTop4 -titleBarHeight; // - titleBarHeight
+                centerY4 = position4[1]+ progressTop4 - titleBarHeight; // - titleBarHeight
 
                 //画点画线
                 LogUtils.showErrLog("测量完成.");
@@ -264,14 +266,22 @@ public class ProgressLinearlayout extends LinearLayout {
         }
     };
 
-    // 获取状态栏高度
+    // 获取状态栏高度  任何时候都能获取到，其他两种方式有局限性，同时有的时候获取不到。
     private int getStatusBarHeight() {
-        int result = 0;
-        int resourceId = getResources().getIdentifier("status_bar_height", "dimens", "android");
-        if (resourceId > 0) {
-            result = getResources().getDimensionPixelSize(resourceId);
+        Class<?> c = null;
+        Object obj = null;
+        Field field = null;
+        int x = 0, statusBarHeight = 0;
+        try {
+            c = Class.forName("com.android.internal.R$dimen");
+            obj = c.newInstance();
+            field = c.getField("status_bar_height");
+            x = Integer.parseInt(field.get(obj).toString());
+            statusBarHeight = getResources().getDimensionPixelSize(x);
+        } catch (Exception e1) {
+            e1.printStackTrace();
         }
-        return result;
+        return statusBarHeight;
     }
 
     public class PointEvaluator implements TypeEvaluator {

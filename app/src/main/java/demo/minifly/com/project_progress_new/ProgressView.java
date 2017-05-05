@@ -3,17 +3,13 @@ package demo.minifly.com.project_progress_new;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.LinearGradient;
 import android.graphics.Paint;
-import android.graphics.Shader;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
 import demo.minifly.com.R;
 import demo.minifly.com.utils.DensityUtils;
-import demo.minifly.com.utils.LogUtils;
 
 /**
  * author ：minifly
@@ -84,7 +80,7 @@ public class ProgressView extends View {
         height = DensityUtils.dip2px(mContext,300);
 
         //设置自定义view的宽度   LinearGradient(x1,y1,x2,y2)四个参数代表的是线性渲染的基准线
-        progressPaint.setShader(new LinearGradient(0,progressBottom,0,progressTop, new int[]{R.color.task_blue, Color.WHITE,R.color.task_blue},null, Shader.TileMode.REPEAT));//从（0,0）到（0,height）的色彩渐变
+//        progressPaint.setShader(new LinearGradient(0,progressBottom,0,progressTop, new int[]{R.color.task_blue, Color.WHITE,R.color.task_blue},null, Shader.TileMode.REPEAT));//从（0,0）到（0,height）的色彩渐变
         canvas.drawRect(0,0,width,height,bgPaint);
 
         getProgressLocation();//获取进度相关的坐标
@@ -104,7 +100,7 @@ public class ProgressView extends View {
         progressRight = width;
         progressBottom = height;
 
-        LogUtils.showErrLog("progressLeft " +  progressLeft + " progressTop " + progressTop + " progressRight " + progressRight + " progressBottom " + progressBottom);
+//        LogUtils.showErrLog("progressLeft " +  progressLeft + " progressTop " + progressTop + " progressRight " + progressRight + " progressBottom " + progressBottom);
 
         //打印一下中间的划线点的坐标
 //        int[] position = new int[2];
