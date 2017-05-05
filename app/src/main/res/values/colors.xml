@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#ececec</color>
+    <color name="bill_bg">#f31e2122</color>
+
+    <color name="water_color">#03a9f4</color>
+
+    <!--进度调颜色设置-->
+    <color name="task_red">#fe7171</color>
+    <color name="task_yellow">#f4c923</color>
+    <color name="task_blue">#45acf1</color>
+    <color name="gray">#999999</color>
+
+
+    <color name="start_color">#00bff6</color>
+    <color name="end_color">#0094f6</color>
+    <!--进度调颜色设置-->
+
+
+    <color name="orders_number">#666666</color>
+    <color name="gray_progress">#acacac</color>
+
+</resources>

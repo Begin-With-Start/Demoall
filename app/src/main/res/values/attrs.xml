@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyTitleView">
+        <attr name="title" format="string">我的标题哦亲</attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/faboptions_favorite"
+        android:icon="@drawable/exit_icon"
+        android:title="Favorite" />
+
+    <item
+        android:id="@+id/faboptions_textsms"
+        android:icon="@drawable/setting_icon"
+        android:title="Message" />
+    <item
+        android:id="@+id/faboptions_textsms2"
+        android:icon="@drawable/setting_icon"
+        android:title="Message" />
+    <item
+        android:id="@+id/faboptions_textsms3"
+        android:icon="@drawable/setting_icon"
+        android:title="Message" />
+</menu>
