@@ -197,7 +197,9 @@
         <activity
             android:name=".constraintlayout_test.ConstraintActivity"
             android:label="@string/title_activity_constraint"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".recycleview_refreshtopbootom.RecycleviewActivity"/>
     </application>
 
 </manifest>

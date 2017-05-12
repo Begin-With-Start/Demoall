@@ -21,7 +21,9 @@
     <!--进度调颜色设置-->
 
 
+    <color name="blueStatus">#1680E2</color>
     <color name="orders_number">#666666</color>
     <color name="gray_progress">#acacac</color>
 
+    <color name="dark">#424242</color>
 </resources>

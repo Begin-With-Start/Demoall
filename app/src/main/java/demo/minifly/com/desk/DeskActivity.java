@@ -45,6 +45,7 @@ import demo.minifly.com.project_progress_new.ProjectProgressActivity;
 import demo.minifly.com.project_testhouse.HorizenProgressActivity;
 import demo.minifly.com.project_testhouse.YituotuoEdittextActivity;
 import demo.minifly.com.pull_moveview_test.PullMoveviewActivity;
+import demo.minifly.com.recycleview_refreshtopbootom.RecycleviewActivity;
 import demo.minifly.com.recycleview_test.Activity3;
 import demo.minifly.com.scrollview_test.ScrollActivity;
 import demo.minifly.com.textView.TextViewActivity;
@@ -78,6 +79,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("共享元素的界面跳转");
         myBean.setClassName(ActivityAnimation.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("一个刷新的操作试试");
+        myBean.setClassName(RecycleviewActivity.class);
         list.add(myBean);
 
         myBean = new MyBean();
