@@ -32,6 +32,7 @@ import demo.minifly.com.canvas_test.ZCanvasSurfaceSinActivity;
 import demo.minifly.com.canvas_test.ZGuagualeActivity;
 import demo.minifly.com.canvas_test.ZObliqueProgressActivity;
 import demo.minifly.com.constraintlayout_test.ConstraintActivity;
+import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
@@ -251,8 +252,12 @@ public class DeskActivity extends Activity {
         myBean.setTitle("工程要用的一个改动的progressbar的效果");
         myBean.setClassName(ProjectProgressActivity.class);
         list.add(myBean);
+        //ImageCompressActivity
 
-
+        myBean = new MyBean();
+        myBean.setTitle("图片压缩相关的操作");
+        myBean.setClassName(ImageCompressActivity.class);
+        list.add(myBean);
 
 
         MyAdapter myAdapter = new MyAdapter(this,list);

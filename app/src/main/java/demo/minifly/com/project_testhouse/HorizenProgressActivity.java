@@ -61,8 +61,8 @@ public class HorizenProgressActivity extends AppCompatActivity {
                     ViewGroup.LayoutParams params = taskBacklogProgressProgressBar.getLayoutParams();
                     params.width = measureWidth(100,100,width - dip2px(context,50));
                     params.height = dip2px(context, 6);
-                    // params.setMargins(dip2px(MainActivity.this, 1), 0, 0, 0); // 可以实现设置位置信息，如居左距离，其它类推
-                    // params.leftMargin = dip2px(MainActivity.this, 1);
+                    // params.setMargins(dip2px(ImageCompressActivity.this, 1), 0, 0, 0); // 可以实现设置位置信息，如居左距离，其它类推
+                    // params.leftMargin = dip2px(ImageCompressActivity.this, 1);
 
                     taskBacklogProgressProgressBar.setLayoutParams(params);
                 }

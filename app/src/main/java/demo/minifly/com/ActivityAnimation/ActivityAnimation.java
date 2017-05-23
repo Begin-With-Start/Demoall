@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import demo.minifly.com.R;
+import demo.minifly.com.utils.LogUtils;
 
 
 /**
@@ -53,8 +54,7 @@ public class ActivityAnimation extends Activity {
 
             }
         });
-
-
+        LogUtils.showErrLog("错误");
     }
 
 

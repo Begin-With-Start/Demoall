@@ -4,6 +4,11 @@
 
     <!-- 热修复的时候要的一个权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!--打开文件的权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -198,8 +203,11 @@
             android:name=".constraintlayout_test.ConstraintActivity"
             android:label="@string/title_activity_constraint"
             android:theme="@style/AppTheme"/>
+        <!--ImageCompressActivity  -->
         <activity
             android:name=".recycleview_refreshtopbootom.RecycleviewActivity"/>
+        <activity
+            android:name=".image_compress_demo.ImageCompressActivity"/>
     </application>
 
 </manifest>
