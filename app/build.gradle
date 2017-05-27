@@ -22,7 +22,7 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
-//    不去管arm64-v8a的类型
+//    不去管arm64-v8a的类型 必须加上这一句，不然编译的时候报错：找不到相应的文件，找不到 arm64-v8a的错误
     splits {
         abi {
             enable true
@@ -48,4 +48,6 @@ dependencies {
     compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
     compile 'com.alibaba:fastjson:1.1.54.android'
     testCompile 'junit:junit:4.12'
+    compile 'io.reactivex:rxjava:1.3.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
 }
