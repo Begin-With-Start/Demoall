@@ -9,9 +9,11 @@ package demo.minifly.com.url_config;
 public class Constant {
     public static String BaseUrl1 = "http://www.baidu.com1";
     public static String BaseUrl2 = "http://www.baidu.com2";
-    public static String BaseUrl3 = "http://www.baidu.com2";
+    public static String BaseUrl3 = "http://www.baidu.com3";
 
 
-    public static String BaseUrl = "";
+    public static String App = BuildConfig2.getBase() + "applogin";
+
+    public static String BaseUrl = "BaseUrl";
     public static String url2 = BaseUrl + "/getInfo";
 }

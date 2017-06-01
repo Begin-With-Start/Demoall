@@ -20,6 +20,6 @@ public class Url2Activity extends AppCompatActivity {
 
     private void initView() {
         txtId = (TextView) findViewById(R.id.txt_id);
-        txtId.setText(Constant.BaseUrl+Constant.url2);
+        txtId.setText(Constant.url2);
     }
 }
