@@ -206,7 +206,12 @@
         <!-- ImageCompressActivity -->
         <activity android:name=".recycleview_refreshtopbootom.RecycleviewActivity" />
         <activity android:name=".image_compress_demo.ImageCompressActivity" />
-        <activity android:name=".rxjava_demo.RxjavaDemoActivity"></activity>
+        <activity android:name=".rxjava_demo.RxjavaDemoActivity" />
+        <activity
+            android:name=".url_config.UrlConfigActivity"
+            android:label="@string/title_activity_url_config"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".url_config.Url2Activity"></activity>
     </application>
 
 </manifest>
