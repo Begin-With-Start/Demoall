@@ -51,21 +51,21 @@ public class UrlConfigActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.btn1:
                 Constant.BaseUrl = Constant.BaseUrl1;
-                reject_utls.reject(Constant.class);
+                reject_utls.reject(new Constant());
                 intent.setClass(this,Url2Activity.class);
                 startActivity(intent);
                 break;
             case R.id.btn2:
 
                 Constant.BaseUrl = Constant.BaseUrl2;
-                reject_utls.reject(Constant.class);
+                reject_utls.reject(new Constant());
                 intent.setClass(this,Url2Activity.class);
                 startActivity(intent);
                 break;
             case R.id.btn3:
 
                 Constant.BaseUrl = Constant.BaseUrl3;
-                reject_utls.reject(Constant.class);
+                reject_utls.reject(new Constant());
                 intent.setClass(this,Url2Activity.class);
                 startActivity(intent);
                 break;
