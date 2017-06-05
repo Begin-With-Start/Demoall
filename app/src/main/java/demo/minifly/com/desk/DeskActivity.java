@@ -42,6 +42,7 @@ import demo.minifly.com.object_animator_test.ObjectAnimatorOwnTest;
 import demo.minifly.com.object_animator_test.PropertyValuesHolderAnimatorTest;
 import demo.minifly.com.object_animator_test.ValueAnimatorTextActivity;
 import demo.minifly.com.object_animator_test.ViewWithAnimatorActivity;
+import demo.minifly.com.permission_demo.PermissionDemoActivity;
 import demo.minifly.com.project_progress_new.ProjectProgressActivity;
 import demo.minifly.com.project_testhouse.HorizenProgressActivity;
 import demo.minifly.com.project_testhouse.YituotuoEdittextActivity;
@@ -270,6 +271,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("配置url");
         myBean.setClassName(UrlConfigActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("权限检测封装");
+        myBean.setClassName(PermissionDemoActivity.class);
         list.add(myBean);
 
 
