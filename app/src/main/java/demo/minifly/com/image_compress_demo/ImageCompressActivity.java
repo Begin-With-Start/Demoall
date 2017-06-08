@@ -138,7 +138,6 @@ public class ImageCompressActivity extends AppCompatActivity {
             e.printStackTrace();
             Log.e("===compressImage===","==压缩=="+e.getMessage());
         }
-
     }
 
 }

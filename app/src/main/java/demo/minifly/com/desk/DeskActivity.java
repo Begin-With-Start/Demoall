@@ -32,6 +32,7 @@ import demo.minifly.com.canvas_test.ZCanvasSurfaceSinActivity;
 import demo.minifly.com.canvas_test.ZGuagualeActivity;
 import demo.minifly.com.canvas_test.ZObliqueProgressActivity;
 import demo.minifly.com.constraintlayout_test.ConstraintActivity;
+import demo.minifly.com.databinding_test.DatabindingDemoActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
@@ -276,6 +277,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("权限检测封装");
         myBean.setClassName(PermissionDemoActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("数据双绑定databinding用法");
+        myBean.setClassName(DatabindingDemoActivity.class);
         list.add(myBean);
 
 

@@ -9,13 +9,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"  />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"  />
-
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".url_config.MobileApplication"
@@ -222,7 +219,8 @@
             android:label="@string/title_activity_url_config"
             android:theme="@style/AppTheme" />
         <activity android:name=".url_config.Url2Activity" />
-        <activity android:name=".permission_demo.PermissionDemoActivity"></activity>
+        <activity android:name=".permission_demo.PermissionDemoActivity" />
+        <activity android:name=".databinding_test.DatabindingDemoActivity"></activity>
     </application>
 
 </manifest>

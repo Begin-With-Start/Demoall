@@ -7,6 +7,10 @@ import java.util.LinkedList;
 import java.util.List;
 public class reject_utls {
 
+    /**
+     * 扫描所有的static中的属性，每次在选择之后，因为系统的static会先执行，那么只能通过反射来进行刷新，强制刷新。
+     * @param model
+     */
     public static void reject(Object model){
         String baseUrl = "BaseUrl";
         List <String > allBase = new LinkedList<>();

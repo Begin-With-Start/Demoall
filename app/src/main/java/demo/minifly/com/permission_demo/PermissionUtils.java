@@ -137,7 +137,7 @@ public class PermissionUtils {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(host);
         builder.setTitle("提示：");
-        builder.setMessage("当前应用已经没有"+perNames.toString().substring(0,perNames.toString().length()-1)+"权限，去设置界面打开？");
+        builder.setMessage("当前应用需要"+perNames.toString().substring(0,perNames.toString().length()-1)+"权限，去设置界面打开？");
         builder.setNegativeButton("取消",listener == null?new AlertDialog.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
