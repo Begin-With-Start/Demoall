@@ -17,11 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
+
 //    不去管arm64-v8a的类型 必须加上这一句，不然编译的时候报错：找不到相应的文件，找不到 arm64-v8a的错误
     splits {
         abi {
