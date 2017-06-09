@@ -7,6 +7,12 @@ package demo.minifly.com.url_config;
  * desc:
  */
 public class Constant {
+    public static final String BaseURl = "";
+
+    public static String BaseUrl1 = "1";
+    public static String BaseUrl2 = "2";
+    public static String BaseUrl3 = "3";
+
 
     public static String SOCKETIO_URL1 = "http://192.168.6.76:19082";
     public static String UPLOAD_PIC1 = "http://192.168.6.78:8888/file/uploads";
@@ -35,6 +41,7 @@ public class Constant {
 
 
 
+
     public static String url1 = SOCKETIO_URL1 + "/getInfo5";
     public static String url2 = UPLOAD_PIC1 + "/getInfo5";
     public static String url3 = SALES1 + "/getInfo5";
@@ -47,13 +54,29 @@ public class Constant {
     public static String url10 = H51 + "/getInfo5";
 
 
-//    public static String getSOCKETIO_URL1() {
-//        return BaseUrl + "/base";
-//    }
-//
-//    public static String baseUrl = "" + "";
-//
-//    public static String MessgeUrl() {
-//        return BaseUrl + "/base";
-//    }
+
+
+    public static String SOCKETIO_URL1() {
+        return BaseURl + "/base";
+    }
+
+    public static String baseUrl = "" + "";
+
+    public static String MessgeUrl() {
+        return BaseURl + "/base";
+    }
+
+    public static String url11;
+
+    public static void refresh() {
+        url11 = BaseUrl1 + "djflkadjflk";
+
+
+
+
+
+
+    }
+
+
 }

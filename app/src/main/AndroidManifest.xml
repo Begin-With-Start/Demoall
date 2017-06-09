@@ -220,7 +220,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".url_config.Url2Activity" />
         <activity android:name=".permission_demo.PermissionDemoActivity" />
-        <activity android:name=".databinding_test.DatabindingDemoActivity"></activity>
+        <activity android:name=".databinding_test.DatabindingDemoActivity" />
+        <activity android:name=".state_layout_fragment.StateFragmentActivity"></activity>
     </application>
 
 </manifest>

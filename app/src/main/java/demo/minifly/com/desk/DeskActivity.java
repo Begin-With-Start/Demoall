@@ -52,6 +52,7 @@ import demo.minifly.com.recycleview_refreshtopbootom.RecycleviewActivity;
 import demo.minifly.com.recycleview_test.Activity3;
 import demo.minifly.com.rxjava_demo.RxjavaDemoActivity;
 import demo.minifly.com.scrollview_test.ScrollActivity;
+import demo.minifly.com.state_layout_fragment.StateFragmentActivity;
 import demo.minifly.com.textView.TextViewActivity;
 import demo.minifly.com.url_config.UrlConfigActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity;
@@ -283,6 +284,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("数据双绑定databinding用法");
         myBean.setClassName(DatabindingDemoActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("状态页面");
+        myBean.setClassName(StateFragmentActivity.class);
         list.add(myBean);
 
 

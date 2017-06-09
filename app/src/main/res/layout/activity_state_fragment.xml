@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/title_bar_id"
+        android:background="@color/colorAccent"
+        android:layout_height="55dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="错误页面"
+            android:id="@+id/btn_id1"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="空页面"
+            android:id="@+id/btn_id2"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="进度页面"
+            android:id="@+id/btn_id3"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="内容页面"
+            android:id="@+id/btn_id4"
+            />
+    </LinearLayout>
+
+    <demo.minifly.com.state_layout_fragment.StateLayout
+        android:id="@+id/content_state_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar_id"
+        >
+        <RelativeLayout
+            android:id="@+id/content_rel_id"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/title_bar_id"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+    </demo.minifly.com.state_layout_fragment.StateLayout>
+</RelativeLayout>
