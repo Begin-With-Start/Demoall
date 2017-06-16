@@ -37,6 +37,7 @@ import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
+import demo.minifly.com.notification_test.NotificationStartActivity;
 import demo.minifly.com.object_animator_test.ObjectAnimatorBezierActivity;
 import demo.minifly.com.object_animator_test.ObjectAnimatorOwnColorTest;
 import demo.minifly.com.object_animator_test.ObjectAnimatorOwnTest;
@@ -290,6 +291,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("状态页面");
         myBean.setClassName(StateFragmentActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("通知的页面");
+        myBean.setClassName(NotificationStartActivity.class);
         list.add(myBean);
 
 
