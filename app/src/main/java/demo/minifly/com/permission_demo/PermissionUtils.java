@@ -16,10 +16,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +27,7 @@ import java.util.Map;
  * author ：minifly
  * date: 2017/6/5
  * time: 16:22
- * desc:
+ * desc:权限管理相关
  */
 public class PermissionUtils {
     public static String TAG = "permission";
@@ -42,17 +42,32 @@ public class PermissionUtils {
     }
 
     public static void requestPermissions(
-            @NonNull Activity host,@NonNull String[] permissions,
+            @NonNull Activity host, @NonNull String[] permissions,
             int requestCode) {
         if (Build.VERSION.SDK_INT >= 23) {
             if(!hasPermissions(host,permissions)){
                 host.requestPermissions(permissions, 1);
-                Toast.makeText(host,"开始请求权限",Toast.LENGTH_LONG).show();
+//                Toast.makeText(host,"开始请求权限",Toast.LENGTH_LONG).show();
+            }else{
+                //全部有权限之后也会回调
+                List<String > pers = new LinkedList<>();
+                for (String per : permissions) {
+                    pers.add(per);
+                }
+                ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
             }
-        }else{//版本小于23，不用请求权限
-            Toast.makeText(host,"版本小于23，不用请求权限",Toast.LENGTH_LONG).show();
+        }else{//版本小于23，不用请求权限 但是全部回调给页面处理
+//            Toast.makeText(host,"版本小于23，不用请求权限",Toast.LENGTH_LONG).show();
+
+            List<String > pers = new LinkedList<>();
+            for (String per : permissions) {
+                pers.add(per);
+            }
+            ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
+
         }
     }
+
 
 
     public static void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults, @NonNull Object... receivers) {
@@ -126,7 +141,7 @@ public class PermissionUtils {
         }
     }
 
-    
+
     //到系统权限管理页面设置相应的权限。
     public static void permissionDialog(final Activity host,List<String> perms,@Nullable final AlertDialog.OnClickListener listener){
         StringBuilder perNames = new StringBuilder("");
@@ -137,7 +152,7 @@ public class PermissionUtils {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(host);
         builder.setTitle("提示：");
-        builder.setMessage("当前应用需要"+perNames.toString().substring(0,perNames.toString().length()-1)+"权限，去设置界面打开？");
+        builder.setMessage("当前应用没有"+perNames.toString().substring(0,perNames.toString().length()-1)+"权限，去设置界面打开？");
         builder.setNegativeButton("取消",listener == null?new AlertDialog.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -203,7 +218,7 @@ public class PermissionUtils {
      WRITE_EXTERNAL_STORAGE
      */
     static Map<String,String > permissionMap= new HashMap<>();
-    static {
+    static{
         permissionMap.put("android.permission.READ_CALENDAR","读取日历");
         permissionMap.put("android.permission.WRITE_CALENDAR","添加日历");
 

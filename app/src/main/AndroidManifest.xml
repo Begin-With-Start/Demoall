@@ -223,7 +223,8 @@
         <activity android:name=".databinding_test.DatabindingDemoActivity" />
         <activity android:name=".state_layout_fragment.StateFragmentActivity" />
         <activity android:name=".notification_test.NotificationViewActivity" />
-        <activity android:name=".notification_test.NotificationStartActivity"></activity>
+        <activity android:name=".notification_test.NotificationStartActivity" />
+        <activity android:name=".popwindow_demo.PopwindowDemoActivity"></activity>
     </application>
 
 </manifest>
