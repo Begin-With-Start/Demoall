@@ -45,6 +45,9 @@ import demo.minifly.com.object_animator_test.PropertyValuesHolderAnimatorTest;
 import demo.minifly.com.object_animator_test.ValueAnimatorTextActivity;
 import demo.minifly.com.object_animator_test.ViewWithAnimatorActivity;
 import demo.minifly.com.permission_demo.PermissionDemoActivity;
+import demo.minifly.com.project_all_demo.bubble.BubblePopActivity;
+import demo.minifly.com.project_all_demo.keyborad.KeyboardActivity;
+import demo.minifly.com.project_all_demo.rangebar.RangebarActivity;
 import demo.minifly.com.project_progress_new.ProjectProgressActivity;
 import demo.minifly.com.project_testhouse.HorizenProgressActivity;
 import demo.minifly.com.project_testhouse.YituotuoEdittextActivity;
@@ -59,7 +62,6 @@ import demo.minifly.com.ui_test.MainActivity;
 import demo.minifly.com.url_config.UrlConfigActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity2;
-import project_all_demo.RangebarActivity;
 
 public class DeskActivity extends Activity {
     private RecyclerView deskRecycleView;
@@ -308,6 +310,16 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("滑块工程定制方法");
         myBean.setClassName(RangebarActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("自定义键盘");
+        myBean.setClassName(KeyboardActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("泡泡弹框");
+        myBean.setClassName(BubblePopActivity.class);
         list.add(myBean);
 
 

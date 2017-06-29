@@ -224,7 +224,9 @@
         <activity android:name=".state_layout_fragment.StateFragmentActivity" />
         <activity android:name=".notification_test.NotificationViewActivity" />
         <activity android:name=".notification_test.NotificationStartActivity" />
-        <activity android:name="project_all_demo.RangebarActivity" />
+        <activity android:name="demo.minifly.com.project_all_demo.rangebar.RangebarActivity" />
+        <activity android:name=".project_all_demo.keyborad.KeyboardActivity"/>
+        <activity android:name=".project_all_demo.bubble.BubblePopActivity"/>
     </application>
 
 </manifest>

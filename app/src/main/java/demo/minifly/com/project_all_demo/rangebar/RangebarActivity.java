@@ -1,4 +1,4 @@
-package project_all_demo;
+package demo.minifly.com.project_all_demo.rangebar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 import demo.minifly.com.R;
+
 
 public class RangebarActivity extends AppCompatActivity {
 
@@ -34,6 +35,7 @@ public class RangebarActivity extends AppCompatActivity {
 		mRangeBar2 = (RangeBar) findViewById(R.id.rangebar2);
 		mTvShowProgress = (TextView) findViewById(R.id.tv_rangebar_progress);
 		mTvTime = (TextView) findViewById(R.id.tv_time);
+
 		mRangeBar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
 			@Override
 			public void onProgressChanged(int progress) {

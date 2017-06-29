@@ -53,4 +53,6 @@
     <string name="error">出错了</string>
     <string name="retry">轻触屏幕重试</string>
     <string name="empty">啥也没有</string>
+    <!--键盘-->
+    <string name="key_confirm">确定</string>
 </resources>

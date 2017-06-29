@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <project_all_demo.RangeBar
+        <demo.minifly.com.project_all_demo.rangebar.RangeBar
             android:id="@+id/rangebar"
             android:layout_width="match_parent"
             android:layout_height="80dp"
@@ -25,7 +25,7 @@
             android:padding="@dimen/common_dimen_dp10"
             android:text="progress"/>
 
-        <project_all_demo.RangeBar
+        <demo.minifly.com.project_all_demo.rangebar.RangeBar
             android:id="@+id/rangebar2"
             android:layout_width="match_parent"
             android:layout_height="80dp"

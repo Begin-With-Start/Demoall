@@ -1,4 +1,4 @@
-package project_all_demo;
+package demo.minifly.com.project_all_demo.rangebar;
 
 import android.view.LayoutInflater;
 import android.view.View;
