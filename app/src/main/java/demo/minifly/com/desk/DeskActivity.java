@@ -55,9 +55,11 @@ import demo.minifly.com.rxjava_demo.RxjavaDemoActivity;
 import demo.minifly.com.scrollview_test.ScrollActivity;
 import demo.minifly.com.state_layout_fragment.StateFragmentActivity;
 import demo.minifly.com.textView.TextViewActivity;
+import demo.minifly.com.ui_test.MainActivity;
 import demo.minifly.com.url_config.UrlConfigActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity2;
+import project_all_demo.RangebarActivity;
 
 public class DeskActivity extends Activity {
     private RecyclerView deskRecycleView;
@@ -91,6 +93,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("一个刷新的操作试试");
         myBean.setClassName(RecycleviewActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("自定义标题");
+        myBean.setClassName(MainActivity.class);
         list.add(myBean);
 
         myBean = new MyBean();
@@ -296,6 +303,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("通知的页面");
         myBean.setClassName(NotificationStartActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("滑块工程定制方法");
+        myBean.setClassName(RangebarActivity.class);
         list.add(myBean);
 
 

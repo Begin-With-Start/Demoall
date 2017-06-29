@@ -26,4 +26,10 @@
     <color name="gray_progress">#acacac</color>
 
     <color name="dark">#424242</color>
+
+
+    <color name="common_color_c13_ececec">#ececec</color>
+    <color name="common_color_c1_0971ce">#0971ce</color>
+    <color name="common_color_c8_666666">#666</color>
+    <color name="common_color_c9_999999">#999</color>
 </resources>

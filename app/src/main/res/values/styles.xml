@@ -38,4 +38,11 @@
         <item name="android:textColor">@color/grey</item>
         <item name="android:textSize">@dimen/textSize_small</item>
     </style>
+
+    <declare-styleable name="RangeBar">
+        <attr format="enum" name="textStyle">
+            <enum name="NORMAL" value="0"/>
+            <enum name="TEXT" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

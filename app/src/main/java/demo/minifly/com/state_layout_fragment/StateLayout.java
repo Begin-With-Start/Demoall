@@ -19,7 +19,7 @@ import demo.minifly.com.R;
 
 
 /**
- * Created by lcc_luffy on 2016/1/30.
+ * Created by minifly on 2016/1/30.
  */
 public class StateLayout extends FrameLayout {
     private View contentView;
