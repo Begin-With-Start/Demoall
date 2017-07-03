@@ -10,7 +10,7 @@ import android.view.WindowManager;
 
 /**
  * 获得屏幕相关的辅助类
- *	三种获取屏幕宽高的方式
+ *
  * @author zhy
  */
 public class ScreenUtils {
@@ -103,35 +103,4 @@ public class ScreenUtils {
 
 	}
 
-	/**
-	 * 屏幕宽高三种方式
-	 */
-	public static void getWidthHeight(Activity activity){
-		// 1. 获取屏幕宽高一
-		int screenWidth1 = activity.getWindowManager().getDefaultDisplay().getWidth(); // 屏幕宽（像素，如：px）
-		int screenHeight1 = activity.getWindowManager().getDefaultDisplay().getHeight(); // 屏幕高（像素，如：p）
-//		tvScreenHeight.setText(screenHeight1 + " px");
-//		tvScreenWidth.setText(screenWidth1 + " px");
-
-
-		// 2.获取屏幕宽高二
-		DisplayMetrics dm2 = activity.getResources().getDisplayMetrics();
-//		float density = dm2.density; // 屏幕密度（像素比例：./././.）
-//		int densityDPI = dm2.densityDpi; // 屏幕密度（每寸像素：///）
-//		float xdpi = dm2.xdpi;
-//		float ydpi = dm2.ydpi;
-		int screenWidth2 = dm2.widthPixels; // 屏幕宽（像素，如：px）
-		int screenHeight2 = dm2.heightPixels; // 屏幕高（像素，如：px）
-
-
-		//3. 获取屏幕宽高三
-		DisplayMetrics dm3 = new DisplayMetrics();
-		activity.getWindowManager().getDefaultDisplay().getMetrics(dm3);
-//		density = dm3.density; // 屏幕密度（像素比例：./././.）
-//		densityDPI = dm3.densityDpi; // 屏幕密度（每寸像素：///）
-//		xdpi = dm3.xdpi;
-//		ydpi = dm3.ydpi;
-		int screenWidth3 = dm3.widthPixels; // 屏幕宽（px，如：px）
-		int screenHeight3 = dm3.heightPixels; // 屏幕高（px，如：px）
-	}
 }

@@ -30,4 +30,9 @@ public class Common {
             return false;
         }
     }
+
+
+    public int addSum(int a ,int b){
+        return a+b;
+    }
 }

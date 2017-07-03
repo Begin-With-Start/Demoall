@@ -3,6 +3,7 @@ package demo.minifly.com.permission_demo;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.ComponentCallbacks;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,15 +14,20 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import android.support.v4.app.AppOpsManagerCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.util.SimpleArrayMap;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import demo.minifly.com.utils.LogUtils;
+
+import static android.support.v4.content.PermissionChecker.checkPermission;
 
 /**
  * author ：minifly
@@ -32,6 +38,22 @@ import java.util.Map;
 public class PermissionUtils {
     public static String TAG = "permission";
 
+    // Map of dangerous permissions introduced in later framework versions.
+    // Used to conditionally bypass permission-hold checks on older devices.
+    private static final SimpleArrayMap<String, Integer> MIN_SDK_PERMISSIONS;
+
+    static {
+        MIN_SDK_PERMISSIONS = new SimpleArrayMap<String, Integer>(8);
+        MIN_SDK_PERMISSIONS.put("com.android.voicemail.permission.ADD_VOICEMAIL", 14);
+        MIN_SDK_PERMISSIONS.put("android.permission.BODY_SENSORS", 20);
+        MIN_SDK_PERMISSIONS.put("android.permission.READ_CALL_LOG", 16);
+        MIN_SDK_PERMISSIONS.put("android.permission.READ_EXTERNAL_STORAGE", 16);
+        MIN_SDK_PERMISSIONS.put("android.permission.USE_SIP", 9);
+        MIN_SDK_PERMISSIONS.put("android.permission.WRITE_CALL_LOG", 16);
+        MIN_SDK_PERMISSIONS.put("android.permission.SYSTEM_ALERT_WINDOW", 23);
+        MIN_SDK_PERMISSIONS.put("android.permission.WRITE_SETTINGS", 23);
+    }
+
     //回调监听
     public interface PermissionCallbacks extends ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -41,31 +63,53 @@ public class PermissionUtils {
 
     }
 
-    public static void requestPermissions(
-            @NonNull Activity host, @NonNull String[] permissions,
+    public static ComponentCallbacks requestPermissions(
+            @NonNull ComponentCallbacks host, @NonNull String[] permissions,
             int requestCode) {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if(!hasPermissions(host,permissions)){
-                host.requestPermissions(permissions, 1);
-//                Toast.makeText(host,"开始请求权限",Toast.LENGTH_LONG).show();
-            }else{
-                //全部有权限之后也会回调
+
+        if(host instanceof  Activity){
+            if (Build.VERSION.SDK_INT >= 23) {
+                if(!hasPermissions(((Activity)host),permissions)){
+                    ((Activity)host).requestPermissions(permissions, requestCode);
+                }else{
+                    List<String > pers = new LinkedList<>();
+                    for (String per : permissions) {
+                        pers.add(per);
+                    }
+                    ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
+                }
+            }else{//版本小于23，不用请求权限
                 List<String > pers = new LinkedList<>();
                 for (String per : permissions) {
                     pers.add(per);
                 }
                 ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
-            }
-        }else{//版本小于23，不用请求权限 但是全部回调给页面处理
-//            Toast.makeText(host,"版本小于23，不用请求权限",Toast.LENGTH_LONG).show();
 
-            List<String > pers = new LinkedList<>();
-            for (String per : permissions) {
-                pers.add(per);
             }
-            ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
+        }else if(host instanceof Fragment){
+            if (Build.VERSION.SDK_INT >= 23) {
 
+                if(!hasPermissions(((Fragment)host).getContext(),permissions)){
+                    ((Fragment)host).requestPermissions(permissions, requestCode);
+                }else{
+                    List<String > pers = new LinkedList<>();
+                    for (String per : permissions) {
+                        pers.add(per);
+                    }
+                    ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
+                }
+            }else{//版本小于23，不用请求权限
+                List<String > pers = new LinkedList<>();
+                for (String per : permissions) {
+                    pers.add(per);
+                }
+                ((PermissionCallbacks) host).onPermissionsGranted(requestCode, pers);//权限通过
+
+            }
         }
+
+
+        return host;
     }
 
 
@@ -75,7 +119,8 @@ public class PermissionUtils {
         List<String> denied = new ArrayList<>();
         for (int i = 0; i < permissions.length; i++) {
             String perm = permissions[i];
-            if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+            LogUtils.showErrLog("sssss"+ perm);
+            if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {//如果有不小心传进来的非运行时权限就这么干
                 granted.add(perm);
             } else {
                 denied.add(perm);
@@ -101,23 +146,48 @@ public class PermissionUtils {
 
     //检测权限是否已全部拥有
     public static boolean hasPermissions(Context context, @NonNull String... perms) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            Log.w(TAG, "hasPermissions: API version < M, returning true by default");
-            return true;
-        }
-
-        if (context == null) {
-            throw new IllegalArgumentException("Can't check permissions for null context");
-        }
-
-        for (String perm : perms) {
-            if (ContextCompat.checkSelfPermission(context, perm)
-                    != PackageManager.PERMISSION_GRANTED) {
+        for (String permission : perms) {
+            if (permissionExists(permission) && !hasSelfPermission(context, permission)) {
                 return false;
             }
         }
-
         return true;
+
+    }
+
+
+    private static boolean hasSelfPermission(Context context, String permission) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && "Xiaomi".equalsIgnoreCase(Build.MANUFACTURER)) {
+            return hasSelfPermissionForXiaomi(context, permission);
+        }
+        try {
+            return checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;
+        } catch (RuntimeException t) {
+            return false;
+        }
+    }
+    private static boolean hasSelfPermissionForXiaomi(Context context, String permission) {
+        String permissionToOp = AppOpsManagerCompat.permissionToOp(permission);
+        if (permissionToOp == null) {
+            // in case of normal permissions(e.g. INTERNET)
+            return true;
+        }
+        int noteOp = AppOpsManagerCompat.noteOp(context, permissionToOp,  android.os.Process.myUid(), context.getPackageName());
+        return noteOp == AppOpsManagerCompat.MODE_ALLOWED && checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    public static int checkSelfPermission(@NonNull Context context,
+                                          @NonNull String permission) {
+        return checkPermission(context, permission, android.os.Process.myPid(),
+                android.os.Process.myUid(), context.getPackageName());
+    }
+
+    private static boolean permissionExists(String permission) {
+        // Check if the permission could potentially be missing on this device
+        Integer minVersion = MIN_SDK_PERMISSIONS.get(permission);
+        // If null was returned from the above call, there is no need for a device API level check for the permission;
+        // otherwise, we check if its minimum API level requirement is met
+        return minVersion == null || Build.VERSION.SDK_INT >= minVersion;
     }
 
     //给用户显示该权限的作用
@@ -152,7 +222,7 @@ public class PermissionUtils {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(host);
         builder.setTitle("提示：");
-        builder.setMessage("当前应用没有"+perNames.toString().substring(0,perNames.toString().length()-1)+"权限，去设置界面打开？");
+        builder.setMessage("当前应用已经没有"+perNames.toString().substring(0,perNames.toString().length()-1)+"权限，去设置界面打开？");
         builder.setNegativeButton("取消",listener == null?new AlertDialog.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
