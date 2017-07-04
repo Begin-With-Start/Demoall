@@ -23,6 +23,7 @@ import demo.minifly.com.RippleShow.MyRippleShowActivity;
 import demo.minifly.com.android_hot_fix.AndroidHotfixActivity;
 import demo.minifly.com.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.androidl_animation.AndroidLTouchFeedbackActivity;
+import demo.minifly.com.canvas_test.canvas_new.CanvasAllDealViewActivity;
 import demo.minifly.com.canvas_test.ZCanvasActivity;
 import demo.minifly.com.canvas_test.ZCanvasClockActivity;
 import demo.minifly.com.canvas_test.ZCanvasLinearGraddientActivity;
@@ -110,6 +111,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("LinearGradient颜色渲染");
         myBean.setClassName(ZCanvasLinearGraddientActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("canvas的很多实例放一起看看");
+        myBean.setClassName(CanvasAllDealViewActivity.class);
         list.add(myBean);
 
         myBean = new MyBean();
