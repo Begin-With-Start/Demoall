@@ -33,18 +33,6 @@ public class CanvasLineView extends View {
         init();
     }
 
-    public CanvasLineView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mContext = context;
-        init();
-    }
-
-    public CanvasLineView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        mContext = context;
-        init();
-    }
-
     public void init(){
         linePaint = new Paint();
         linePaint.setColor(Color.BLACK);

@@ -41,18 +41,6 @@ public class CanvasGuaguale  extends View{
         init();
     }
 
-    public CanvasGuaguale(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        this.mContext = context;
-        init();
-    }
-
-    public CanvasGuaguale(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        this.mContext = context;
-        init();
-    }
-
     public void init(){
         mPaint = new Paint();
         mPaint.setAlpha(0); //透明度设置为0

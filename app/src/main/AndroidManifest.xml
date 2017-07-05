@@ -227,7 +227,10 @@
         <activity android:name=".project_all_demo.rangebar.RangebarActivity" />
         <activity android:name=".project_all_demo.keyborad.KeyboardActivity" />
         <activity android:name=".project_all_demo.bubble.BubblePopActivity" />
-        <activity android:name=".canvas_test.canvas_new.CanvasAllDealViewActivity"></activity>
+        <activity android:name=".canvas_test.canvas_new.CanvasAllDealViewActivity" />
+        <activity android:name=".canvas_test.canvas_painting_new.CanvasPaintingDemoActivity"
+            android:screenOrientation="portrait"
+            ></activity>
     </application>
 
 </manifest>

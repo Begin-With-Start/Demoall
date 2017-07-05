@@ -34,17 +34,6 @@ public class CanvasPointView extends View {
         init();
     }
 
-    public CanvasPointView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mContext = context;
-        init();
-    }
-
-    public CanvasPointView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        mContext = context;
-        init();
-    }
 
     public void init(){
         pointPaint = new Paint();

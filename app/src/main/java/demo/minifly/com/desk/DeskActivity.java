@@ -23,7 +23,6 @@ import demo.minifly.com.RippleShow.MyRippleShowActivity;
 import demo.minifly.com.android_hot_fix.AndroidHotfixActivity;
 import demo.minifly.com.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.androidl_animation.AndroidLTouchFeedbackActivity;
-import demo.minifly.com.canvas_test.canvas_new.CanvasAllDealViewActivity;
 import demo.minifly.com.canvas_test.ZCanvasActivity;
 import demo.minifly.com.canvas_test.ZCanvasClockActivity;
 import demo.minifly.com.canvas_test.ZCanvasLinearGraddientActivity;
@@ -32,6 +31,8 @@ import demo.minifly.com.canvas_test.ZCanvasSurfaceDrawBoardActivity;
 import demo.minifly.com.canvas_test.ZCanvasSurfaceSinActivity;
 import demo.minifly.com.canvas_test.ZGuagualeActivity;
 import demo.minifly.com.canvas_test.ZObliqueProgressActivity;
+import demo.minifly.com.canvas_test.canvas_new.CanvasAllDealViewActivity;
+import demo.minifly.com.canvas_test.canvas_painting_new.CanvasPaintingDemoActivity;
 import demo.minifly.com.constraintlayout_test.ConstraintActivity;
 import demo.minifly.com.databinding_test.DatabindingDemoActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
@@ -116,6 +117,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("canvas的很多实例放一起看看");
         myBean.setClassName(CanvasAllDealViewActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("canvas画布的操作的集合，一起学学呗.");
+        myBean.setClassName(CanvasPaintingDemoActivity.class);
         list.add(myBean);
 
         myBean = new MyBean();

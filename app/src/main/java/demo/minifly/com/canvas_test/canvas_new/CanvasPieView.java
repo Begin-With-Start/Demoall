@@ -57,6 +57,13 @@ public class CanvasPieView extends View {
 
     }
 
+    /**
+     * view的大小不仅仅是获取一次就可以的，控件的大小还受到父控件的控制，当父控件改动的时候，应该顺应改变。
+     * @param w
+     * @param h
+     * @param oldw
+     * @param oldh
+     */
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
