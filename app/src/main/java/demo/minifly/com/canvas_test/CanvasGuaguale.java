@@ -51,7 +51,7 @@ public class CanvasGuaguale  extends View{
         mPaint.setStrokeWidth(50);
 
         mPath = new Path();
-        mBgBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.guaguale);
+        mBgBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.guaguale);
         mFgBitmap = Bitmap.createBitmap(ScreenUtils.getScreenWidth(mContext),ScreenUtils.getScreenHeight(mContext), Bitmap.Config.ARGB_8888); //刮刮乐的蒙版
         mCanvas = new Canvas(mFgBitmap);
 

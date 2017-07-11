@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_dimen_dp55"
+        android:background="@color/common_color_c5_ffffff">
+
+        <ImageView
+            android:id="@+id/top_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_dimen_dp20"
+            android:src="@drawable/returnbtn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/upload_photo"
+            android:textColor="@color/common_color_c7_333333"
+            android:textSize="@dimen/common_dimen_s5_dp18"/>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/common_dimen_dp21"
+        android:paddingRight="@dimen/common_dimen_dp21"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:horizontalSpacing="@dimen/common_dimen_dp20"
+        android:verticalSpacing="@dimen/common_dimen_dp20"
+        android:scrollbars="none">
+    </GridView>
+</LinearLayout>

@@ -55,4 +55,19 @@
     <string name="empty">啥也没有</string>
     <!--键盘-->
     <string name="key_confirm">确定</string>
+
+
+    <!-- 多媒体组件 -->
+    <string name="edit_photo_delete">删除</string>
+    <string name="edit_photo_cancel">取消</string>
+    <string name="edit_photo_save">保存到相册</string>
+    <string name="edit_photo_confirm">确定</string>
+    <string name="external_storage_is_disable">存储卡不可用</string>
+    <string name="scan_no_photo">未扫描到任何图片</string>
+    <string name="camera_file">相机胶卷</string>
+    <string name="pls_select_photo">请选择图片</string>
+    <string name="select_photo_count">已选择%d张图片</string>
+    <string name="upload_photo">上传图片</string>
+    <string name="attach_video">添加视频</string>
+    <string name="play_video">播放视频</string>
 </resources>

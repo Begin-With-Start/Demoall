@@ -26,6 +26,9 @@ public class SharedPreferencesHelper {
 		// 第二个参数是默认值， 如果取的时候发现没数据，那就会自动设置为空
 		return sp.getString(key, "1");
 	}
+	public String getValue(String key, String defaultValue) {
+		return sp.getString(key, defaultValue);
+	}
 
 	public void putIntValue(String key, int value) {
 		editor.putInt(key, value);

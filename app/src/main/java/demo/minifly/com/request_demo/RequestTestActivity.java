@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.yolanda.nohttp.rest.OnResponseListener;
-import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.Response;
 
 import java.util.HashMap;
@@ -36,8 +35,8 @@ public class RequestTestActivity extends BaseActivity {
         map.put("currentPage", "1");
         map.put("pageSize", "1000");
         map.put("sort", "createTime&asc");
-        Request<String> request = NoHttpUtils.getRequest(url, map);
-        requestQueue.add(0, request, onResponseListener);
+//        Request<String> request = NoHttpUtils.getRequest(url, map);
+//        requestQueue.add(0, request, onResponseListener);
     }
 
     /**

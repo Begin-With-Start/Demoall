@@ -9,10 +9,6 @@
 
     <!--做了沉浸式的状态栏之后，为了5.0一下的进行的定制.都没有给actionbar的设置-->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:colorPrimary">@color/colorPrimary</item>
-        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:colorAccent">@color/colorAccent</item>
-        <item name="android:actionBarTheme">@style/Theme.AppCompat.DayNight.NoActionBar</item>
     </style>
 
     <style name="DeepTheme" parent="AppTheme">
@@ -45,4 +41,15 @@
             <enum name="TEXT" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="ClipImageLayout">
+        <!-- 水平间距 -->
+        <attr name="horizontal_padding" format="dimension"/>
+        <attr name= "image_drawable" format="reference"/>
+    </declare-styleable>
+    <!--popupWindow底部菜单动画-->
+    <style name="anim_menu_top_bar">
+        <item name="android:windowEnterAnimation">@anim/menu_top_bar_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_top_bar_out</item>
+    </style>
 </resources>

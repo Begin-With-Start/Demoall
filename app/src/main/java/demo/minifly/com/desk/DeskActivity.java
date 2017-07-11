@@ -49,6 +49,7 @@ import demo.minifly.com.object_animator_test.ViewWithAnimatorActivity;
 import demo.minifly.com.permission_demo.PermissionDemoActivity;
 import demo.minifly.com.project_all_demo.bubble.BubblePopActivity;
 import demo.minifly.com.project_all_demo.keyborad.KeyboardActivity;
+import demo.minifly.com.project_all_demo.photo_select_upload.UploadImageActivity;
 import demo.minifly.com.project_all_demo.rangebar.RangebarActivity;
 import demo.minifly.com.project_progress_new.ProjectProgressActivity;
 import demo.minifly.com.project_testhouse.HorizenProgressActivity;
@@ -332,6 +333,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("泡泡弹框");
         myBean.setClassName(BubblePopActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("工程的一个图片上传的界面。可以用。");
+        myBean.setClassName(UploadImageActivity.class);
         list.add(myBean);
 
 

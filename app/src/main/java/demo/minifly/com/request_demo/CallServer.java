@@ -66,10 +66,8 @@ public class CallServer {
      * @param what      用来标志请求, 当多个请求使用同一个{@link HttpListener}时, 在回调方法中会返回这个what.
      * @param request   请求对象.
      * @param callback  结果回调对象.
-     * @param canCancel 是否允许用户取消请求.
-     * @param isLoading 是否显示dialog.
      */
-    public <T> void add(int what, Request<T> request, HttpListener<T> callback, boolean canCancel, boolean isLoading) {
+    public <T> void add(int what, Request<T> request, HttpListener<T> callback) {
         requestQueue.add(what, request, new HttpResponseListener<T>(request, callback));
     }
 

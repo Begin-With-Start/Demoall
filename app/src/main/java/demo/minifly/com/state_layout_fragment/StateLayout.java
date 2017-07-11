@@ -109,7 +109,7 @@ public class StateLayout extends FrameLayout {
         if (errorDrawable != null) {
             errorImageView.setImageDrawable(errorDrawable);
         } else {
-            errorImageView.setImageResource(R.mipmap.ic_state_layout_error);
+            errorImageView.setImageResource(R.drawable.icon_activity_view_system);
         }
         addView(errorView);
         /******************************************************************************************/
@@ -123,7 +123,7 @@ public class StateLayout extends FrameLayout {
         if (emptyDrawable != null) {
             emptyImageView.setImageDrawable(emptyDrawable);
         } else {
-            emptyImageView.setImageResource(R.mipmap.ic_state_layout_empty);
+            emptyImageView.setImageResource(R.drawable.icon_activity_view_empty);
         }
         addView(emptyView);
         /******************************************************************************************/
