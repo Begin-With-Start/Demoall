@@ -70,4 +70,5 @@
     <string name="upload_photo">上传图片</string>
     <string name="attach_video">添加视频</string>
     <string name="play_video">播放视频</string>
+    <string name="title_activity_finger_print">FingerPrintActivity</string>
 </resources>

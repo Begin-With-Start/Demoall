@@ -35,6 +35,7 @@ import demo.minifly.com.canvas_test.canvas_new.CanvasAllDealViewActivity;
 import demo.minifly.com.canvas_test.canvas_painting_new.CanvasPaintingDemoActivity;
 import demo.minifly.com.constraintlayout_test.ConstraintActivity;
 import demo.minifly.com.databinding_test.DatabindingDemoActivity;
+import demo.minifly.com.finger_print_demo.FingerPrintActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
@@ -336,8 +337,13 @@ public class DeskActivity extends Activity {
         list.add(myBean);
 
         myBean = new MyBean();
-        myBean.setTitle("工程的一个图片上传的界面。可以用。");
+        myBean.setTitle("工程的一个图片上传的界面可以用");
         myBean.setClassName(UploadImageActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("指纹识别相关东西");
+        myBean.setClassName(FingerPrintActivity.class);
         list.add(myBean);
 
 
