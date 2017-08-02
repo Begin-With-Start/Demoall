@@ -36,6 +36,7 @@ import demo.minifly.com.canvas_test.canvas_painting_new.CanvasPaintingDemoActivi
 import demo.minifly.com.constraintlayout_test.ConstraintActivity;
 import demo.minifly.com.databinding_test.DatabindingDemoActivity;
 import demo.minifly.com.finger_print_demo.FingerPrintActivity;
+import demo.minifly.com.float_titlebar.FloatTitleBarActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
@@ -350,6 +351,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("共享元素相关实验.");
         myBean.setClassName(FrameActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("titlebar的一个效果");
+        myBean.setClassName(FloatTitleBarActivity.class);
         list.add(myBean);
 
 

@@ -247,7 +247,8 @@
         <activity android:name=".transition_element.TransitionElementActivity" />
         <activity android:name=".transition_element.TransitionElement2Activity" />
         <activity android:name=".transition_element.FrameActivity" />
-        <activity android:name=".transition_element.FrameFragmentAcitity"></activity>
+        <activity android:name=".transition_element.FrameFragmentAcitity" />
+        <activity android:name=".float_titlebar.FloatTitleBarActivity"></activity>
     </application>
 
 </manifest>
