@@ -53,6 +53,7 @@ import demo.minifly.com.project_all_demo.bubble.BubblePopActivity;
 import demo.minifly.com.project_all_demo.keyborad.KeyboardActivity;
 import demo.minifly.com.project_all_demo.photo_select_upload.UploadImageActivity;
 import demo.minifly.com.project_all_demo.rangebar.RangebarActivity;
+import demo.minifly.com.project_arrow_test.ProjectArrowTestActivity;
 import demo.minifly.com.project_progress_new.ProjectProgressActivity;
 import demo.minifly.com.project_testhouse.HorizenProgressActivity;
 import demo.minifly.com.project_testhouse.YituotuoEdittextActivity;
@@ -356,6 +357,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("titlebar的一个效果");
         myBean.setClassName(FloatTitleBarActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("一个连线相关的东西演示..");
+        myBean.setClassName(ProjectArrowTestActivity.class);
         list.add(myBean);
 
 

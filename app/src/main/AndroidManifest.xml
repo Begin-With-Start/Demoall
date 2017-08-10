@@ -248,7 +248,9 @@
         <activity android:name=".transition_element.TransitionElement2Activity" />
         <activity android:name=".transition_element.FrameActivity" />
         <activity android:name=".transition_element.FrameFragmentAcitity" />
-        <activity android:name=".float_titlebar.FloatTitleBarActivity"></activity>
+        <activity android:name=".float_titlebar.FloatTitleBarActivity" />
+        <activity android:name=".project_arrow_test.ProjectArrowTestActivity"
+            ></activity>
     </application>
 
 </manifest>

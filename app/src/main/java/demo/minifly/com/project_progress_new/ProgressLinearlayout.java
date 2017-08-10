@@ -84,7 +84,6 @@ public class ProgressLinearlayout extends LinearLayout {
 
         this.setOrientation(HORIZONTAL);
 
-
         LayoutInflater mInflater = LayoutInflater.from(mContext);
         View myView = mInflater.inflate(R.layout.mine_linearlayout, null);
         LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
