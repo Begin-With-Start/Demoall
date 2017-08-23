@@ -15,7 +15,6 @@ public class ProjectArrowTestActivity extends AppCompatActivity implements View.
     private ImageView mArrowImg1;
     private ImageView mArrowImg2;
     private ImageView mArrowImg3;
-    private ImageView mArrowImg4;
     private ArrowLinearlayout mArrowArrowlinearlayout;
 
     List<View> tempList = new LinkedList<>();
@@ -32,13 +31,11 @@ public class ProjectArrowTestActivity extends AppCompatActivity implements View.
         mArrowImg1 = (ImageView) findViewById(R.id.arrow_img_1);
         mArrowImg2 = (ImageView) findViewById(R.id.arrow_img_2);
         mArrowImg3 = (ImageView) findViewById(R.id.arrow_img_3);
-        mArrowImg4 = (ImageView) findViewById(R.id.arrow_img_4);
         mArrowArrowlinearlayout = (ArrowLinearlayout) findViewById(R.id.arrow_arrowlinearlayout);
 
         mArrowImg1.setOnClickListener(this);
         mArrowImg2.setOnClickListener(this);
         mArrowImg3.setOnClickListener(this);
-        mArrowImg4.setOnClickListener(this);
     }
 
 
@@ -50,14 +47,12 @@ public class ProjectArrowTestActivity extends AppCompatActivity implements View.
                 judgeViewLine();
                 break;
             case R.id.arrow_img_2:
-
+                tempList.add(mArrowImg2);
+                judgeViewLine();
                 break;
             case R.id.arrow_img_3:
                 tempList.add(mArrowImg3);
                 judgeViewLine();
-                break;
-            case R.id.arrow_img_4:
-
                 break;
         }
     }
@@ -70,19 +65,24 @@ public class ProjectArrowTestActivity extends AppCompatActivity implements View.
         if(tempList.size()==1){ //才第一个view
 
         }else if(tempList.size()==2){ //第二个view了
-            View view1 = tempList.get(0);
-            View view2 = tempList.get(1);
-
-            int [] loc1 = new int[]{0,0};
-            view1.getLocationOnScreen(loc1);//获取到view在screen的位置
-            int [] loc2 = new int[]{0,0};
-            view2.getLocationOnScreen(loc2); //获取view在screen的位置
-
-            //算出一下view两个的中间点的位置
-            loc1[0] = loc1[0] + view1.getWidth();
-
-            mArrowArrowlinearlayout.setData(loc1,loc2);
-
+//            View view1 = tempList.get(0);
+//            View view2 = tempList.get(1);
+//
+//            int [] loc1 = new int[]{0,0};
+//            view1.getLocationOnScreen(loc1);//获取到view在screen的位置
+//            int [] loc2 = new int[]{0,0};
+//            view2.getLocationOnScreen(loc2); //获取view在screen的位置
+//
+//            //算出一下view两个的中间点的位置
+//            loc1[0] = loc1[0] + view1.getWidth()/2;
+//            loc1[1] = loc1[1] + view1.getHeight()/2;
+//
+//            loc2[0] = loc2[0] + view2.getWidth()/2;
+//            loc2[1] = loc2[1] - view2.getHeight()/2;
+//
+//            mArrowArrowlinearlayout.setData(loc1,loc2);
+            mArrowArrowlinearlayout.setData(tempList.get(0),tempList.get(1));
+            tempList = new LinkedList<>();
         }
     }
 
