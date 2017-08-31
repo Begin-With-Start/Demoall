@@ -38,6 +38,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile files('libs/pinyin4j-2.5.0.jar')
+    //底部导航的一个小红点库
+    //微信浏览左划结束当前页 库
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
@@ -51,5 +53,7 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.2.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'q.rorbin:badgeview:1.1.0'
+    compile 'com.jude:swipebackhelper:3.1.2'
     testCompile 'junit:junit:4.12'
 }

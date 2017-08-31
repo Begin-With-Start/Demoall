@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demo.minifly.com.bottomnavgationview_demo.BottomNavigationDemoActivity">
+
+    <TextView
+        android:id="@+id/bottom_navigation_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Hello World!"
+        android:textSize="36sp"/>
+
+
+
+    <demo.minifly.com.bottomnavgationview_demo.BottomNavigationViewEx
+        android:id="@+id/bottom_navigation_id"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/common_color_c5_ffffff"
+        app:itemTextColor="@color/common_color_c1_0971ce"
+        app:menu="@menu/bottom_navigation_menu"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -51,4 +51,14 @@
         <item name="android:windowEnterAnimation">@anim/menu_top_bar_in</item>
         <item name="android:windowExitAnimation">@anim/menu_top_bar_out</item>
     </style>
+
+    <style name="allActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+   </style>
+    <style name="mainActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
 </resources>

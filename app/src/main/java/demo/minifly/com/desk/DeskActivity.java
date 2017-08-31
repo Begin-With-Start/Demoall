@@ -23,6 +23,7 @@ import demo.minifly.com.RippleShow.MyRippleShowActivity;
 import demo.minifly.com.android_hot_fix.AndroidHotfixActivity;
 import demo.minifly.com.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.androidl_animation.AndroidLTouchFeedbackActivity;
+import demo.minifly.com.bottomnavgationview_demo.BottomNavigationDemoActivity;
 import demo.minifly.com.canvas_test.ZCanvasActivity;
 import demo.minifly.com.canvas_test.ZCanvasClockActivity;
 import demo.minifly.com.canvas_test.ZCanvasLinearGraddientActivity;
@@ -63,6 +64,7 @@ import demo.minifly.com.recycleview_test.Activity3;
 import demo.minifly.com.rxjava_demo.RxjavaDemoActivity;
 import demo.minifly.com.scrollview_test.ScrollActivity;
 import demo.minifly.com.state_layout_fragment.StateFragmentActivity;
+import demo.minifly.com.swipe_back.SwipeMainActivity;
 import demo.minifly.com.textView.TextViewActivity;
 import demo.minifly.com.transition_element.FrameActivity;
 import demo.minifly.com.ui_test.MainActivity;
@@ -362,6 +364,16 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("一个连线相关的东西演示..");
         myBean.setClassName(ProjectArrowTestActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("一个底部bottomnavigationviewex的演示效果");
+        myBean.setClassName(BottomNavigationDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("左划退出当前的activity页面");
+        myBean.setClassName(SwipeMainActivity.class);
         list.add(myBean);
 
 

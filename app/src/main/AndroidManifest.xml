@@ -249,8 +249,18 @@
         <activity android:name=".transition_element.FrameActivity" />
         <activity android:name=".transition_element.FrameFragmentAcitity" />
         <activity android:name=".float_titlebar.FloatTitleBarActivity" />
-        <activity android:name=".project_arrow_test.ProjectArrowTestActivity"
-            ></activity>
+        <activity android:name=".project_arrow_test.ProjectArrowTestActivity" />
+        <activity android:name=".bottomnavgationview_demo.BottomNavigationDemoActivity" />
+        <activity
+            android:name=".swipe_back.SwipeMainActivity"
+            android:theme="@style/mainActivityTheme">
+
+        </activity>
+        <activity android:name=".swipe_back.SwipeNextActivity"
+            android:theme="@style/allActivityTheme"
+            >
+
+        </activity>
     </application>
 
 </manifest>
