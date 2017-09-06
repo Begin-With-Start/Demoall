@@ -10,6 +10,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
     }
     buildTypes {
         release {
@@ -55,5 +61,7 @@ dependencies {
     compile 'com.makeramen:roundedimageview:2.3.0'
     compile 'q.rorbin:badgeview:1.1.0'
     compile 'com.jude:swipebackhelper:3.1.2'
+    compile 'com.alibaba:arouter-api:1.1.0'
+    compile 'com.alibaba:arouter-compiler:1.1.1'
     testCompile 'junit:junit:4.12'
 }

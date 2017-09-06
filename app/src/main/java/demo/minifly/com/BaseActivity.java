@@ -1,13 +1,12 @@
-package demo.minifly.com.request_demo;
+package demo.minifly.com;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.rest.RequestQueue;
-
-import demo.minifly.com.R;
 
 
 public class BaseActivity extends Activity {
@@ -46,5 +45,33 @@ public class BaseActivity extends Activity {
                 Toast.makeText(BaseActivity.this, resource, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    /**
+     * 跳转activity
+     */
+    public void startActivity(String path){
+        if(path == null || "".equals(path)){
+            throw new ArouterPathException("路径为空！");
+        }
+        ARouter.getInstance().build(path).navigation();
+    }
+
+    public void startActivity(String path,String key,String value){
+        if(path == null || "".equals(path)){
+            throw new ArouterPathException("路径为空！");
+        }
+        ARouter.getInstance().build(path)
+                .withString(key, value)
+                .navigation();
+    }
+
+    public void startActivity(String path,Bundle bundle){
+        if(path == null || "".equals(path)){
+            throw new ArouterPathException("路径为空！");
+        }
+        ARouter.getInstance().build(path)
+//                .setExtra(bundle)
+                .navigation();
     }
 }

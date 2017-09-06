@@ -40,7 +40,7 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
 import demo.minifly.com.R;
-import demo.minifly.com.request_demo.BaseActivity;
+import demo.minifly.com.BaseActivity;
 
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class FingerPrintActivity extends BaseActivity {

@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import demo.minifly.com.R;
-import demo.minifly.com.request_demo.BaseActivity;
+import demo.minifly.com.BaseActivity;
 import demo.minifly.com.utils.DensityUtils;
 
 public class FloatTitleBarActivity extends BaseActivity {

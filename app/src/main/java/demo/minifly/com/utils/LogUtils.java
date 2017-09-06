@@ -5,6 +5,7 @@ import android.util.Log;
 
 public class LogUtils {
 	private static boolean debug = true;
+	private static String  TAG = "minifly";
 	public static void setDebug(boolean isDebug) {
 		debug = isDebug;
 	}
@@ -14,18 +15,18 @@ public class LogUtils {
 			if(!TextUtils.isEmpty(text)&&text.length() > 3000) {
 				for(int i=0;i<text.length();i+=3000){
 					if(i+3000<text.length())
-						Log.d("wangcang",text.substring(i, i+3000));
+						Log.d(TAG,text.substring(i, i+3000));
 					else
-						Log.d("wangcang",text.substring(i, text.length()));
+						Log.d(TAG,text.substring(i, text.length()));
 				}
 			} else
-				Log.d("wangcang",text);
+				Log.d(TAG,text);
 		}
 	}
 
 	public static void showErrLog(String text) {
 		if (debug) {
-			Log.e("wangcang", text);
+			Log.e(TAG, text);
 		}
 	}
 
@@ -34,12 +35,12 @@ public class LogUtils {
 			if(!TextUtils.isEmpty(text)&&text.length() > 3000) {
 				for(int i=0;i<text.length();i+=3000){
 					if(i+3000<text.length())
-						Log.i("wangcang",text.substring(i, i+3000));
+						Log.i(TAG,text.substring(i, i+3000));
 					else
-						Log.i("wangcang",text.substring(i, text.length()));
+						Log.i(TAG,text.substring(i, text.length()));
 				}
 			} else
-				Log.i("wangcang",text);
+				Log.i(TAG,text);
 		}
 	}
 }

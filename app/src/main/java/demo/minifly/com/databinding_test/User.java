@@ -3,7 +3,7 @@ package demo.minifly.com.databinding_test;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
-import demo.minifly.com.BR;
+//import demo.minifly.com.BR;
 
 /**
  * author ：minifly
@@ -27,7 +27,7 @@ public class User extends BaseObservable{
 
     public void setPassword(String password) {
         this.password = password;
-        notifyPropertyChanged(BR.password);
+//        notifyPropertyChanged(BR.password);
         /**
          * BR 是编译阶段生成的一个类，功能与 R.java 类似，用 @Bindable 标记过 getter 方法会在 BR 中生成一个 entry，当我们
          * 通过代码可以看出，当数据发生变化时还是需要手动发出通知。
@@ -42,6 +42,6 @@ public class User extends BaseObservable{
 
     public void setUsername(String username) {
         this.username = username;
-        notifyPropertyChanged(BR.username);
+//        notifyPropertyChanged(BR.username);
     }
 }

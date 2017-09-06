@@ -201,7 +201,7 @@
         <activity
             android:name=".ActivityAnimation.PhotoFragmentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".request_demo.BaseActivity" />
+        <activity android:name=".BaseActivity" />
         <activity android:name=".intent_test.Intent1Activity" />
         <activity android:name=".intent_test.Intent2Activity" />
         <activity

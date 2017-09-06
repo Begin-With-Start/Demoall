@@ -8,6 +8,7 @@ import com.yolanda.nohttp.rest.Response;
 
 import java.util.HashMap;
 
+import demo.minifly.com.BaseActivity;
 import demo.minifly.com.R;
 import demo.minifly.com.utils.LogUtils;
 
