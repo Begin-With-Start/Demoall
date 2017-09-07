@@ -42,7 +42,6 @@ public class MobileApplication extends Application {
 
         // 初始化NoHttp
         NoHttp.initialize(getApplicationContext());
-
     }
 
 

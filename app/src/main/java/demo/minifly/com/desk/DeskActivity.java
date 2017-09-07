@@ -24,6 +24,7 @@ import demo.minifly.com.android_hot_fix.AndroidHotfixActivity;
 import demo.minifly.com.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.androidl_animation.AndroidLTouchFeedbackActivity;
 import demo.minifly.com.bottomnavgationview_demo.BottomNavigationDemoActivity;
+import demo.minifly.com.canvas_pathmesure_demo.PathMesureDemoActivity;
 import demo.minifly.com.canvas_test.ZCanvasActivity;
 import demo.minifly.com.canvas_test.ZCanvasClockActivity;
 import demo.minifly.com.canvas_test.ZCanvasLinearGraddientActivity;
@@ -374,6 +375,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("左划退出当前的activity页面");
         myBean.setClassName(SwipeMainActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("光能使者的view自定义");
+        myBean.setClassName(PathMesureDemoActivity.class);
         list.add(myBean);
 
 

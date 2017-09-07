@@ -253,14 +253,11 @@
         <activity android:name=".bottomnavgationview_demo.BottomNavigationDemoActivity" />
         <activity
             android:name=".swipe_back.SwipeMainActivity"
-            android:theme="@style/mainActivityTheme">
-
-        </activity>
-        <activity android:name=".swipe_back.SwipeNextActivity"
-            android:theme="@style/allActivityTheme"
-            >
-
-        </activity>
+            android:theme="@style/mainActivityTheme"></activity>
+        <activity
+            android:name=".swipe_back.SwipeNextActivity"
+            android:theme="@style/allActivityTheme"></activity>
+        <activity android:name=".canvas_pathmesure_demo.PathMesureDemoActivity"></activity>
     </application>
 
 </manifest>
