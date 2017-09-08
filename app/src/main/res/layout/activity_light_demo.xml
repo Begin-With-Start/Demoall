@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demo.minifly.com.ear_listener_demo.LightDemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/light_current_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前屏幕亮度"
+            />
+        <Button
+            android:id="@+id/light_whole_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统的亮度"
+            />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

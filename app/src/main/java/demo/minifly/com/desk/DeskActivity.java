@@ -24,6 +24,7 @@ import demo.minifly.com.android_hot_fix.AndroidHotfixActivity;
 import demo.minifly.com.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.androidl_animation.AndroidLTouchFeedbackActivity;
 import demo.minifly.com.bottomnavgationview_demo.BottomNavigationDemoActivity;
+import demo.minifly.com.canvas_pathmesure_demo.BlurMaskFilterDemoActivity;
 import demo.minifly.com.canvas_pathmesure_demo.PathMesureDemoActivity;
 import demo.minifly.com.canvas_test.ZCanvasActivity;
 import demo.minifly.com.canvas_test.ZCanvasClockActivity;
@@ -37,6 +38,8 @@ import demo.minifly.com.canvas_test.canvas_new.CanvasAllDealViewActivity;
 import demo.minifly.com.canvas_test.canvas_painting_new.CanvasPaintingDemoActivity;
 import demo.minifly.com.constraintlayout_test.ConstraintActivity;
 import demo.minifly.com.databinding_test.DatabindingDemoActivity;
+import demo.minifly.com.ear_listener_demo.AudioTestActivity;
+import demo.minifly.com.ear_listener_demo.LightDemoActivity;
 import demo.minifly.com.finger_print_demo.FingerPrintActivity;
 import demo.minifly.com.float_titlebar.FloatTitleBarActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
@@ -380,6 +383,21 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("光能使者的view自定义");
         myBean.setClassName(PathMesureDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("耳机的监听相关东西");
+        myBean.setClassName(AudioTestActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("屏幕亮度操作");
+        myBean.setClassName(LightDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("发光效果");
+        myBean.setClassName(BlurMaskFilterDemoActivity.class);
         list.add(myBean);
 
 
