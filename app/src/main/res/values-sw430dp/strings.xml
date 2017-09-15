@@ -1,0 +1,4 @@
+<resources>
+    <!--几个文件夹的适配方案，来检测几种文件夹适配方案的优先级问题。-->
+    <string name="app_name">我是sw420dp的</string>
+</resources>

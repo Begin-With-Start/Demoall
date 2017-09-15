@@ -90,4 +90,5 @@
     <dimen name="common_dimen_dp375">375dp</dimen>
     <dimen name="common_dimen_dp400">400dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="test_dimen">60dp</dimen>
 </resources>
