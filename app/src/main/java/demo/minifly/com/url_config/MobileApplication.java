@@ -85,7 +85,7 @@ public class MobileApplication extends Application {
                                                public void onActivityDestroyed(Activity activity) {
 
                                                }
-                                           }
+                                           }  
         );
     }
 
