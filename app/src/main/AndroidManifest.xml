@@ -262,7 +262,8 @@
         <activity android:name=".canvas_pathmesure_demo.PathMesureDemoActivity" />
         <activity android:name=".ear_listener_demo.AudioTestActivity" />
         <activity android:name=".ear_listener_demo.LightDemoActivity" />
-        <activity android:name=".canvas_pathmesure_demo.BlurMaskFilterDemoActivity"></activity>
+        <activity android:name=".canvas_pathmesure_demo.BlurMaskFilterDemoActivity" />
+        <activity android:name=".project_all_demo.button.ButtonActivity"></activity>
     </application>
 
 </manifest>

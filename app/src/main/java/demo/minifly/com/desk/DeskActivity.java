@@ -55,6 +55,7 @@ import demo.minifly.com.object_animator_test.ValueAnimatorTextActivity;
 import demo.minifly.com.object_animator_test.ViewWithAnimatorActivity;
 import demo.minifly.com.permission_demo.PermissionDemoActivity;
 import demo.minifly.com.project_all_demo.bubble.BubblePopActivity;
+import demo.minifly.com.project_all_demo.button.ButtonActivity;
 import demo.minifly.com.project_all_demo.keyborad.KeyboardActivity;
 import demo.minifly.com.project_all_demo.photo_select_upload.UploadImageActivity;
 import demo.minifly.com.project_all_demo.rangebar.RangebarActivity;
@@ -398,6 +399,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("发光效果");
         myBean.setClassName(BlurMaskFilterDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("按钮封装");
+        myBean.setClassName(ButtonActivity.class);
         list.add(myBean);
 
 
