@@ -59,6 +59,7 @@ import demo.minifly.com.project_all_demo.button.ButtonActivity;
 import demo.minifly.com.project_all_demo.keyborad.KeyboardActivity;
 import demo.minifly.com.project_all_demo.photo_select_upload.UploadImageActivity;
 import demo.minifly.com.project_all_demo.rangebar.RangebarActivity;
+import demo.minifly.com.project_all_demo.weekdemo.WeekDemoActivity;
 import demo.minifly.com.project_arrow_test.ProjectArrowTestActivity;
 import demo.minifly.com.project_progress_new.ProjectProgressActivity;
 import demo.minifly.com.project_testhouse.HorizenProgressActivity;
@@ -404,6 +405,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("按钮封装");
         myBean.setClassName(ButtonActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("周周递减天数");
+        myBean.setClassName(WeekDemoActivity.class);
         list.add(myBean);
 
 
