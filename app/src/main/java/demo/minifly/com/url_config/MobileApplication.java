@@ -1,14 +1,17 @@
 package demo.minifly.com.url_config;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.os.Vibrator;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yolanda.nohttp.NoHttp;
 
 import demo.minifly.com.utils.SharedPreferencesHelper;
+import demo.minifly.com.utils.ToastUtils;
 
 /**
  * Created by Administrator on 2016/10/8.
@@ -26,6 +29,9 @@ public class MobileApplication extends Application {
     //是否是调试模式
     boolean isDebug = true;
 
+    //acitivity 数量统计 来判断是否实在前端
+    int appCount = 0;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -42,6 +48,53 @@ public class MobileApplication extends Application {
 
         // 初始化NoHttp
         NoHttp.initialize(getApplicationContext());
+
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+                                               @Override
+                                               public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+                                               }
+
+                                               @Override
+                                               public void onActivityStarted(Activity activity) {
+                                                   appCount++;
+                                               }
+
+                                               @Override
+                                               public void onActivityResumed(Activity activity) {
+                                               }
+
+                                               @Override
+                                               public void onActivityPaused(Activity activity) {
+                                               }
+
+                                               @Override
+                                               public void onActivityStopped(Activity activity) {
+
+                                                   appCount--;
+                                                   if (appCount == 0) {
+                                                       ToastUtils.showToast("到后台了");
+                                                   }
+                                               }
+
+                                               @Override
+                                               public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+                                               }
+
+                                               @Override
+                                               public void onActivityDestroyed(Activity activity) {
+
+                                               }
+                                           }
+        );
+    }
+
+    public int getAppCount() {
+        return appCount;
+    }
+
+    public void setAppCount(int appCount) {
+        this.appCount = appCount;
     }
 
 
@@ -50,10 +103,12 @@ public class MobileApplication extends Application {
     }
 
 
-    public interface OnBackLinstener{
+    public interface OnBackLinstener {
         void onBack();
+
         void onError();
     }
+
     // 获取版本名
     public String getVersionName() {
         PackageManager packageManager = getPackageManager();

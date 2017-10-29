@@ -80,26 +80,26 @@
 
 
     <!--自定义的view颜色-->
-    <color name="canvas_own_color" >#cfd8dc</color>
-    <color name="canvas_own_point_color" >#b0bec5</color>
-    <color name="canvas_own_line_color" >#90a4ae</color>
-    <color name="canvas_own_rect_color" >#78909c</color>
-    <color name="canvas_own_1_color" >#607d8b</color>
-    <color name="canvas_own_2_color" >#546e7a</color>
-    <color name="canvas_own_3_color" >#455a64</color>
-    <color name="canvas_own_4_color" >#37474f</color>
+    <color name="canvas_own_color">#cfd8dc</color>
+    <color name="canvas_own_point_color">#b0bec5</color>
+    <color name="canvas_own_line_color">#90a4ae</color>
+    <color name="canvas_own_rect_color">#78909c</color>
+    <color name="canvas_own_1_color">#607d8b</color>
+    <color name="canvas_own_2_color">#546e7a</color>
+    <color name="canvas_own_3_color">#455a64</color>
+    <color name="canvas_own_4_color">#37474f</color>
 
 
-    <color name="canvas_own_green_1_color" >#d0f8ce</color>
-    <color name="canvas_own_green_2_color" >#a3e9a4</color>
-    <color name="canvas_own_green_3_color" >#72d572</color>
-    <color name="canvas_own_green_4_color" >#42bd41</color>
-    <color name="canvas_own_green_5_color" >#2baf2b</color>
-    <color name="canvas_own_green_6_color" >#259b24</color>
-    <color name="canvas_own_green_7_color" >#0a8f08</color>
-    <color name="canvas_own_green_8_color" >#0a7307</color>
-    <color name="canvas_own_green_9_color" >#056f00</color>
-    <color name="canvas_own_green_10_color" >#0d5302</color>
+    <color name="canvas_own_green_1_color">#d0f8ce</color>
+    <color name="canvas_own_green_2_color">#a3e9a4</color>
+    <color name="canvas_own_green_3_color">#72d572</color>
+    <color name="canvas_own_green_4_color">#42bd41</color>
+    <color name="canvas_own_green_5_color">#2baf2b</color>
+    <color name="canvas_own_green_6_color">#259b24</color>
+    <color name="canvas_own_green_7_color">#0a8f08</color>
+    <color name="canvas_own_green_8_color">#0a7307</color>
+    <color name="canvas_own_green_9_color">#056f00</color>
+    <color name="canvas_own_green_10_color">#0d5302</color>
 
     <color name="canvas_own_red_1_color">#fde0dc</color>
     <color name="canvas_own_red_2_color">#f9bdbb</color>
