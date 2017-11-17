@@ -2,14 +2,14 @@ package demo.minifly.com.image_compress_demo;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -17,16 +17,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import net.bither.util.NativeUtil;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-
 import demo.minifly.com.R;
+import demo.minifly.com.utils.BitmapUtil;
 import demo.minifly.com.utils.LogUtils;
 
-public class ImageCompressActivity extends AppCompatActivity {
+public class ImageCompressActivity2 extends AppCompatActivity {
 
     private ImageView oldImageview,newImageview;
     private TextView oldTxt,newTxt;
@@ -97,6 +92,10 @@ public class ImageCompressActivity extends AppCompatActivity {
                         Log.e("======", "====-----==图片为空======");
                     }
                     break;
+
+                default:
+
+                    break;
             }
         }
     }
@@ -118,31 +117,33 @@ public class ImageCompressActivity extends AppCompatActivity {
         Log.e("===compressImage===", "====开始====uri==" + uri.getPath());
         long currentBefore = System.currentTimeMillis();
 
-        try {
-            File saveFile = new File(Environment.getExternalStorageDirectory()+"/", "compress_" + System.currentTimeMillis() + ".jpg");
-            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+        String filepath = BitmapUtil.getSmallImage(getRealFilePath(this,uri));
+        Log.e("===compressImage===", "====完成==压缩==saveFile==" + filepath);
 
-            Log.e("===compressImage===", "====开始==压缩==saveFile==" + saveFile.getAbsolutePath());
-            NativeUtil.compressBitmap(bitmap, saveFile.getAbsolutePath());
+        LogUtils.showErrLog("用时间： " + (System.currentTimeMillis() - currentBefore));
 
-
-            try{
-                FileInputStream fis = new FileInputStream(saveFile.getAbsolutePath());
-                newTxt.setText(fis.available()+"b");
-                Bitmap bitmap2  = BitmapFactory.decodeStream(fis);
-                newImageview.setImageBitmap(bitmap2);
-            }catch(Exception e){
-
-            }
-
-            Log.e("===compressImage===", "====完成==压缩==saveFile==" + saveFile.getAbsolutePath());
-
-            LogUtils.showErrLog("用时间： " + (System.currentTimeMillis() - currentBefore));
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.e("===compressImage===","==压缩=="+e.getMessage());
-        }
     }
 
+    public static String getRealFilePath( final Context context, final Uri uri ) {
+        if ( null == uri ) return null;
+        final String scheme = uri.getScheme();
+        String data = null;
+        if ( scheme == null )
+            data = uri.getPath();
+        else if ( ContentResolver.SCHEME_FILE.equals( scheme ) ) {
+            data = uri.getPath();
+        } else if ( ContentResolver.SCHEME_CONTENT.equals( scheme ) ) {
+            Cursor cursor = context.getContentResolver().query( uri, new String[] { MediaStore.Images.ImageColumns.DATA }, null, null, null );
+            if ( null != cursor ) {
+                if ( cursor.moveToFirst() ) {
+                    int index = cursor.getColumnIndex( MediaStore.Images.ImageColumns.DATA );
+                    if ( index > -1 ) {
+                        data = cursor.getString( index );
+                    }
+                }
+                cursor.close();
+            }
+        }
+        return data;
+    }
 }

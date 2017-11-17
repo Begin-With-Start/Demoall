@@ -34,7 +34,7 @@ public class BitmapUtil {
 		Resources res = c.getResources();
 		return BitmapFactory.decodeResource(res, resource);
 	}
-	
+
 	// 把指定的Bitmap缩放到指定的大小
 	public static Bitmap scaleBtimap(Bitmap bitmap, int width, int height) {
 		int w = bitmap.getWidth();
@@ -46,99 +46,99 @@ public class BitmapUtil {
 		Bitmap newbmp = Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
 		return newbmp;
 	}
-	
+
 	// 把drawable转化成Bitmap
 	public static Bitmap drawableToBitmap(Drawable drawable) {
-    	int w = drawable.getIntrinsicWidth();
-    	int h = drawable.getIntrinsicHeight();   
+		int w = drawable.getIntrinsicWidth();
+		int h = drawable.getIntrinsicHeight();
 
-    	// 取 drawable 的颜色格式   
-    	Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Config.ARGB_8888 : Config.RGB_565;
-    	// 建立对应 bitmap   
-    	Bitmap bitmap = Bitmap.createBitmap(w, h, config);
-    	// 建立对应 bitmap 的画布   
-    	Canvas canvas = new Canvas(bitmap);
-    	drawable.setBounds(0, 0, w, h);   
-    	// 把 drawable 内容画到画布中   
-    	drawable.draw(canvas);   
-    	return bitmap;   
-    } 
-	
-    // 把Bitmap转化为Drawable
-    public static Drawable drawableToBitmap(Bitmap bmp) {
-    	BitmapDrawable drawable = new BitmapDrawable(bmp);
-    	return drawable;
-    }
-    
-    // 获得带倒影的Bitmap图片
-    public static Bitmap createReflectionImageWithOrigin(Bitmap bitmap) {
-    	final int reflectionGap = 4;   
-    	int w = bitmap.getWidth();   
-    	int h = bitmap.getHeight();   
+		// 取 drawable 的颜色格式
+		Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Config.ARGB_8888 : Config.RGB_565;
+		// 建立对应 bitmap
+		Bitmap bitmap = Bitmap.createBitmap(w, h, config);
+		// 建立对应 bitmap 的画布
+		Canvas canvas = new Canvas(bitmap);
+		drawable.setBounds(0, 0, w, h);
+		// 把 drawable 内容画到画布中
+		drawable.draw(canvas);
+		return bitmap;
+	}
 
-    	Matrix matrix = new Matrix();
-    	matrix.preScale(1, -1);   
+	// 把Bitmap转化为Drawable
+	public static Drawable drawableToBitmap(Bitmap bmp) {
+		BitmapDrawable drawable = new BitmapDrawable(bmp);
+		return drawable;
+	}
 
-    	Bitmap reflectionImage = Bitmap.createBitmap(bitmap, 0, h / 2, w,
-    			h / 2, matrix, false);   
+	// 获得带倒影的Bitmap图片
+	public static Bitmap createReflectionImageWithOrigin(Bitmap bitmap) {
+		final int reflectionGap = 4;
+		int w = bitmap.getWidth();
+		int h = bitmap.getHeight();
 
-    	Bitmap bitmapWithReflection = Bitmap.createBitmap(w, (h + h / 2),
-    			Config.ARGB_8888);
+		Matrix matrix = new Matrix();
+		matrix.preScale(1, -1);
 
-    	Canvas canvas = new Canvas(bitmapWithReflection);
-    	canvas.drawBitmap(bitmap, 0, 0, null);   
-    	Paint deafalutPaint = new Paint();
-    	canvas.drawRect(0, h, w, h + reflectionGap, deafalutPaint);   
+		Bitmap reflectionImage = Bitmap.createBitmap(bitmap, 0, h / 2, w,
+				h / 2, matrix, false);
 
-    	canvas.drawBitmap(reflectionImage, 0, h + reflectionGap, null);   
-    	Paint paint = new Paint();
-    	LinearGradient shader = new LinearGradient(0, bitmap.getHeight(), 0,
-    			bitmapWithReflection.getHeight() + reflectionGap, 0x70ffffff, 0x00ffffff, TileMode.CLAMP);
-    	paint.setShader(shader);   
-    	// Set the Transfer mode to be porter duff and destination in   
-    	paint.setXfermode(new PorterDuffXfermode(Mode.DST_IN));
-    	// Draw a rectangle using the paint with our linear gradient   
-    	canvas.drawRect(0, h, w, bitmapWithReflection.getHeight()   
-    			+ reflectionGap, paint);   
+		Bitmap bitmapWithReflection = Bitmap.createBitmap(w, (h + h / 2),
+				Config.ARGB_8888);
 
-    	return bitmapWithReflection;   
-    }  
-    
-    // 获得一个圆角Bitmap图片
-    public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
-    	int w = bitmap.getWidth();   
-    	int h = bitmap.getHeight();   
-    	Bitmap output = Bitmap.createBitmap(w, h, Config.ARGB_8888);
-    	Canvas canvas = new Canvas(output);
-    	final int color = 0xff424242;   
-    	final Paint paint = new Paint();
-    	final Rect rect = new Rect(0, 0, w, h);
-    	final RectF rectF = new RectF(rect);
-    	paint.setAntiAlias(true);   
-    	canvas.drawARGB(0, 0, 0, 0);   
-    	paint.setColor(color);   
-    	canvas.drawRoundRect(rectF, roundPx, roundPx, paint);   
-    	paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
-    	canvas.drawBitmap(bitmap, rect, rect, paint);   
+		Canvas canvas = new Canvas(bitmapWithReflection);
+		canvas.drawBitmap(bitmap, 0, 0, null);
+		Paint deafalutPaint = new Paint();
+		canvas.drawRect(0, h, w, h + reflectionGap, deafalutPaint);
 
-    	return output;   
-    } 
-    
-    // 把一张Bitmap转化为一个字节数组
-    public static byte[] Bitmap2Bytes(Bitmap bm) {
-    	ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    	bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
-    	return baos.toByteArray();   
-    } 
-    
-    public static Bitmap Bytes2Bimap(byte[] b) {
-    	if (b.length != 0) {   
-    		return BitmapFactory.decodeByteArray(b, 0, b.length);
-    	} else {   
-    		return null;   
-    	}   
-    }     
-    
+		canvas.drawBitmap(reflectionImage, 0, h + reflectionGap, null);
+		Paint paint = new Paint();
+		LinearGradient shader = new LinearGradient(0, bitmap.getHeight(), 0,
+				bitmapWithReflection.getHeight() + reflectionGap, 0x70ffffff, 0x00ffffff, TileMode.CLAMP);
+		paint.setShader(shader);
+		// Set the Transfer mode to be porter duff and destination in
+		paint.setXfermode(new PorterDuffXfermode(Mode.DST_IN));
+		// Draw a rectangle using the paint with our linear gradient
+		canvas.drawRect(0, h, w, bitmapWithReflection.getHeight()
+				+ reflectionGap, paint);
+
+		return bitmapWithReflection;
+	}
+
+	// 获得一个圆角Bitmap图片
+	public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {
+		int w = bitmap.getWidth();
+		int h = bitmap.getHeight();
+		Bitmap output = Bitmap.createBitmap(w, h, Config.ARGB_8888);
+		Canvas canvas = new Canvas(output);
+		final int color = 0xff424242;
+		final Paint paint = new Paint();
+		final Rect rect = new Rect(0, 0, w, h);
+		final RectF rectF = new RectF(rect);
+		paint.setAntiAlias(true);
+		canvas.drawARGB(0, 0, 0, 0);
+		paint.setColor(color);
+		canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+		paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+		canvas.drawBitmap(bitmap, rect, rect, paint);
+
+		return output;
+	}
+
+	// 把一张Bitmap转化为一个字节数组
+	public static byte[] Bitmap2Bytes(Bitmap bm) {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
+		return baos.toByteArray();
+	}
+
+	public static Bitmap Bytes2Bimap(byte[] b) {
+		if (b.length != 0) {
+			return BitmapFactory.decodeByteArray(b, 0, b.length);
+		} else {
+			return null;
+		}
+	}
+
 	// 图片从中心旋转degree度
 	public static Bitmap rotateImage(Bitmap bp, int degree) {
 		Matrix matrix = new Matrix();
@@ -175,9 +175,9 @@ public class BitmapUtil {
 		Matrix matrix = new Matrix();
 		matrix.postRotate(degree);
 		Bitmap newBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-		if (bitmap != null && !bitmap.isRecycled()) {
-			bitmap.recycle();
-		}
+//		if (bitmap != null && !bitmap.isRecycled()) {
+//			bitmap.recycle();
+//		}
 		return newBitmap;
 	}
 

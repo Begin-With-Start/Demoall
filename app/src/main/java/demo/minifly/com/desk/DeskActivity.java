@@ -43,6 +43,7 @@ import demo.minifly.com.ear_listener_demo.LightDemoActivity;
 import demo.minifly.com.finger_print_demo.FingerPrintActivity;
 import demo.minifly.com.float_titlebar.FloatTitleBarActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
+import demo.minifly.com.image_compress_demo.ImageCompressActivity2;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
@@ -297,6 +298,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("图片压缩相关的操作");
         myBean.setClassName(ImageCompressActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("图片压缩相关的操作2");
+        myBean.setClassName(ImageCompressActivity2.class);
         list.add(myBean);
 
 
