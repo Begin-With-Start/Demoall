@@ -145,7 +145,7 @@
             android:name=".object_animator_test.ViewWithAnimatorActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
-        <!-- 主页面-->
+        <!-- 主页面 -->
         <activity
             android:name=".desk.DeskActivity"
             android:launchMode="singleTop"
@@ -157,8 +157,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <!--主页面-->
-        <!--<activity
+        <!-- 主页面 -->
+        <!--
+        <activity
             android:name=".project_all_demo.LauncherActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
@@ -168,7 +169,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>-->
+        </activity>
+        -->
         <!-- 隐藏下下面的bar -->
         <activity
             android:name=".gallary_test.GalleryTestActivity"
@@ -277,7 +279,12 @@
         <activity android:name=".ear_listener_demo.LightDemoActivity" />
         <activity android:name=".canvas_pathmesure_demo.BlurMaskFilterDemoActivity" />
         <activity android:name=".project_all_demo.button.ButtonActivity" />
-        <activity android:name=".project_all_demo.weekdemo.WeekDemoActivity"></activity>
+        <activity android:name=".project_all_demo.weekdemo.WeekDemoActivity" />
+        <activity
+            android:name=".map.InputTextviewControlActivity"
+            android:windowSoftInputMode="stateHidden"
+            >
+        </activity>
     </application>
 
 </manifest>

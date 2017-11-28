@@ -47,6 +47,7 @@ import demo.minifly.com.image_compress_demo.ImageCompressActivity2;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
+import demo.minifly.com.map.InputTextviewControlActivity;
 import demo.minifly.com.notification_test.NotificationStartActivity;
 import demo.minifly.com.object_animator_test.ObjectAnimatorBezierActivity;
 import demo.minifly.com.object_animator_test.ObjectAnimatorOwnColorTest;
@@ -416,6 +417,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("周周递减天数");
         myBean.setClassName(WeekDemoActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("输入文字扫描控制");
+        myBean.setClassName(InputTextviewControlActivity.class);
         list.add(myBean);
 
 

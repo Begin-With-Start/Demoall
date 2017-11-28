@@ -49,4 +49,10 @@
         <!--animation duration-->
         <attr name="AnimationDuration" format="integer|reference"/>
     </declare-styleable>
+
+    <declare-styleable name="TextInputLayout">
+        <attr name="hideUnderLine" format="boolean" />
+        <attr name="labelText" format="string|reference" />
+        <attr name="hintMarginTop" format="dimension" />
+    </declare-styleable>
 </resources>

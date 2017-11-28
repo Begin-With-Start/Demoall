@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="demo.minifly.com.map.InputTextviewControlActivity">
+
+
+    <demo.minifly.com.map.TextInputLayout
+        android:id="@+id/task_addpoint_step5_showall_inputlayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <demo.minifly.com.map.KeyBoardEditText
+            android:id="@+id/task_addpoint_step5_showall_edittext"
+            style="@style/common_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="提示"
+            android:singleLine="true" />
+
+    </demo.minifly.com.map.TextInputLayout>
+
+
+    <demo.minifly.com.map.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@+id/task_addpoint_step5_showall_inputlayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@android:color/white">
+
+        <demo.minifly.com.map.ClearEditText
+            android:id="@+id/desk_my_email_edittext"
+            style="@style/common_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="哈哈哈哈"
+            android:singleLine="true"/>
+
+    </demo.minifly.com.map.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/demo_inputtext_button"
+        android:text="点我啊"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp" />
+
+</android.support.constraint.ConstraintLayout>

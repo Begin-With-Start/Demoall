@@ -62,4 +62,12 @@
         <item name="android:windowIsTranslucent">false</item>
     </style>
 
+
+    <!--editText的风格-->
+    <style name="common_edit_text_style">
+        <item name="android:textCursorDrawable">@drawable/shape_cursor</item>
+        <item name="android:textColorHint">@color/common_color_c8_d5d7dc</item>
+        <item name="android:textColor">@color/common_color_c5_45494e</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
