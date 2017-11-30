@@ -153,6 +153,10 @@ public class TextInputLayout extends LinearLayout {
 
 	public void setEnabled(boolean enabled) {
 		editTextEnabled = enabled;
+		mEditText.clearFocus();
+		mEditText.setFocusable(false);
+		mEditText.setEnabled(editTextEnabled);
+
 		if (enabled) {
 			return;
 		}
@@ -165,8 +169,7 @@ public class TextInputLayout extends LinearLayout {
 //				mEditText.setBackgroundResource(R.drawable.selector_edittext);
 //			}
 //		}
-		mEditText.setEnabled(false);
-		mLabelView.setVisibility(GONE);
+		mLabelView.setVisibility(INVISIBLE);
 		mLabelView.setText(null);
 		if (!mUnderLineHide) {
 			mEditText.setBackgroundResource(R.drawable.selector_edittext);
@@ -176,30 +179,10 @@ public class TextInputLayout extends LinearLayout {
 	public void updateLabelState() {
 		final boolean isFocused = arrayContains(getDrawableState(), android.R.attr.state_focused);
 
-		// 有焦点的状态
-		if (isFocused) {
-			mEditText.setHint(null);
-			if (isStateWrong) {
-				mLabelView.setText(mWrongMsg);
-				mLabelView.setTextColor(DEF_WRONG_COLOR);
-				if (!mUnderLineHide) {
-					mEditText.setBackgroundResource(R.drawable.layer_edittext_wrong);
-				}
-			} else {
-				mLabelView.setText(mLabelText);
-				mLabelView.setTextColor(DEF_LABEL_COLOR);
-				if (!mUnderLineHide) {
-					mEditText.setBackgroundResource(R.drawable.selector_edittext);
-				}
-			}
-		} else { // 没有焦点的状态
-			mEditText.setHint(mEditTextHintText);
-			if (TextUtils.isEmpty(mEditText.getText())) {// EditText中的内容为空
-				mLabelView.setText(null);
-				if (!mUnderLineHide) {
-					mEditText.setBackgroundResource(R.drawable.selector_edittext);
-				}
-			} else {// EditText中有内容
+		if(mEditText.isEnabled()){
+			// 有焦点的状态
+			if (isFocused) {
+				mEditText.setHint(null);
 				if (isStateWrong) {
 					mLabelView.setText(mWrongMsg);
 					mLabelView.setTextColor(DEF_WRONG_COLOR);
@@ -213,9 +196,35 @@ public class TextInputLayout extends LinearLayout {
 						mEditText.setBackgroundResource(R.drawable.selector_edittext);
 					}
 				}
+			} else { // 没有焦点的状态
+				mEditText.setHint(mEditTextHintText);
+				if (TextUtils.isEmpty(mEditText.getText())) {// EditText中的内容为空
+					mLabelView.setText(null);
+					if (!mUnderLineHide) {
+						mEditText.setBackgroundResource(R.drawable.selector_edittext);
+					}
+				} else {// EditText中有内容
+					if (isStateWrong) {
+						mLabelView.setText(mWrongMsg);
+						mLabelView.setTextColor(DEF_WRONG_COLOR);
+						if (!mUnderLineHide) {
+							mEditText.setBackgroundResource(R.drawable.layer_edittext_wrong);
+						}
+					} else {
+						mLabelView.setText(mLabelText);
+						mLabelView.setTextColor(DEF_LABEL_COLOR);
+						if (!mUnderLineHide) {
+							mEditText.setBackgroundResource(R.drawable.selector_edittext);
+						}
+					}
+				}
+
 			}
+		}else{
 
 		}
+
+
 	}
 
 	public void showLableView() {

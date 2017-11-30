@@ -64,4 +64,5 @@ dependencies {
     compile 'com.alibaba:arouter-api:1.1.0'
     compile 'com.alibaba:arouter-compiler:1.1.1'
     testCompile 'junit:junit:4.12'
+    compile files('libs/eventbus-2.4.0.jar')
 }

@@ -2,23 +2,26 @@ package demo.minifly.com.map;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.text.InputType;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.lang.reflect.Method;
 
 import demo.minifly.com.R;
 
-import static demo.minifly.com.R.id.desk_my_email_edittext;
+import static demo.minifly.com.R.id.task_addpoint_step5_showall_edittext2;
 
-public class InputTextviewControlActivity extends AppCompatActivity{
+public class InputTextviewControlActivity extends AppCompatActivity {
 
-    private Button button;
-    private boolean isShowInput = true;
     private KeyBoardEditText mTaskAddpointStep5ShowallEdittext;
     private TextInputLayout mTaskAddpointStep5ShowallInputlayout;
     private ClearEditText mDeskMyEmailEdittext;
+    private KeyBoardEditText mTaskAddpointStep5ShowallEdittext2;
+    private TextInputLayout mTaskAddpointStep5ShowallInputlayout2;
+    private Button button;
+    private boolean isShowinput = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,51 +31,57 @@ public class InputTextviewControlActivity extends AppCompatActivity{
     }
 
     private void initView() {
-        button = (Button) findViewById(R.id.demo_inputtext_button);
+
         mTaskAddpointStep5ShowallEdittext = (KeyBoardEditText) findViewById(R.id.task_addpoint_step5_showall_edittext);
         mTaskAddpointStep5ShowallInputlayout = (TextInputLayout) findViewById(R.id.task_addpoint_step5_showall_inputlayout);
-        mDeskMyEmailEdittext = (ClearEditText) findViewById(desk_my_email_edittext);
 
-        mTaskAddpointStep5ShowallEdittext.setOnKeyboardClick(new KeyBoardEditText.OnKeyboardClick() {
-            @Override
-            public void onKeyboardClick() {
-                if(isShowInput){
-                    isShowInput = !isShowInput;
-                    mTaskAddpointStep5ShowallEdittext.setInputType(InputType.TYPE_NULL);
-                }else{
-                    isShowInput = !isShowInput;
-                    mTaskAddpointStep5ShowallEdittext.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                }
-            }
-        });
+        mTaskAddpointStep5ShowallEdittext2 = (KeyBoardEditText) findViewById(task_addpoint_step5_showall_edittext2);
+        mTaskAddpointStep5ShowallInputlayout2 = (TextInputLayout) findViewById(R.id.task_addpoint_step5_showall_inputlayout2);
 
-        mTaskAddpointStep5ShowallEdittext.addTextChangedListener(new TextWatcher() {
+        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext,false);
+        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2,false);
 
-            @Override
-            public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-
-            }
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable arg0) {
-                mTaskAddpointStep5ShowallEdittext.setSelection(mTaskAddpointStep5ShowallEdittext.length());
-            }
-        });
+        button = (Button) findViewById(R.id.button_id);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(isShowInput){
-//                    isShowInput = !isShowInput;
-////                    mTaskAddpointStep5ShowallEdittext.setKeyBoardInputType(InputType.TYPE_NULL);
-//                }else{
-//                    isShowInput = !isShowInput;
-////                    mTaskAddpointStep5ShowallEdittext.setKeyBoardInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-//                }
+                if(isShowinput){
+                    isShowinput = !isShowinput;
+                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext,isShowinput);
+                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2,isShowinput);
+                }else{
+                    isShowinput = !isShowinput;
+                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext,isShowinput);
+                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2,isShowinput);
+                }
+
             }
         });
+    }
+
+    /**
+     * 禁止Edittext弹出软件盘，光标依然正常显示。
+     */
+    public void disableShowSoftInput(EditText editText ,boolean isShow) {
+        if (android.os.Build.VERSION.SDK_INT <= 10) {
+            editText.setInputType(InputType.TYPE_NULL);
+        } else {
+            Class<EditText> cls = EditText.class;
+            Method method;
+            try {
+                method = cls.getMethod("setShowSoftInputOnFocus", boolean.class);
+                method.setAccessible(true);
+                method.invoke(editText, isShow);
+            } catch (Exception e) {
+            }
+
+            try {
+                method = cls.getMethod("setSoftInputShownOnFocus", boolean.class);
+                method.setAccessible(true);
+                method.invoke(editText, isShow);
+            } catch (Exception e) {
+            }
+        }
     }
 }

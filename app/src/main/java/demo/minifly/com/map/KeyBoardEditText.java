@@ -14,6 +14,9 @@ import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputConnectionWrapper;
 import android.widget.EditText;
 
+
+import java.lang.reflect.Method;
+
 import demo.minifly.com.R;
 import demo.minifly.com.listview_test.ConvertUtils;
 
@@ -29,7 +32,6 @@ public class KeyBoardEditText extends EditText implements View.OnFocusChangeList
     private boolean hasFoucs;
     private onMyFocusChangeListener mListener;
     private Context mContext;
-    private int keyboardinputtype = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD;
 
     public void setOnMyFocusChangeListener(onMyFocusChangeListener listener) {
         this.mListener = listener;
@@ -65,14 +67,7 @@ public class KeyBoardEditText extends EditText implements View.OnFocusChangeList
         setClearIconVisible(true);
     }
 
-    /**
-     * 设置输入的类型
-     * @param type
-     */
-    public void setKeyBoardInputType(int type){
-        keyboardinputtype = type;
-        setInputType(keyboardinputtype);
-    }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -96,11 +91,8 @@ public class KeyBoardEditText extends EditText implements View.OnFocusChangeList
             }
         }
 
-
         return super.onTouchEvent(event);
     }
-
-
 
     /**
      * 当ClearEditText焦点发生变化的时候，
@@ -113,10 +105,12 @@ public class KeyBoardEditText extends EditText implements View.OnFocusChangeList
             if (mListener != null) {
                 mListener.onFocusChange(v, true);
             }
+
         } else {
             if (mListener != null) {
                 mListener.onFocusChange(v, false);
             }
+            setEnabled(true);
         }
     }
 
@@ -187,6 +181,56 @@ public class KeyBoardEditText extends EditText implements View.OnFocusChangeList
 
     public void setOnKeyboardClick(OnKeyboardClick onKeyboardclick){
         this.onKeyboardclick = onKeyboardclick;
+    }
+
+    /**
+     * 禁止Edittext弹出软件盘，光标依然正常显示。
+     */
+    public void disableShowSoftInput() {
+        if (android.os.Build.VERSION.SDK_INT <= 10) {
+            this.setInputType(InputType.TYPE_NULL);
+        } else {
+            Class<EditText> cls = EditText.class;
+            Method method;
+            try {
+                method = cls.getMethod("setShowSoftInputOnFocus", boolean.class);
+                method.setAccessible(true);
+                method.invoke(this, false);
+            } catch (Exception e) {
+            }
+
+            try {
+                method = cls.getMethod("setSoftInputShownOnFocus", boolean.class);
+                method.setAccessible(true);
+                method.invoke(this, false);
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    /**
+     * 打开Edittext弹出软件盘，光标依然正常显示。
+     */
+    public void openShowSoftInput() {
+        if (android.os.Build.VERSION.SDK_INT <= 10) {
+            this.setInputType(InputType.TYPE_NULL);
+        } else {
+            Class<EditText> cls = EditText.class;
+            Method method;
+            try {
+                method = cls.getMethod("setShowSoftInputOnFocus", boolean.class);
+                method.setAccessible(true);
+                method.invoke(this, true);
+            } catch (Exception e) {
+            }
+
+            try {
+                method = cls.getMethod("setSoftInputShownOnFocus", boolean.class);
+                method.setAccessible(true);
+                method.invoke(this, true);
+            } catch (Exception e) {
+            }
+        }
     }
 
 }
