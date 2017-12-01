@@ -1,5 +1,6 @@
 package demo.minifly.com.map;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -20,8 +21,9 @@ public class InputTextviewControlActivity extends AppCompatActivity {
     private ClearEditText mDeskMyEmailEdittext;
     private KeyBoardEditText mTaskAddpointStep5ShowallEdittext2;
     private TextInputLayout mTaskAddpointStep5ShowallInputlayout2;
-    private Button button;
+    private Button button,button2;
     private boolean isShowinput = false;
+    private KeyboardEditLayout mAllLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,34 +39,34 @@ public class InputTextviewControlActivity extends AppCompatActivity {
 
         mTaskAddpointStep5ShowallEdittext2 = (KeyBoardEditText) findViewById(task_addpoint_step5_showall_edittext2);
         mTaskAddpointStep5ShowallInputlayout2 = (TextInputLayout) findViewById(R.id.task_addpoint_step5_showall_inputlayout2);
+        button2 = (Button) findViewById(R.id.button_id2);
+        mAllLayout = (KeyboardEditLayout) findViewById(R.id.all_layout);
 
-        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext,false);
-        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2,false);
+        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext, false);
+        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2, false);
 
         button = (Button) findViewById(R.id.button_id);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isShowinput){
-                    isShowinput = !isShowinput;
-                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext,isShowinput);
-                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2,isShowinput);
-                }else{
-                    isShowinput = !isShowinput;
-                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext,isShowinput);
-                    disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2,isShowinput);
-                }
-
+                mAllLayout.previous();
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAllLayout.next();
+            }
+        });
+
     }
 
     /**
      * 禁止Edittext弹出软件盘，光标依然正常显示。
      */
-    public void disableShowSoftInput(EditText editText ,boolean isShow) {
-        if (android.os.Build.VERSION.SDK_INT <= 10) {
+    public void disableShowSoftInput(EditText editText, boolean isShow) {
+        if (Build.VERSION.SDK_INT <= 10) {
             editText.setInputType(InputType.TYPE_NULL);
         } else {
             Class<EditText> cls = EditText.class;
