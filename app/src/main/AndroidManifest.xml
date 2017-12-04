@@ -282,9 +282,8 @@
         <activity android:name=".project_all_demo.weekdemo.WeekDemoActivity" />
         <activity
             android:name=".map.InputTextviewControlActivity"
-            android:windowSoftInputMode="stateHidden"
-            >
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".weex_test.WeexTest1Activity"></activity>
     </application>
 
 </manifest>

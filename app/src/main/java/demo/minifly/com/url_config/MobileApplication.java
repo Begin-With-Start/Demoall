@@ -8,10 +8,13 @@ import android.os.Bundle;
 import android.os.Vibrator;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.taobao.weex.InitConfig;
+import com.taobao.weex.WXSDKEngine;
 import com.yolanda.nohttp.NoHttp;
 
 import demo.minifly.com.utils.SharedPreferencesHelper;
 import demo.minifly.com.utils.ToastUtils;
+import demo.minifly.com.weex_test.IImageLoaderAdapter;
 
 /**
  * Created by Administrator on 2016/10/8.
@@ -48,6 +51,11 @@ public class MobileApplication extends Application {
 
         // 初始化NoHttp
         NoHttp.initialize(getApplicationContext());
+
+        /** weex的初始化操作 **/
+        InitConfig config=new InitConfig.Builder().setImgAdapter(new IImageLoaderAdapter()).build();
+        WXSDKEngine.initialize(this,config);
+        
 
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
                                                @Override

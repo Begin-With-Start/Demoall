@@ -1,14 +1,9 @@
 package demo.minifly.com.map;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-
-import java.lang.reflect.Method;
 
 import demo.minifly.com.R;
 
@@ -21,9 +16,10 @@ public class InputTextviewControlActivity extends AppCompatActivity {
     private ClearEditText mDeskMyEmailEdittext;
     private KeyBoardEditText mTaskAddpointStep5ShowallEdittext2;
     private TextInputLayout mTaskAddpointStep5ShowallInputlayout2;
-    private Button button,button2;
+    private Button button,button2,controlBtn;
     private boolean isShowinput = false;
     private KeyboardEditLayout mAllLayout;
+    private boolean isShowInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +29,15 @@ public class InputTextviewControlActivity extends AppCompatActivity {
     }
 
     private void initView() {
-
+        isShowInput = false;
         mTaskAddpointStep5ShowallEdittext = (KeyBoardEditText) findViewById(R.id.task_addpoint_step5_showall_edittext);
         mTaskAddpointStep5ShowallInputlayout = (TextInputLayout) findViewById(R.id.task_addpoint_step5_showall_inputlayout);
 
         mTaskAddpointStep5ShowallEdittext2 = (KeyBoardEditText) findViewById(task_addpoint_step5_showall_edittext2);
         mTaskAddpointStep5ShowallInputlayout2 = (TextInputLayout) findViewById(R.id.task_addpoint_step5_showall_inputlayout2);
+        controlBtn = (Button) findViewById(R.id.control_btn);
         button2 = (Button) findViewById(R.id.button_id2);
         mAllLayout = (KeyboardEditLayout) findViewById(R.id.all_layout);
-
-        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext, false);
-        disableShowSoftInput(mTaskAddpointStep5ShowallEdittext2, false);
 
         button = (Button) findViewById(R.id.button_id);
 
@@ -60,30 +54,17 @@ public class InputTextviewControlActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    /**
-     * 禁止Edittext弹出软件盘，光标依然正常显示。
-     */
-    public void disableShowSoftInput(EditText editText, boolean isShow) {
-        if (Build.VERSION.SDK_INT <= 10) {
-            editText.setInputType(InputType.TYPE_NULL);
-        } else {
-            Class<EditText> cls = EditText.class;
-            Method method;
-            try {
-                method = cls.getMethod("setShowSoftInputOnFocus", boolean.class);
-                method.setAccessible(true);
-                method.invoke(editText, isShow);
-            } catch (Exception e) {
+        controlBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isShowInput){
+                    isShowInput = !isShowInput;
+                    mAllLayout.startAllChildSoftinput();
+                }else{
+                    isShowInput = !isShowInput;
+                    mAllLayout.forbidenAllChildSoftinput();
+                }
             }
-
-            try {
-                method = cls.getMethod("setSoftInputShownOnFocus", boolean.class);
-                method.setAccessible(true);
-                method.invoke(editText, isShow);
-            } catch (Exception e) {
-            }
-        }
+        });
     }
 }

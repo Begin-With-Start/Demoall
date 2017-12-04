@@ -16,21 +16,14 @@ android {
                 arguments = [moduleName: project.getName()]
             }
         }
+        ndk {
+            abiFilters "armeabi"
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-//    不去管arm64-v8a的类型 必须加上这一句，不然编译的时候报错：找不到相应的文件，找不到 arm64-v8a的错误
-    splits {
-        abi {
-            enable true
-            reset()
-            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
-            universalApk false
         }
     }
     dataBinding {
@@ -46,6 +39,9 @@ dependencies {
     compile files('libs/pinyin4j-2.5.0.jar')
     //底部导航的一个小红点库
     //微信浏览左划结束当前页 库
+
+
+    compile files('libs/eventbus-2.4.0.jar')
     compile 'com.android.support:appcompat-v7:25.1.0'
     compile 'com.android.support:recyclerview-v7:25.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
@@ -60,9 +56,9 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.makeramen:roundedimageview:2.3.0'
     compile 'q.rorbin:badgeview:1.1.0'
+    compile 'com.taobao.android:weex_sdk:0.5.1@aar'
     compile 'com.jude:swipebackhelper:3.1.2'
     compile 'com.alibaba:arouter-api:1.1.0'
     compile 'com.alibaba:arouter-compiler:1.1.1'
     testCompile 'junit:junit:4.12'
-    compile files('libs/eventbus-2.4.0.jar')
 }

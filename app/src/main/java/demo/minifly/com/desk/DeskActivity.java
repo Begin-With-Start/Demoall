@@ -79,6 +79,7 @@ import demo.minifly.com.ui_test.MainActivity;
 import demo.minifly.com.url_config.UrlConfigActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity2;
+import demo.minifly.com.weex_test.WeexTest1Activity;
 
 public class DeskActivity extends Activity {
     private RecyclerView deskRecycleView;
@@ -423,6 +424,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("输入文字扫描控制");
         myBean.setClassName(InputTextviewControlActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("weex的一个例子");
+        myBean.setClassName(WeexTest1Activity.class);
         list.add(myBean);
 
 

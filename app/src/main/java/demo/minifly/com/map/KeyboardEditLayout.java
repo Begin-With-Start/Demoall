@@ -17,6 +17,8 @@ import java.util.ArrayList;
  * </pre>
  */
 public class KeyboardEditLayout extends LinearLayout {
+
+
     public KeyboardEditLayout(Context context) {
         super(context);
     }
@@ -31,6 +33,9 @@ public class KeyboardEditLayout extends LinearLayout {
 
     //View v = getCurrentFocus();
 
+    /**
+     * 光标往下去一个输入组件
+     */
     public void next(){
         boolean isThis = false;
         View current = this.findFocus();
@@ -48,6 +53,9 @@ public class KeyboardEditLayout extends LinearLayout {
 
     }
 
+    /**
+     * 光标往上去一个输入组件
+     */
     public void previous(){
         View current = this.findFocus();
         ArrayList<View> views =  this.getFocusables(View.FOCUS_DOWN);
@@ -59,4 +67,33 @@ public class KeyboardEditLayout extends LinearLayout {
             }
         }
     }
+
+    /**
+     * 禁用子view的软键盘自动弹出
+     */
+    public void forbidenAllChildSoftinput(){
+        KeyBoardEditText editText;
+        ArrayList<View> views =  this.getFocusables(View.FOCUS_DOWN);
+        for(View view : views){
+            if(view instanceof KeyBoardEditText){
+                editText = (KeyBoardEditText) view;
+                editText.disableShowSoftInput();
+            }
+        }
+    }
+
+    /**
+     * 启用子view的软键盘自动弹出
+     */
+    public void startAllChildSoftinput(){
+        KeyBoardEditText editText;
+        ArrayList<View> views =  this.getFocusables(View.FOCUS_DOWN);
+        for(View view : views){
+            if(view instanceof KeyBoardEditText){
+                editText = (KeyBoardEditText) view;
+                editText.openShowSoftInput();
+            }
+        }
+    }
+
 }
