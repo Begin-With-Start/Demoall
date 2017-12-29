@@ -16,7 +16,7 @@ public class PermissionDemoActivity extends AppCompatActivity implements Permiss
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permission_demo);
-        PermissionUtils.requestPermissions(this,new String[]{Manifest.permission.CAMERA,Manifest.permission.CALL_PHONE},1);
+        PermissionUtils.requestPermissions(this,new String[]{Manifest.permission.CAMERA},1);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class PermissionDemoActivity extends AppCompatActivity implements Permiss
         /**
          * 当requestcode相同时候，同时perms.size == 请求的权限数时候，认为权限请求成功。
          */
-        if(requestCode==1 && perms.size() == 2){
+        if(requestCode==1 && perms.size() == 1){
 
             Toast.makeText(this,"同意了权限全部权限",Toast.LENGTH_LONG).show();
         }
