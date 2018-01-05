@@ -203,7 +203,9 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
                         });
                 break;
             //要在不再使用的时候尽快在合适的地方（例如 onPause() onStop() 等方法中）调用 unsubscribe() 来解除引用关系，以避免内存泄露的发生。
-            
+            default:
+
+                break;
         }
     }
 
