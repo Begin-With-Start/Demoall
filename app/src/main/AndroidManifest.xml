@@ -282,8 +282,9 @@
         <activity android:name=".project_all_demo.weekdemo.WeekDemoActivity" />
         <activity
             android:name=".map.InputTextviewControlActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
-        <activity android:name=".weex_test.WeexTest1Activity"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".weex_test.WeexTest1Activity" />
+        <activity android:name=".iconfont_demo.IconfontDemoActivity"></activity>
     </application>
 
 </manifest>

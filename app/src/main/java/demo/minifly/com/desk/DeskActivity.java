@@ -42,6 +42,7 @@ import demo.minifly.com.ear_listener_demo.AudioTestActivity;
 import demo.minifly.com.ear_listener_demo.LightDemoActivity;
 import demo.minifly.com.finger_print_demo.FingerPrintActivity;
 import demo.minifly.com.float_titlebar.FloatTitleBarActivity;
+import demo.minifly.com.iconfont_demo.IconfontDemoActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity2;
 import demo.minifly.com.intent_test.Intent1Activity;
@@ -429,6 +430,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("weex的一个例子");
         myBean.setClassName(WeexTest1Activity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("iconfont例子");
+        myBean.setClassName(IconfontDemoActivity.class);
         list.add(myBean);
 
 
