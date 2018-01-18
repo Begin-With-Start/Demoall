@@ -14,6 +14,12 @@ import rx.schedulers.Schedulers;
 
 /**
  * rxjava：异步，简洁
+ * rxjava 一个异步的基于事件的库
+ * 在理解上可以用onclick的listener来理解，其实就是一个序列在每次的处理的时候，放出了回调的一个库，原理比较简单。
+ * 在序列开始循环的时候开始调用onstart，在每次循环的时候，调用onnext，在发生错误的时候调用onerror，结束的时候调用观察者的oncomplete方法。
+ * 然后在每次调用的时候进行实现就行。
+ * 没有什么特别的地方。
+ *
  */
 public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -68,16 +74,23 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
                     public void onNext(Object o) {
                         sb.append(o.toString() + "\n");
                     }
+
+                    @Override
+                    public void onStart() {
+                        super.onStart();
+                        sb.append("开始了啊" + "\n");
+                    }
                 };
 
                 //被观察者
-                Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
+                Observable observable = Observable.create(new Observable.OnSubscribe<Object>() {
                     @Override
-                    public void call(Subscriber<? super String> subscriber) {
+                    public void call(Subscriber<? super Object> subscriber) {
                         //会按顺序进行调用
                         subscriber.onNext("我");
                         subscriber.onNext("是");
                         subscriber.onNext("有顺序的");
+                        subscriber.onNext(1000001001);
                         subscriber.onCompleted();
                     }
                 });
@@ -153,6 +166,13 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
 
                     }
 
+                    @Override
+                    public void onStart() {
+                        sb.append("我开始了啊");
+                        super.onStart();
+                    }
+
+
                 };
                 String[] strs = new String[]{"我3", "是3", "有顺序的3"};
 
@@ -203,6 +223,12 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
                         });
                 break;
             //要在不再使用的时候尽快在合适的地方（例如 onPause() onStop() 等方法中）调用 unsubscribe() 来解除引用关系，以避免内存泄露的发生。
+            /**
+             * 绑定观察者与被观察者的方式只有一种，就跟设置回调一样，一个方法来绑定即可了
+             * observable.subscribe(observer);
+             * observable.subscribe(subscriber);
+             */
+
             default:
 
                 break;
@@ -210,4 +236,9 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
     }
 
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        Unsubscribed.
+    }
 }
