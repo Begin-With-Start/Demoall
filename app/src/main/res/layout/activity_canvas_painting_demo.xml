@@ -59,6 +59,16 @@
             <demo.minifly.com.canvas_test.canvas_painting_new.CanvasRotateView
                 android:layout_width="match_parent"
                 android:layout_height="180dp" />
+            <!--一个旋转canvas画布的操作-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个文字 "
+                />
+
+            <demo.minifly.com.canvas_test.canvas_painting_new.CanvasTextView
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
 
 
 

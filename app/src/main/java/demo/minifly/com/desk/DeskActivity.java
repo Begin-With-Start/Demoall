@@ -80,6 +80,7 @@ import demo.minifly.com.ui_test.MainActivity;
 import demo.minifly.com.url_config.UrlConfigActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity;
 import demo.minifly.com.user_defined_animator.OwnAnimatorActivity2;
+import demo.minifly.com.webview.WebviewActivity;
 import demo.minifly.com.weex_test.WeexTest1Activity;
 
 public class DeskActivity extends Activity {
@@ -435,6 +436,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("iconfont例子");
         myBean.setClassName(IconfontDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("webview例子。。。。");
+        myBean.setClassName(WebviewActivity.class);
         list.add(myBean);
 
 
