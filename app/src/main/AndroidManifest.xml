@@ -285,7 +285,8 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".weex_test.WeexTest1Activity" />
         <activity android:name=".iconfont_demo.IconfontDemoActivity" />
-        <activity android:name=".webview.WebviewActivity"></activity>
+        <activity android:name=".webview.WebviewActivity" />
+        <activity android:name=".lottie.LottieShowActivity"></activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import demo.minifly.com.R;
+import demo.minifly.com.utils.LogUtils;
 
 
 /**
@@ -66,6 +67,8 @@ public class ObjectAnimatorOwnColorTest extends Activity implements View.OnClick
                 int endR = (endInt >> 16) & 0xff;
                 int endG = (endInt >> 8) & 0xff;
                 int endB = endInt & 0xff;
+
+                LogUtils.showErrLog("fraction" + fraction);
 
                 //分别对Alpha、Red、Green、Blue四个分量进行计算，
                 //最终合成一个完整的int型的颜色值

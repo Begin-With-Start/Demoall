@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "demo.minifly.com"
@@ -19,6 +20,14 @@ android {
         ndk {
             abiFilters "armeabi"
         }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true    //加上这行即可
+            }
+
+        }
+
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -26,9 +35,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
+//    dataBinding {
+//        enabled = true
+//    }
 }
 
 dependencies {
@@ -42,11 +51,11 @@ dependencies {
 
 
     compile files('libs/eventbus-2.4.0.jar')
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     compile 'com.alipay.euler:andfix:0.5.0@aar'
-    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:design:26.1.0'
     compile 'com.android.support:support-v4:25.2.0'
     compile 'com.yolanda.nohttp:nohttp:1.1.0'
     compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
@@ -61,4 +70,9 @@ dependencies {
     compile 'com.alibaba:arouter-api:1.1.0'
     compile 'com.alibaba:arouter-compiler:1.1.1'
     testCompile 'junit:junit:4.12'
+    compile "com.airbnb.android:lottie:1.5.3"
+//    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

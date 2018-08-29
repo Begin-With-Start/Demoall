@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 public class DatabindingDemoActivity extends AppCompatActivity {
 
-    private User user;
+//    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

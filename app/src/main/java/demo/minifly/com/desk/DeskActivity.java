@@ -48,6 +48,7 @@ import demo.minifly.com.image_compress_demo.ImageCompressActivity2;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
+import demo.minifly.com.lottie.LottieShowActivity;
 import demo.minifly.com.map.InputTextviewControlActivity;
 import demo.minifly.com.notification_test.NotificationStartActivity;
 import demo.minifly.com.object_animator_test.ObjectAnimatorBezierActivity;
@@ -441,6 +442,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("webview例子。。。。");
         myBean.setClassName(WebviewActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("lottie动画");
+        myBean.setClassName(LottieShowActivity.class);
         list.add(myBean);
 
 
