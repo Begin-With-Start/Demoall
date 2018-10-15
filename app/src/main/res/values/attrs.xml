@@ -12,33 +12,62 @@
     </declare-styleable>
 
 
+    <!--<declare-styleable name="StateButton">-->
+        <!--&lt;!&ndash;text color&ndash;&gt;-->
+        <!--<attr name="normalTextColor" format="color|reference"/>-->
+        <!--<attr name="pressedTextColor" format="color|reference"/>-->
+        <!--<attr name="unableTextColor" format="color|reference"/>-->
+        <!--&lt;!&ndash;stroke width and color, dash width, dash gap&ndash;&gt;-->
+        <!--<attr name="strokeDashWidth" format="dimension|reference"/>-->
+        <!--<attr name="strokeDashGap" format="dimension|reference"/>-->
+        <!--<attr name="normalStrokeWidth" format="dimension|reference"/>-->
+        <!--<attr name="pressedStrokeWidth" format="dimension|reference"/>-->
+        <!--<attr name="unableStrokeWidth" format="dimension|reference"/>-->
+        <!--<attr name="normalStrokeColor" format="color|reference"/>-->
+        <!--<attr name="pressedStrokeColor" format="color|reference"/>-->
+        <!--<attr name="unableStrokeColor" format="color|reference"/>-->
+
+        <!--&lt;!&ndash;background color&ndash;&gt;-->
+        <!--<attr name="normalBackgroundColor" format="color|reference"/>-->
+        <!--<attr name="pressedBackgroundColor" format="color|reference"/>-->
+        <!--<attr name="unableBackgroundColor" format="color|reference"/>-->
+
+        <!--&lt;!&ndash;background radius&ndash;&gt;-->
+        <!--<attr name="radius" format="dimension|reference"/>-->
+        <!--<attr name="round" format="boolean|reference"/>-->
+
+        <!--&lt;!&ndash;animation duration&ndash;&gt;-->
+        <!--<attr name="animationDuration" format="integer|reference"/>-->
+
+    <!--</declare-styleable>-->
+
+    <!-- button-->
     <declare-styleable name="StateButton">
         <!--text color-->
-        <attr name="normalTextColor" format="color|reference"/>
-        <attr name="pressedTextColor" format="color|reference"/>
-        <attr name="unableTextColor" format="color|reference"/>
+        <attr name="normalTextColor" format="color|reference" />
+        <attr name="pressedTextColor" format="color|reference" />
+        <attr name="unableTextColor" format="color|reference" />
         <!--stroke width and color, dash width, dash gap-->
-        <attr name="strokeDashWidth" format="dimension|reference"/>
-        <attr name="strokeDashGap" format="dimension|reference"/>
-        <attr name="normalStrokeWidth" format="dimension|reference"/>
-        <attr name="pressedStrokeWidth" format="dimension|reference"/>
-        <attr name="unableStrokeWidth" format="dimension|reference"/>
-        <attr name="normalStrokeColor" format="color|reference"/>
-        <attr name="pressedStrokeColor" format="color|reference"/>
-        <attr name="unableStrokeColor" format="color|reference"/>
+        <attr name="strokeDashWidth" format="dimension|reference" />
+        <attr name="strokeDashGap" format="dimension|reference" />
+        <attr name="normalStrokeWidth" format="dimension|reference" />
+        <attr name="pressedStrokeWidth" format="dimension|reference" />
+        <attr name="unableStrokeWidth" format="dimension|reference" />
+        <attr name="normalStrokeColor" format="color|reference" />
+        <attr name="pressedStrokeColor" format="color|reference" />
+        <attr name="unableStrokeColor" format="color|reference" />
 
         <!--background color-->
-        <attr name="normalBackgroundColor" format="color|reference"/>
-        <attr name="pressedBackgroundColor" format="color|reference"/>
-        <attr name="unableBackgroundColor" format="color|reference"/>
+        <attr name="normalBackgroundColor" format="color|reference" />
+        <attr name="pressedBackgroundColor" format="color|reference" />
+        <attr name="unableBackgroundColor" format="color|reference" />
 
         <!--background radius-->
-        <attr name="radius" format="dimension|reference"/>
-        <attr name="round" format="boolean|reference"/>
+        <attr name="radiusButton" format="dimension|reference" />
+        <attr name="roundOrNot" format="boolean|reference" />
 
         <!--animation duration-->
-        <attr name="animationDuration" format="integer|reference"/>
-
+        <attr name="animationDuration" format="integer|reference" />
     </declare-styleable>
 
     <declare-styleable name="StateImageView">

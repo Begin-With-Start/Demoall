@@ -13,7 +13,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:padding="10dp"
-        app:round="true"
         android:text="change text color"
         app:normalBackgroundColor="@color/colorPrimary"
         app:normalTextColor="@android:color/white"

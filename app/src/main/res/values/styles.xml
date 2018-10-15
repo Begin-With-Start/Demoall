@@ -70,4 +70,9 @@
         <item name="android:textColor">@color/common_color_c5_45494e</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="commonbns_anim_inout_dialog_new">
+        <item name="android:windowEnterAnimation">@anim/modal_two_in</item>
+        <item name="android:windowExitAnimation">@anim/modal_out</item>
+    </style>
 </resources>

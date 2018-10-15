@@ -41,37 +41,41 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile files('libs/pinyin4j-2.5.0.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
     //底部导航的一个小红点库
     //微信浏览左划结束当前页 库
 
 
-    compile files('libs/eventbus-2.4.0.jar')
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:recyclerview-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
-    compile 'com.alipay.euler:andfix:0.5.0@aar'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support:support-v4:25.2.0'
-    compile 'com.yolanda.nohttp:nohttp:1.1.0'
-    compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
-    compile 'com.alibaba:fastjson:1.1.54.android'
-    compile 'io.reactivex:rxjava:1.3.0'
-    compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.makeramen:roundedimageview:2.3.0'
-    compile 'q.rorbin:badgeview:1.1.0'
-    compile 'com.taobao.android:weex_sdk:0.5.1@aar'
-    compile 'com.jude:swipebackhelper:3.1.2'
-    compile 'com.alibaba:arouter-api:1.1.0'
-    compile 'com.alibaba:arouter-compiler:1.1.1'
-    testCompile 'junit:junit:4.12'
-    compile "com.airbnb.android:lottie:1.5.3"
+    implementation files('libs/eventbus-2.4.0.jar')
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    implementation 'com.alipay.euler:andfix:0.5.0@aar'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.yolanda.nohttp:nohttp:1.1.0'
+    implementation 'com.yanzhenjie.nohttp:okhttp:1.1.0'
+    implementation 'com.alibaba:fastjson:1.1.54.android'
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'q.rorbin:badgeview:1.1.0'
+    implementation 'com.taobao.android:weex_sdk:0.5.1@aar'
+    implementation 'com.jude:swipebackhelper:3.1.2'
+    implementation 'com.alibaba:arouter-api:1.1.0'
+    implementation 'com.alibaba:arouter-compiler:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    implementation "com.airbnb.android:lottie:1.5.3"
 //    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+//    implementation 'com.leoao:lib_leoao_business:0.1.253'
+
+    implementation 'com.leoao:lib_common_ui:0.0.106'
 }
 repositories {
     mavenCentral()

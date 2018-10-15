@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_nps_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rel_update_dialog_content_topimg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_dimen_dp140"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_dimen_dp70"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_dimen_dp140"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_update_topimg" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/common_dimen_dp130"
+        android:background="@drawable/bg_dialog">
+
+        <TextView
+            android:id="@+id/tv_update_dialog_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/common_dimen_dp18"
+            android:textColor="#000000"
+            android:layout_marginTop="@dimen/common_dimen_dp15"
+            android:layout_gravity="center_horizontal"
+            android:text="升级到新版本"
+            />
+
+        <TextView
+            android:id="@+id/tv_update_dialog_content_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_dimen_dp14"
+            android:layout_marginLeft="@dimen/common_dimen_dp24"
+            android:layout_marginRight="@dimen/common_dimen_dp24"
+            android:textSize="@dimen/common_dimen_dp12"
+            android:textColor="#666666"
+            android:lineSpacingExtra="@dimen/common_dimen_dp12"
+            android:text="1.“我的”页面焕然一新，重要功能一目了然。 2.3D Touch来啦！一键触达开门、签到。 3.安卓用户久等了，开门、签到扫码速度大幅提 升，秒开感受爽到不行！"
+            />
+
+
+        <demo.minifly.com.project_all_demo.button.StateButton
+            android:id="@+id/btn_update_dialog_content_update"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/common_dimen_dp14"
+            android:layout_marginLeft="@dimen/common_dimen_dp24"
+            android:layout_marginRight="@dimen/common_dimen_dp24"
+            android:layout_height="@dimen/common_dimen_dp40"
+            app:radiusButton="@dimen/common_dimen_dp4"
+            app:normalBackgroundColor="#ff5d47"
+            app:pressedBackgroundColor="#ff5d47"
+            app:normalTextColor="@color/white"
+            app:pressedTextColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="@dimen/common_dimen_dp16"
+            android:layout_marginBottom="@dimen/common_dimen_dp25"
+            android:text="立即升级"
+            android:padding="@dimen/common_dimen_dp0"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

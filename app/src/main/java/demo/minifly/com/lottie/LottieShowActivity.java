@@ -39,7 +39,7 @@ public class LottieShowActivity extends Activity implements View.OnClickListener
             case R.id.start_play:
 //                ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
 //                mLottieMedal.setAnimation(animator);
-                mLottieMedal.setSpeed(0.7f);
+                mLottieMedal.setSpeed(2f);
                 mLottieMedal.addAnimatorUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
@@ -47,6 +47,7 @@ public class LottieShowActivity extends Activity implements View.OnClickListener
                         if(animatorF >= 0.75f ){
                             mLottieMedal.cancelAnimation();
                             mLottieMedal.setProgress(0.75f);
+//                            mLottieMedal.
                         }
                     }
                 });

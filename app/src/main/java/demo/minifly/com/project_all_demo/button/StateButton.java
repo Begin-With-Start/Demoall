@@ -118,8 +118,8 @@ public class StateButton extends AppCompatButton {
         mUnableBackground.setColor(mUnableBackgroundColor);
 
         //set radius
-        mRadius = a.getDimensionPixelSize(R.styleable.StateButton_radius, 0);
-        mRound = a.getBoolean(R.styleable.StateButton_round, false);
+//        mRadius = a.getDimensionPixelSize(R.styleable.StateButton_radius, 0);
+//        mRound = a.getBoolean(R.styleable.StateButton_round, false);
         mNormalBackground.setCornerRadius(mRadius);
         mPressedBackground.setCornerRadius(mRadius);
         mUnableBackground.setCornerRadius(mRadius);

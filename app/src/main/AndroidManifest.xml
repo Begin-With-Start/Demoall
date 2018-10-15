@@ -286,7 +286,8 @@
         <activity android:name=".weex_test.WeexTest1Activity" />
         <activity android:name=".iconfont_demo.IconfontDemoActivity" />
         <activity android:name=".webview.WebviewActivity" />
-        <activity android:name=".lottie.LottieShowActivity"></activity>
+        <activity android:name=".lottie.LottieShowActivity" />
+        <activity android:name=".leoao.dialog.dialog2.DialogShowActivity"></activity>
     </application>
 
 </manifest>

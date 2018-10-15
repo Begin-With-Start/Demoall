@@ -47,6 +47,7 @@ import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity2;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
+import demo.minifly.com.leoao.dialog.dialog2.DialogShowActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
 import demo.minifly.com.lottie.LottieShowActivity;
 import demo.minifly.com.map.InputTextviewControlActivity;
@@ -447,6 +448,11 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("lottie动画");
         myBean.setClassName(LottieShowActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("弹框展示");
+        myBean.setClassName(DialogShowActivity.class);
         list.add(myBean);
 
 
