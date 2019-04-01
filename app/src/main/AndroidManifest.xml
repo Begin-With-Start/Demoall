@@ -287,7 +287,8 @@
         <activity android:name=".iconfont_demo.IconfontDemoActivity" />
         <activity android:name=".webview.WebviewActivity" />
         <activity android:name=".lottie.LottieShowActivity" />
-        <activity android:name=".leoao.dialog.dialog2.DialogShowActivity"></activity>
+        <activity android:name=".leoao.dialog.dialog2.DialogShowActivity" />
+        <activity android:name=".leke.textviewlineheight.TextViewLineHeightActivity"></activity>
     </application>
 
 </manifest>

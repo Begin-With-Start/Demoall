@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 //apply plugin: 'kotlin-android'
+apply plugin: 'myplugin'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "demo.minifly.com"
         minSdkVersion 18
@@ -76,6 +77,8 @@ dependencies {
 //    implementation 'com.leoao:lib_leoao_business:0.1.253'
 
     implementation 'com.leoao:lib_common_ui:0.0.106'
+
+    // in the individual module build.gradle files
 }
 repositories {
     mavenCentral()

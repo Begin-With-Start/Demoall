@@ -47,6 +47,7 @@ import demo.minifly.com.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.image_compress_demo.ImageCompressActivity2;
 import demo.minifly.com.intent_test.Intent1Activity;
 import demo.minifly.com.layout_animation.LayoutAnimationActivity;
+import demo.minifly.com.leke.textviewlineheight.TextViewLineHeightActivity;
 import demo.minifly.com.leoao.dialog.dialog2.DialogShowActivity;
 import demo.minifly.com.listview_test.ListViewActivity;
 import demo.minifly.com.lottie.LottieShowActivity;
@@ -453,6 +454,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("弹框展示");
         myBean.setClassName(DialogShowActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("文字高度例子");
+        myBean.setClassName(TextViewLineHeightActivity.class);
         list.add(myBean);
 
 

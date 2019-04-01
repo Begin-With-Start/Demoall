@@ -3,10 +3,10 @@
 buildscript {
     ext.kotlin_version = '1.2.30'
     repositories {
+        //外部的访问时候直接换成aliyun的即可；
 //        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
 //        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
 //        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
-
 
         maven { url 'http://maven.leoao.com/nexus/content/repositories/releases/' }
         maven { url 'http://maven.leoao.com/nexus/content/repositories/snapshots/' }
@@ -15,25 +15,20 @@ buildscript {
         maven { url 'http://maven.leoao.com/nexus/content/repositories/google/' }
         maven { url 'http://maven.leoao.com/nexus/content/repositories/aliyun-public/' }
         maven { url 'http://maven.leoao.com/nexus/content/repositories/jcenter/' }
-        google()
-        jcenter()
+
+        maven { url uri('/Users/hexiaofei/Desktop/mojiang') }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        // NOTE: Do not place your application dependencies here
+        classpath "com.minifly.demo:myplugin:1.0.0"
     }
 }
 
 allprojects {
     repositories {
-//        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
-//        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-//        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
-
-
         maven { url 'http://maven.leoao.com/nexus/content/repositories/releases/' }
         maven { url 'http://maven.leoao.com/nexus/content/repositories/snapshots/' }
 
@@ -42,7 +37,6 @@ allprojects {
         maven { url 'http://maven.leoao.com/nexus/content/repositories/aliyun-public/' }
         maven { url 'http://maven.leoao.com/nexus/content/repositories/jcenter/' }
         maven { url 'https://jitpack.io' }
-        jcenter()
     }
 }
 
