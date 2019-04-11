@@ -73,6 +73,7 @@ import demo.minifly.com.project_testhouse.YituotuoEdittextActivity;
 import demo.minifly.com.pull_moveview_test.PullMoveviewActivity;
 import demo.minifly.com.recycleview_refreshtopbootom.RecycleviewActivity;
 import demo.minifly.com.recycleview_test.Activity3;
+import demo.minifly.com.rxjava_demo.GenericDemoActivity;
 import demo.minifly.com.rxjava_demo.RxjavaDemoActivity;
 import demo.minifly.com.scrollview_test.ScrollActivity;
 import demo.minifly.com.state_layout_fragment.StateFragmentActivity;
@@ -460,6 +461,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("文字高度例子");
         myBean.setClassName(TextViewLineHeightActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("泛型的例子");
+        myBean.setClassName(GenericDemoActivity.class);
         list.add(myBean);
 
 

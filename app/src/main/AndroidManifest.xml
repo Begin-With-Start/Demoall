@@ -288,7 +288,8 @@
         <activity android:name=".webview.WebviewActivity" />
         <activity android:name=".lottie.LottieShowActivity" />
         <activity android:name=".leoao.dialog.dialog2.DialogShowActivity" />
-        <activity android:name=".leke.textviewlineheight.TextViewLineHeightActivity"></activity>
+        <activity android:name=".leke.textviewlineheight.TextViewLineHeightActivity" />
+        <activity android:name=".rxjava_demo.GenericDemoActivity"></activity>
     </application>
 
 </manifest>
