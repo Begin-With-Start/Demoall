@@ -18,6 +18,7 @@ import java.util.LinkedList;
 
 import demo.minifly.com.ActivityAnimation.ActivityAnimation;
 import demo.minifly.com.ActivityAnimation.PhotoFragmentActivity;
+import demo.minifly.com.DesignPattern.decorator.DecoratorDemoActivity;
 import demo.minifly.com.R;
 import demo.minifly.com.RippleShow.MyRippleShowActivity;
 import demo.minifly.com.android_hot_fix.AndroidHotfixActivity;
@@ -469,6 +470,16 @@ public class DeskActivity extends Activity {
         myBean.setClassName(GenericDemoActivity.class);
         list.add(myBean);
 
+        myBean = new MyBean();
+        myBean.setTitle("装饰器模式：");
+        myBean.setClassName(DecoratorDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("网络监听：");
+        myBean.setClassName(com.fitness.network.demo.MainActivity.class);
+        list.add(myBean);
+
 
         MyAdapter myAdapter = new MyAdapter(this,list);
         deskRecycleView.setAdapter(myAdapter);
@@ -526,13 +537,10 @@ public class DeskActivity extends Activity {
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
             final MyBean myBean = list.get(position);
             ((MyHolder)holder).myTextView.setText(myBean.getTitle());
-            ((MyHolder)holder).myRel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent();
-                    intent.setClass(context,myBean.getClassName());
-                    startActivity(intent);
-                }
+            ((MyHolder)holder).myRel.setOnClickListener(view -> {
+                Intent intent = new Intent();
+                intent.setClass(context,myBean.getClassName());
+                startActivity(intent);
             });
         }
 

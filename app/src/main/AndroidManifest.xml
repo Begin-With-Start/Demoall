@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name="com.fitness.network.demo.MainActivity"></activity>
+
+
         <!-- listview的粘性处理，但是在该例子中，当没有拖动到设定的那个值时候，不能够弹回去。 -->
         <activity
             android:name=".listview_test.ListViewActivity"
@@ -157,6 +160,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!-- 主页面 -->
         <!--
         <activity
@@ -289,7 +293,11 @@
         <activity android:name=".lottie.LottieShowActivity" />
         <activity android:name=".leoao.dialog.dialog2.DialogShowActivity" />
         <activity android:name=".leke.textviewlineheight.TextViewLineHeightActivity" />
-        <activity android:name=".rxjava_demo.GenericDemoActivity"></activity>
+        <activity android:name=".rxjava_demo.GenericDemoActivity" />
+        <activity
+            android:name=".DesignPattern.decorator.DecoratorDemoActivity"
+            android:label="@string/title_activity_decorator_demo"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

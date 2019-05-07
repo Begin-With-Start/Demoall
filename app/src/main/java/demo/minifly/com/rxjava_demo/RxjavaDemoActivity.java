@@ -1,15 +1,24 @@
 package demo.minifly.com.rxjava_demo;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import demo.minifly.com.R;
 import rx.Observable;
+import rx.Observer;
+import rx.Scheduler;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -19,7 +28,6 @@ import rx.schedulers.Schedulers;
  * 在序列开始循环的时候开始调用onstart，在每次循环的时候，调用onnext，在发生错误的时候调用onerror，结束的时候调用观察者的oncomplete方法。
  * 然后在每次调用的时候进行实现就行。
  * 没有什么特别的地方。
- *
  */
 public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,6 +37,7 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
     private Button rxjavaBtn2Id;
     private Button rxjavaBtn3Id;
     private Button rxjavaBtn4Id;
+    private Button rxjavaBtn5Id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +59,8 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
         rxjavaBtn3Id.setOnClickListener(this);
         rxjavaBtn4Id = (Button) findViewById(R.id.rxjava_btn4_id);
         rxjavaBtn4Id.setOnClickListener(this);
+        rxjavaBtn5Id = (Button) findViewById(R.id.rxjava_btn5_id);
+        rxjavaBtn5Id.setOnClickListener(this);
     }
 
     @Override
@@ -196,7 +207,7 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
             case R.id.rxjava_btn4_id:
                 //链式的方式写一次
                 sb = new StringBuilder("");
-                Observable.just("我4","还是4","有4","顺序的4")
+                Observable.just("我4", "还是4", "有4", "顺序的4")
                         .subscribeOn(Schedulers.io())//指定订阅的线程在io线程中
                         .observeOn(AndroidSchedulers.mainThread()) //指定subscriber回调发生在主线程中。
                         .subscribe(new Subscriber<String>() {
@@ -219,8 +230,69 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
                             @Override
                             public void onStart() {
                                 super.onStart();
+                                sb.append("我开始了 4: ");
                             }
                         });
+
+
+                sb.append(" \n ");
+
+//                Observable : 可观察者 Observer ： 观察者  subscribe ： 订阅   事件 ；Observable 和 Observer 通过 subscribe() 方法实现订阅关系，从而 Observable 可以在需要的时候发出事件来通知 Observer
+                Observable.create(new Observable.OnSubscribe<String>() {
+                    @Override
+                    public void call(Subscriber<? super String> subscriber) {
+                        //实现被观察者的实现；
+                        subscriber.onNext("我5");
+                        subscriber.onNext("是5");
+                        subscriber.onNext("一个5");
+                        subscriber.onNext("链式的调用5");
+                        subscriber.onCompleted(); //调用了之后才会起反应；
+                    }
+                }).subscribeOn(Schedulers.io())//指定订阅的线程在io线程中
+                    .observeOn(AndroidSchedulers.mainThread()) //指定subscriber回调发生在主线程中。
+                    .subscribe(new Subscriber<String>() {
+                            @Override
+                            public void onCompleted() {
+                                sb.append("我打印完了5");
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+
+                            }
+
+                            @Override
+                            public void onNext(String o) {
+                                sb.append("" + o);
+                            }
+
+                            @Override
+                            public void onStart() {
+                                super.onStart();
+                                sb.append("开始了啊5");
+                            }
+                        });
+
+
+                Observable observable3 = Observable.just("呜" , "哈" , "哈" );
+                Observer observer = new Observer() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(Object o) {
+                        Log.e("mainactivity" , o.toString());
+                    }
+                };
+                observable3.subscribe(observer);
+
                 break;
             //要在不再使用的时候尽快在合适的地方（例如 onPause() onStop() 等方法中）调用 unsubscribe() 来解除引用关系，以避免内存泄露的发生。
             /**
@@ -229,16 +301,89 @@ public class RxjavaDemoActivity extends AppCompatActivity implements View.OnClic
              * observable.subscribe(subscriber);
              */
 
-            default:
+            /**
+             * just() 与 from() 跟之前的订阅的create方式是等价的；
+             */
 
+            case R.id.rxjava_btn5_id:
+
+                List<String > dest = new LinkedList<>();
+                dest.add("5顺");
+                dest.add("5序");
+                dest.add("5显示");
+                Observable.from(dest).subscribe(new Action1<String>(){
+                    @Override
+                    public void call(String s) {
+                        Log.e("mainactivity" , "" + s);
+                    }
+                });
+
+
+                /**
+                 * 转换的方式； map方式
+                 */
+                Observable.just("10" , "21" ).map(s -> Integer.parseInt(s)).subscribe(integer -> Log.e("mainactivity" , integer.toString()));
+
+                /**
+                 * 转换的方式： flatmap
+                 */
+                List<Student> students = new LinkedList<>();
+                students.add(new Student("142","王老师","语文"));
+                students.add(new Student("142","李老师","数学"));
+                students.add(new Student("142","张老师","英语"));
+                students.add(new Student("143","王老师","语文"));
+
+                Observable.just(students).flatMap((Func1<List<Student>, Observable<Student>>) students1 -> Observable.from(students1)).subscribe(student -> {
+
+                });
+
+
+                break;
+
+            default:
                 break;
         }
     }
-
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 //        Unsubscribed.
+    }
+
+    class Student{
+        String number ;
+        String name ;
+        String course;
+
+        public Student(String number, String name, String course) {
+            this.number = number;
+            this.name = name;
+            this.course = course;
+        }
+
+        public String getNumber() {
+            return number;
+        }
+
+        public void setNumber(String number) {
+            this.number = number;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getCourse() {
+            return course;
+        }
+
+        public void setCourse(String course) {
+            this.course = course;
+        }
     }
 }

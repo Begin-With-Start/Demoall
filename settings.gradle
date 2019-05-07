@@ -1,1 +1,1 @@
-include ':app', ':myplugin'
+include ':app', ':myplugin', ':network_lib'

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Vibrator;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.fitness.network.NetworkManager;
 import com.leoao.sdk.common.config.SdkConfig;
 import com.taobao.weex.InitConfig;
 import com.taobao.weex.WXSDKEngine;
@@ -42,6 +43,10 @@ public class MobileApplication extends Application {
         // 避免重复初始化
         instance = this;
         sp = new SharedPreferencesHelper(this);
+
+
+        NetworkManager.getDefault().init(this);
+
         SdkConfig.getSdkConfig().init(this);
         //arouter初始化
         if (isDebug) {           // 这两行必须写在init之前，否则这些配置在init过程中将无效

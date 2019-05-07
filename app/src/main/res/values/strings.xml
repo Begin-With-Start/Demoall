@@ -75,4 +75,5 @@
     <!-- iconfont 资源-->
     <string name="icon_font_msg">\ue639</string>
     <string name="icon_font_en">&#xe77b;</string>
+    <string name="title_activity_decorator_demo">DecoratorDemoActivity</string>
 </resources>

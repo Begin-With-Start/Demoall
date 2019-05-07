@@ -32,7 +32,7 @@ public class GenericDemoActivity extends AppCompatActivity {
         //泛型接口，其中的方法的入参和返回值类型都是在调用的时候进行指定；
         ((TextView)findViewById(R.id.generic_txt_1)).setText("泛型接口方法的入参和返回值都为泛型 在实现的时候指定类型：  \n " + new GInterfaceImp().perform("123")
                 + "\n" + "" + new GInterfaceImp2().perform("123") + "\n String 的list 与 integer的list" + class1.equals(class2) + "   " + class1.toString() + "   " + class2.toString()
-                + "\n " + "   " + (new GInterfaceImp4().dealPerform(new GInterfaceImp3()))
+//                + "\n " + "   " + (new GInterfaceImp4().dealPerform(new GInterfaceImp3()))
         );
 
         /**
