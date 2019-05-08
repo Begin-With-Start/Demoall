@@ -1,7 +1,11 @@
 package com.fitness.network;
 
 import android.app.Application;
+import android.arch.lifecycle.GenericLifecycleObserver;
+import android.arch.lifecycle.Lifecycle;
+import android.arch.lifecycle.LifecycleOwner;
 import android.content.IntentFilter;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.fitness.network.annotation.NetworkListener;
@@ -9,12 +13,13 @@ import com.fitness.network.entry.MethodEntry;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import static android.arch.lifecycle.Lifecycle.State.DESTROYED;
 
 /**
  * author ： minifly
@@ -26,7 +31,7 @@ public class NetworkManager implements NetChangeObserver {
     private NetStateReceiver mReceiver;
     private Application mApplication;
 
-    private Map<Object, List<MethodEntry>> methodEntryMap;
+    private Map<LifecycleOwner, List<MethodEntry>> methodEntryMap;
 
     public NetworkManager() {
         mReceiver = new NetStateReceiver();
@@ -63,8 +68,9 @@ public class NetworkManager implements NetChangeObserver {
      * 解绑
      */
     public void unRegisterObserver(Object object) {
-        if (methodEntryMap.size() != 0 && methodEntryMap.get(object.getClass()) != null) {
-            methodEntryMap.remove(object.getClass());
+        if (methodEntryMap.size() != 0 && methodEntryMap.get(object) != null) {
+            Log.e("mainactivity" , "注销方法" + object.getClass());
+            methodEntryMap.remove(object);
         }
     }
 
@@ -82,19 +88,26 @@ public class NetworkManager implements NetChangeObserver {
         getApplication().unregisterReceiver(mReceiver);
     }
 
-    public void registerObserver(Object object) {
+    public void registerObserver(LifecycleOwner object) {
         List<MethodEntry> methodEntry = methodEntryMap.get(object.getClass());
         if (methodEntry == null) { //为空：尚未注册；
+            if (object.getLifecycle().getCurrentState() == DESTROYED) {
+                return;
+            }
+            LifecycleBoundObserver observer = new LifecycleBoundObserver(object);
+            object.getLifecycle().addObserver(observer);
             methodEntry = findAnnotationMethod(object);
-            methodEntryMap.put(object, methodEntry);
+            if(methodEntry != null && methodEntry.size() != 0){
+                methodEntryMap.put(object, methodEntry);
+            }
         }
     }
 
     /**
      * 获取注解的方法class
-     *
+     * 检查： 返回值为空 + 方法参数为一个
      * @param object 监听类
-     * @return 方法数组
+     * @return 方法数组 找不到绑定的方法不会添加到map中；
      */
     public List<MethodEntry> findAnnotationMethod(Object object) {
         List<MethodEntry> methodEntryList = new ArrayList<>();
@@ -114,15 +127,11 @@ public class NetworkManager implements NetChangeObserver {
                 throw new RuntimeException(method.getName() + "方法的返回值需要为空!");
             }
 
-//            if(Modifier.PUBLIC != method.getModifiers()){
-//                throw new RuntimeException(method.getName() + "方法的返回值需要为空!");
-//            }
-
             Class<?>[] parameterTypes = method.getParameterTypes();
             if (parameterTypes.length != 1) {
                 throw new RuntimeException(method.getName() + "方法的参数必须只有一个");
             }
-            MethodEntry methodEntry = new MethodEntry(parameterTypes[0], annotation.type(), method);
+            MethodEntry methodEntry = new MethodEntry(parameterTypes[0], annotation.type(), method );
             methodEntryList.add(methodEntry);
         }
         return methodEntryList;
@@ -134,12 +143,13 @@ public class NetworkManager implements NetChangeObserver {
      * @param type 网络类型
      */
     private void engin(@NetTypes String type) {
-        Set<Object> methodSets = methodEntryMap.keySet();
+        Set<LifecycleOwner> methodSets = methodEntryMap.keySet();
+
         for (Object object : methodSets) {
             List<MethodEntry> methodEntries = methodEntryMap.get(object);
             for (MethodEntry methodEntry : methodEntries) {
                 if (methodEntry.getType().isAssignableFrom(type.getClass())) { //当监听传递的监听类型与注解方法的类型相同时
-                    Log.e("mainactivity", "类型相同了啊1 " + methodEntry.getType().toString() + "     " + type.getClass().toString() + " method name  " + methodEntry.getMethod().getName() + "  type" + type);
+//                    Log.e("mainactivity" ,"反射到这个方法" + methodEntry.getMethod().getName() );
                     switch (methodEntry.getNetType()) {
                         case NetTypes.AUTO:
                             invokeAnnotationMethod(methodEntry, type, object);
@@ -151,13 +161,13 @@ public class NetworkManager implements NetChangeObserver {
                             break;
                         case NetTypes.NET_3G:
 
-                            if (NetTypes.NET_2G == type || NetTypes.NONE == type) {
+                            if (NetTypes.NET_3G == type || NetTypes.NONE == type) {
                                 invokeAnnotationMethod(methodEntry, type, object);
                             }
                             break;
                         case NetTypes.NET_4G:
 
-                            if (NetTypes.NET_2G == type || NetTypes.NONE == type) {
+                            if (NetTypes.NET_4G == type || NetTypes.NONE == type) {
                                 invokeAnnotationMethod(methodEntry, type, object);
                             }
                             break;
@@ -187,11 +197,36 @@ public class NetworkManager implements NetChangeObserver {
             excuteMethod.invoke(object, nettype);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
-            Log.e("mainactivity", "反射错误1 ");
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-            Log.e("mainactivity", "反射错误2 ");
         }
+    }
+
+
+
+    class LifecycleBoundObserver implements GenericLifecycleObserver {
+        @NonNull final LifecycleOwner mOwner;
+
+        LifecycleBoundObserver(@NonNull LifecycleOwner owner) {
+            mOwner = owner;
+        }
+
+        @Override
+        public void onStateChanged(LifecycleOwner source, Lifecycle.Event event) {
+            if (mOwner.getLifecycle().getCurrentState() == DESTROYED) {
+                unRegisterObserver(mOwner);
+                return;
+            }
+
+//            if(event == Lifecycle.Event.ON_STOP || event == Lifecycle.Event.ON_PAUSE){
+//
+//            }else{
+//
+//            }
+        }
+
+
+
     }
 
     @Override

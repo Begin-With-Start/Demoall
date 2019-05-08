@@ -8,11 +8,11 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application>
-
-        <!--网络监听广播接收处理-->
-        <receiver android:name="com.fitness.network.NetStateReceiver">
+        <activity android:name=".demo.NetworkTest2Activity"></activity>
+        <!-- 网络监听广播接收处理 -->
+        <receiver android:name=".NetStateReceiver">
             <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
     </application>

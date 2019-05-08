@@ -136,4 +136,5 @@ public class MobileApplication extends Application {
         }
         return versionName;
     }
+
 }
