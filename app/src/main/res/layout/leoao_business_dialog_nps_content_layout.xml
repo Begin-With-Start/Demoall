@@ -12,7 +12,7 @@
         android:layout_height="@dimen/common_dimen_dp400"
         android:scaleType="centerCrop" />
 
-    <demo.minifly.com.project_all_demo.button.StateButton
+    <demo.minifly.com.fuction_demo.project_all_demo.button.StateButton
         android:id="@+id/dialog_nps_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/common_dimen_dp58"

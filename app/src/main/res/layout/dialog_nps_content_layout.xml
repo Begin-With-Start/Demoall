@@ -62,7 +62,7 @@
             />
 
 
-        <demo.minifly.com.project_all_demo.button.StateButton
+        <demo.minifly.com.fuction_demo.project_all_demo.button.StateButton
             android:id="@+id/btn_update_dialog_content_update"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/common_dimen_dp14"

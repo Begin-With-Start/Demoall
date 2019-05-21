@@ -4,31 +4,31 @@
     android:background="@color/white"
     android:layout_height="match_parent">
         <!---->
-<!--    <demo.minifly.com.canvas_test.CanvasViewDemo
+<!--    <demo.minifly.com.fuction_demo.canvas_test.CanvasViewDemo
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_margin="10dp"
         />-->
         <!--刮刮乐的操作-->
-<!--    <demo.minifly.com.canvas_test.CanvasGuaguale
+<!--    <demo.minifly.com.fuction_demo.canvas_test.CanvasGuaguale
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         />    -->
-    <!--<demo.minifly.com.canvas_test.CanvasLinearGradient-->
+    <!--<demo.minifly.com.fuction_demo.canvas_test.CanvasLinearGradient-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->
         <!--android:layout_margin="10dp"-->
         <!--/>-->
 
-<!--    <demo.minifly.com.canvas_test.CanvasPathEffect
+<!--    <demo.minifly.com.fuction_demo.canvas_test.CanvasPathEffect
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
         />-->
 
         <!--图片的水平滚动-->
-<!--    <demo.minifly.com.canvas_test.MarqueeImageView
+<!--    <demo.minifly.com.fuction_demo.canvas_test.MarqueeImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
@@ -36,7 +36,7 @@
         />-->
 
         <!--圆形进度条-->
-    <demo.minifly.com.canvas_test.CanvasViewClock
+    <demo.minifly.com.fuction_demo.canvas_test.CanvasViewClock
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_margin="20dp"

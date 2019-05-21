@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:layout_height="match_parent">
     
-    <demo.minifly.com.canvas_test.ObliqueProgressbar
+    <demo.minifly.com.fuction_demo.canvas_test.ObliqueProgressbar
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="30dp"

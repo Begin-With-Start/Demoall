@@ -18,7 +18,7 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
-        android:name=".url_config.MobileApplication"
+        android:name=".fuction_demo.url_config.MobileApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -30,127 +30,127 @@
 
         <!-- listview的粘性处理，但是在该例子中，当没有拖动到设定的那个值时候，不能够弹回去。 -->
         <activity
-            android:name=".listview_test.ListViewActivity"
+            android:name=".fuction_demo.listview_test.ListViewActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- scrollview 的拖动粘性事件 overdrag -->
         <activity
-            android:name=".scrollview_test.ScrollActivity"
+            android:name=".fuction_demo.scrollview_test.ScrollActivity"
             android:launchMode="singleTop" />
         <!-- view 的七种拖动view的方式。 -->
         <activity
-            android:name=".pull_moveview_test.PullMoveviewActivity"
+            android:name=".fuction_demo.pull_moveview_test.PullMoveviewActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- titleview 的设置方式。 -->
         <activity
-            android:name=".ui_test.MainActivity"
+            android:name=".fuction_demo.ui_test.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
 
         <!-- canvas 绘图相关 -->
         <activity
-            android:name=".canvas_test.ZCanvasActivity"
+            android:name=".fuction_demo.canvas_test.ZCanvasActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
 
         <!-- canvas 绘图相关 -->
         <activity
-            android:name=".rsatest.CanvasActivity"
+            android:name=".fuction_demo.rsatest.CanvasActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 属性动画 -->
         <activity
-            android:name=".object_animator_test.ObjectAnimatorTest"
+            android:name=".fuction_demo.object_animator_test.ObjectAnimatorTest"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 属性动画 自定义问题。 -->
         <activity
-            android:name=".object_animator_test.ObjectAnimatorOwnTest"
+            android:name=".fuction_demo.object_animator_test.ObjectAnimatorOwnTest"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 属性动画 自定义问题。 -->
         <activity
-            android:name=".object_animator_test.ObjectAnimatorOwnColorTest"
+            android:name=".fuction_demo.object_animator_test.ObjectAnimatorOwnColorTest"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 属性动画 动画集合相关 -->
         <activity
-            android:name=".object_animator_test.PropertyValuesHolderAnimatorTest"
+            android:name=".fuction_demo.object_animator_test.PropertyValuesHolderAnimatorTest"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 自定义的动画 -->
         <activity
-            android:name=".user_defined_animator.OwnAnimatorActivity"
+            android:name=".fuction_demo.user_defined_animator.OwnAnimatorActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 自定义的动画 三维开门的效果 -->
         <activity
-            android:name=".user_defined_animator.OwnAnimatorActivity2"
+            android:name=".fuction_demo.user_defined_animator.OwnAnimatorActivity2"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
 
         <!-- recycleview的自定义问题 -->
         <activity
-            android:name=".recycleview_test.Activity3"
+            android:name=".fuction_demo.recycleview_test.Activity3"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 属性动画 动画集合相关 -->
         <!-- 布局动画问题 在布局中添加这个设置之后添加view会有逐渐显示的过渡效果 -->
         <activity
-            android:name=".layout_animation.LayoutAnimationActivity"
+            android:name=".fuction_demo.layout_animation.LayoutAnimationActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 布局动画问题 -->
         <!-- 属性动画的值动画 问题 -->
         <activity
-            android:name=".object_animator_test.ValueAnimatorTextActivity"
+            android:name=".fuction_demo.object_animator_test.ValueAnimatorTextActivity"
             android:launchMode="singleTop"
             android:theme="@style/DeepTheme" />
         <!-- 属性动画的值动画 问题 -->
         <activity
-            android:name=".ActivityAnimation.ActivityAnimation"
+            android:name=".fuction_demo.ActivityAnimation.ActivityAnimation"
             android:theme="@style/DeepTheme" />
         <activity
-            android:name=".ActivityAnimation.ActivityAnimation2"
+            android:name=".fuction_demo.ActivityAnimation.ActivityAnimation2"
             android:theme="@style/DeepTheme" />
         <!-- 有界波纹与无界波纹 -->
         <activity
-            android:name=".RippleShow.MyRippleShowActivity"
+            android:name=".fuction_demo.RippleShow.MyRippleShowActivity"
             android:theme="@style/DeepTheme" />
 
         <!-- 刮刮乐效果 -->
         <activity
-            android:name=".canvas_test.ZGuagualeActivity"
+            android:name=".fuction_demo.canvas_test.ZGuagualeActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 时钟效果 -->
         <activity
-            android:name=".canvas_test.ZCanvasClockActivity"
+            android:name=".fuction_demo.canvas_test.ZCanvasClockActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- sin曲线效果 -->
         <activity
-            android:name=".canvas_test.ZCanvasSurfaceSinActivity"
+            android:name=".fuction_demo.canvas_test.ZCanvasSurfaceSinActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 颜色渐变 -->
         <activity
-            android:name=".canvas_test.ZCanvasLinearGraddientActivity"
+            android:name=".fuction_demo.canvas_test.ZCanvasLinearGraddientActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 绘图版 -->
         <activity
-            android:name=".canvas_test.ZCanvasSurfaceDrawBoardActivity"
+            android:name=".fuction_demo.canvas_test.ZCanvasSurfaceDrawBoardActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 图片滚动 -->
         <activity
-            android:name=".canvas_test.ZMarqueeImageviewActivity"
+            android:name=".fuction_demo.canvas_test.ZMarqueeImageviewActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 自带view动画 -->
         <activity
-            android:name=".object_animator_test.ViewWithAnimatorActivity"
+            android:name=".fuction_demo.object_animator_test.ViewWithAnimatorActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
         <!-- 主页面 -->
         <activity
-            android:name=".desk.DeskActivity"
+            android:name=".fuction_demo.desk.DeskActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -177,123 +177,123 @@
         -->
         <!-- 隐藏下下面的bar -->
         <activity
-            android:name=".gallary_test.GalleryTestActivity"
+            android:name=".fuction_demo.gallary_test.GalleryTestActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <!-- 工程定制的一个progressbar -->
         <activity
-            android:name=".canvas_test.ZCanvasMyCustomizationActivity"
+            android:name=".fuction_demo.canvas_test.ZCanvasMyCustomizationActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <!-- 工作的demo页面 -->
         <activity
-            android:name=".project_testhouse.HorizenProgressActivity"
+            android:name=".fuction_demo.project_testhouse.HorizenProgressActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <!-- 触摸反馈 starting -->
         <activity
-            android:name=".androidl_animation.AndroidLTouchFeedbackActivity"
+            android:name=".fuction_demo.androidl_animation.AndroidLTouchFeedbackActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".androidl_animation.AndroidLCircularRevealActivity"
+            android:name=".fuction_demo.androidl_animation.AndroidLCircularRevealActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".androidl_animation.AndroidLZActivity"
+            android:name=".fuction_demo.androidl_animation.AndroidLZActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
         <!-- 贝塞尔曲线的购物车动画 starting -->
         <activity
-            android:name=".object_animator_test.ObjectAnimatorBezierActivity"
+            android:name=".fuction_demo.object_animator_test.ObjectAnimatorBezierActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 斜线进度条 带有小雨点 starting -->
         <activity
-            android:name=".canvas_test.ZObliqueProgressActivity"
+            android:name=".fuction_demo.canvas_test.ZObliqueProgressActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name=".textView.TextViewActivity" />
+        <activity android:name=".fuction_demo.textView.TextViewActivity" />
         <!-- 热修复框架测试 starting -->
         <activity
-            android:name=".android_hot_fix.AndroidHotfixActivity"
+            android:name=".fuction_demo.android_hot_fix.AndroidHotfixActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 热修复框架测试 ending -->
         <activity
-            android:name=".project_testhouse.YituotuoEdittextActivity"
+            android:name=".fuction_demo.project_testhouse.YituotuoEdittextActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".ActivityAnimation.PhotoFragmentActivity"
+            android:name=".fuction_demo.ActivityAnimation.PhotoFragmentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".intent_test.Intent1Activity" />
-        <activity android:name=".intent_test.Intent2Activity" />
+        <activity android:name=".fuction_demo.intent_test.Intent1Activity" />
+        <activity android:name=".fuction_demo.intent_test.Intent2Activity" />
         <activity
-            android:name=".project_progress_new.ProjectProgressActivity"
+            android:name=".fuction_demo.project_progress_new.ProjectProgressActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".constraintlayout_test.ConstraintActivity"
+            android:name=".fuction_demo.constraintlayout_test.ConstraintActivity"
             android:label="@string/title_activity_constraint"
             android:theme="@style/AppTheme" />
         <!-- ImageCompressActivity -->
-        <activity android:name=".recycleview_refreshtopbootom.RecycleviewActivity" />
-        <activity android:name=".image_compress_demo.ImageCompressActivity" />
-        <activity android:name=".image_compress_demo.ImageCompressActivity2" />
-        <activity android:name=".rxjava_demo.RxjavaDemoActivity" />
+        <activity android:name=".fuction_demo.recycleview_refreshtopbootom.RecycleviewActivity" />
+        <activity android:name=".fuction_demo.image_compress_demo.ImageCompressActivity" />
+        <activity android:name=".fuction_demo.image_compress_demo.ImageCompressActivity2" />
+        <activity android:name=".fuction_demo.rxjava_demo.RxjavaDemoActivity" />
         <activity
-            android:name=".url_config.UrlConfigActivity"
+            android:name=".fuction_demo.url_config.UrlConfigActivity"
             android:label="@string/title_activity_url_config"
             android:theme="@style/AppTheme" />
-        <activity android:name=".url_config.Url2Activity" />
-        <activity android:name=".permission_demo.PermissionDemoActivity" />
-        <activity android:name=".databinding_test.DatabindingDemoActivity" />
-        <activity android:name=".state_layout_fragment.StateFragmentActivity" />
-        <activity android:name=".notification_test.NotificationViewActivity" />
-        <activity android:name=".notification_test.NotificationStartActivity" />
-        <activity android:name=".project_all_demo.rangebar.RangebarActivity" />
-        <activity android:name=".project_all_demo.keyborad.KeyboardActivity" />
-        <activity android:name=".project_all_demo.bubble.BubblePopActivity" />
-        <activity android:name=".canvas_test.canvas_new.CanvasAllDealViewActivity" />
+        <activity android:name=".fuction_demo.url_config.Url2Activity" />
+        <activity android:name=".fuction_demo.permission_demo.PermissionDemoActivity" />
+        <activity android:name=".fuction_demo.databinding_test.DatabindingDemoActivity" />
+        <activity android:name=".fuction_demo.state_layout_fragment.StateFragmentActivity" />
+        <activity android:name=".fuction_demo.notification_test.NotificationViewActivity" />
+        <activity android:name=".fuction_demo.notification_test.NotificationStartActivity" />
+        <activity android:name=".fuction_demo.project_all_demo.rangebar.RangebarActivity" />
+        <activity android:name=".fuction_demo.project_all_demo.keyborad.KeyboardActivity" />
+        <activity android:name=".fuction_demo.project_all_demo.bubble.BubblePopActivity" />
+        <activity android:name=".fuction_demo.canvas_test.canvas_new.CanvasAllDealViewActivity" />
         <activity
-            android:name=".canvas_test.canvas_painting_new.CanvasPaintingDemoActivity"
+            android:name=".fuction_demo.canvas_test.canvas_painting_new.CanvasPaintingDemoActivity"
             android:screenOrientation="portrait" />
         <!-- 图片上传相关的界面 -->
         <activity
-            android:name=".project_all_demo.photo_select_upload.UploadImageActivity"
+            android:name=".fuction_demo.project_all_demo.photo_select_upload.UploadImageActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <!-- 图片上传相关。 -->
         <activity
-            android:name=".project_all_demo.photo_select_upload.UploadConfirmActivity"
+            android:name=".fuction_demo.project_all_demo.photo_select_upload.UploadConfirmActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".finger_print_demo.FingerPrintActivity"
+            android:name=".fuction_demo.finger_print_demo.FingerPrintActivity"
             android:label="@string/title_activity_finger_print"
             android:theme="@style/AppTheme" />
-        <activity android:name=".transition_element.TransitionElementActivity" />
-        <activity android:name=".transition_element.TransitionElement2Activity" />
-        <activity android:name=".transition_element.FrameActivity" />
-        <activity android:name=".transition_element.FrameFragmentAcitity" />
-        <activity android:name=".float_titlebar.FloatTitleBarActivity" />
-        <activity android:name=".project_arrow_test.ProjectArrowTestActivity" />
-        <activity android:name=".bottomnavgationview_demo.BottomNavigationDemoActivity" />
+        <activity android:name=".fuction_demo.transition_element.TransitionElementActivity" />
+        <activity android:name=".fuction_demo.transition_element.TransitionElement2Activity" />
+        <activity android:name=".fuction_demo.transition_element.FrameActivity" />
+        <activity android:name=".fuction_demo.transition_element.FrameFragmentAcitity" />
+        <activity android:name=".fuction_demo.float_titlebar.FloatTitleBarActivity" />
+        <activity android:name=".fuction_demo.project_arrow_test.ProjectArrowTestActivity" />
+        <activity android:name=".fuction_demo.bottomnavgationview_demo.BottomNavigationDemoActivity" />
         <activity
-            android:name=".swipe_back.SwipeMainActivity"
+            android:name=".fuction_demo.swipe_back.SwipeMainActivity"
             android:theme="@style/mainActivityTheme" />
         <activity
-            android:name=".swipe_back.SwipeNextActivity"
+            android:name=".fuction_demo.swipe_back.SwipeNextActivity"
             android:theme="@style/allActivityTheme" />
-        <activity android:name=".canvas_pathmesure_demo.PathMesureDemoActivity" />
-        <activity android:name=".ear_listener_demo.AudioTestActivity" />
-        <activity android:name=".ear_listener_demo.LightDemoActivity" />
-        <activity android:name=".canvas_pathmesure_demo.BlurMaskFilterDemoActivity" />
-        <activity android:name=".project_all_demo.button.ButtonActivity" />
-        <activity android:name=".project_all_demo.weekdemo.WeekDemoActivity" />
+        <activity android:name=".fuction_demo.canvas_pathmesure_demo.PathMesureDemoActivity" />
+        <activity android:name=".fuction_demo.ear_listener_demo.AudioTestActivity" />
+        <activity android:name=".fuction_demo.ear_listener_demo.LightDemoActivity" />
+        <activity android:name=".fuction_demo.canvas_pathmesure_demo.BlurMaskFilterDemoActivity" />
+        <activity android:name=".fuction_demo.project_all_demo.button.ButtonActivity" />
+        <activity android:name=".fuction_demo.project_all_demo.weekdemo.WeekDemoActivity" />
         <activity
-            android:name=".map.InputTextviewControlActivity"
+            android:name=".fuction_demo.map.InputTextviewControlActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".weex_test.WeexTest1Activity" />
-        <activity android:name=".iconfont_demo.IconfontDemoActivity" />
-        <activity android:name=".webview.WebviewActivity" />
-        <activity android:name=".lottie.LottieShowActivity" />
-        <activity android:name=".leoao.dialog.dialog2.DialogShowActivity" />
-        <activity android:name=".leke.textviewlineheight.TextViewLineHeightActivity" />
-        <activity android:name=".rxjava_demo.GenericDemoActivity" />
+        <activity android:name=".fuction_demo.weex_test.WeexTest1Activity" />
+        <activity android:name=".fuction_demo.iconfont_demo.IconfontDemoActivity" />
+        <activity android:name=".fuction_demo.webview.WebviewActivity" />
+        <activity android:name=".fuction_demo.lottie.LottieShowActivity" />
+        <activity android:name=".fuction_demo.dialog2.DialogShowActivity" />
+        <activity android:name=".fuction_demo.textviewlineheight.TextViewLineHeightActivity" />
+        <activity android:name=".fuction_demo.rxjava_demo.GenericDemoActivity" />
         <activity
             android:name=".DesignPattern.decorator.DecoratorDemoActivity"
             android:label="@string/title_activity_decorator_demo"

@@ -1,6 +1,6 @@
 package demo.minifly.com.DesignPattern.decorator;
 
-import demo.minifly.com.utils.LogUtils;
+import demo.minifly.com.fuction_demo.utils.LogUtils;
 
 public class AudiCar implements Car {
 

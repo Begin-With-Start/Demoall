@@ -29,7 +29,7 @@
 #-------------------------------------------定制化区域----------------------------------------------
 #---------------------------------1.实体类---------------------------------
 
--keep class demo.minifly.com.bean.** { *; }
+-keep class demo.minifly.com.fuction_demo.bean.** { *; }
 
 #-------------------------------------------------------------------------
 
@@ -69,7 +69,7 @@
 
 #---------------------------------3.与js互相调用的类------------------------
 
--keepclasseswithmembers class demo.minifly.com.bean.ui.MainActivity$JSInterface {
+-keepclasseswithmembers class demo.minifly.com.fuction_demo.bean.ui.MainActivity$JSInterface {
       <methods>;
 }
 

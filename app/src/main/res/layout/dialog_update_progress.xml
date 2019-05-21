@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <demo.minifly.com.project_all_demo.button.StateButton
+            <demo.minifly.com.fuction_demo.project_all_demo.button.StateButton
                 android:id="@+id/btn_update_dialog_progress_cancle"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"
@@ -99,7 +99,7 @@
                 app:pressedTextColor="#888888"
                 app:radiusButton="@dimen/common_dimen_dp4" />
 
-            <demo.minifly.com.project_all_demo.button.StateButton
+            <demo.minifly.com.fuction_demo.project_all_demo.button.StateButton
                 android:id="@+id/btn_update_dialog_progress_confirm"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"

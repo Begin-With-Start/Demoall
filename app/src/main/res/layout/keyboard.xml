@@ -27,13 +27,13 @@
             android:layout_width="@dimen/common_dimen_dp10"
             android:layout_height="match_parent"
             android:background="@color/common_color_c14_e5e9ee" />
-        <demo.minifly.com.project_all_demo.keyborad.VirtualKey
+        <demo.minifly.com.fuction_demo.project_all_demo.keyborad.VirtualKey
             android:id="@+id/vk_key"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-        </demo.minifly.com.project_all_demo.keyborad.VirtualKey>
+        </demo.minifly.com.fuction_demo.project_all_demo.keyborad.VirtualKey>
 
         <View
             android:layout_width="@dimen/common_dimen_dp10"

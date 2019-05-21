@@ -1,11 +1,7 @@
 package demo.minifly.com.DesignPattern.decorator;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import demo.minifly.com.R;
 
@@ -17,7 +13,9 @@ public class DecoratorDemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_decorator_demo);
 
         new BenzCar().drive("");
-        InsuranceIDecorator insuranceIDecorator = new InsuranceIDecoratorImp(new BenzCar());
+        BeautyCar beautyCar = new BeautyCar(new BenzCar());
+        beautyCar.drive("");
+        InsuranceIDecorator insuranceIDecorator = new InsuranceIDecoratorImp(beautyCar);
         insuranceIDecorator.drive("");
 
         new AudiCar().drive("");

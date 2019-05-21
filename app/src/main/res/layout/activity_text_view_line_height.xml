@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".leke.textviewlineheight.TextViewLineHeightActivity">
+    tools:context=".fuction_demo.textviewlineheight.TextViewLineHeightActivity">
 
     <TextView
         android:id="@+id/view1"
@@ -112,7 +112,7 @@
         />
 
 
-    <demo.minifly.com.project_all_demo.button.StateButton
+    <demo.minifly.com.fuction_demo.project_all_demo.button.StateButton
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         app:layout_constraintTop_toBottomOf="@+id/view8"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.transition_element.FrameFragmentAcitity">
+    tools:context=".fuction_demo.transition_element.FrameFragmentAcitity">
 
     <RelativeLayout
         android:id="@+id/container"

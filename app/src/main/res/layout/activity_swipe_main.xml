@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.swipe_back.SwipeMainActivity">
+    tools:context=".fuction_demo.swipe_back.SwipeMainActivity">
 
 
     <TextView

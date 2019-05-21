@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.transition_element.FrameActivity">
+    tools:context=".fuction_demo.transition_element.FrameActivity">
 
     <Button
         android:id="@+id/transition_frame_btn"

@@ -20,7 +20,7 @@
                 android:text="一个背景色的自定义view"
                 />
             <!--一个背景色的自定义view-->
-            <demo.minifly.com.canvas_test.canvas_new.CanvasColorView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasColorView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 />
@@ -34,7 +34,7 @@
                 android:text="一个自定义画点的view"
                 />
             <!--一个背景色的自定义view-->
-            <demo.minifly.com.canvas_test.canvas_new.CanvasPointView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasPointView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 />
@@ -47,7 +47,7 @@
                 android:text="一个自定义画线的view"
                 />
             <!--一个背景色的自定义view-->
-            <demo.minifly.com.canvas_test.canvas_new.CanvasLineView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasLineView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 />
@@ -61,7 +61,7 @@
                 android:text="一个自定义矩形的view"
                 />
             <!--一个背景色的自定义view-->
-            <demo.minifly.com.canvas_test.canvas_new.CanvasRectView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasRectView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 />
@@ -74,7 +74,7 @@
                 android:text="一个自定义椭圆的view"
                 />
             <!--一个背景色的自定义view-->
-            <demo.minifly.com.canvas_test.canvas_new.CanvasOvalView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasOvalView
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 />
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:text="一个自定义圆弧的view"
                 />
-            <demo.minifly.com.canvas_test.canvas_new.CanvasArcView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasArcView
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 />
@@ -102,7 +102,7 @@
                 android:text="一个不同的style的圆的view"
                 />
 
-            <demo.minifly.com.canvas_test.canvas_new.CanvasCircleView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasCircleView
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 />
@@ -114,7 +114,7 @@
                 android:text="一个进度的圆饼view"
                 />
 
-            <demo.minifly.com.canvas_test.canvas_new.CanvasPieView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasPieView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:id="@+id/canvas_all_pieview_id"

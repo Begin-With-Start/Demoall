@@ -40,7 +40,7 @@
             />
     </LinearLayout>
 
-    <demo.minifly.com.state_layout_fragment.StateLayout
+    <demo.minifly.com.fuction_demo.state_layout_fragment.StateLayout
         android:id="@+id/content_state_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -53,5 +53,5 @@
             android:layout_height="match_parent">
 
         </RelativeLayout>
-    </demo.minifly.com.state_layout_fragment.StateLayout>
+    </demo.minifly.com.fuction_demo.state_layout_fragment.StateLayout>
 </RelativeLayout>

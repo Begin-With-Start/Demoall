@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/canvas_own_green_9_color"
-    tools:context="demo.minifly.com.canvas_pathmesure_demo.PathMesureDemoActivity">
+    tools:context=".fuction_demo.canvas_pathmesure_demo.PathMesureDemoActivity">
 
-    <demo.minifly.com.canvas_pathmesure_demo.LightPathCanvasView
+    <demo.minifly.com.fuction_demo.canvas_pathmesure_demo.LightPathCanvasView
         android:id="@+id/pathmesure_view_id"
         android:layout_width="200dp"
         android:layout_height="200dp"

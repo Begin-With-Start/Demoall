@@ -16,7 +16,7 @@
             />
     </android.support.v7.widget.Toolbar>
 
-    <demo.minifly.com.listview_test.MyListView
+    <demo.minifly.com.fuction_demo.listview_test.MyListView
         android:id="@+id/minifly_listview_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

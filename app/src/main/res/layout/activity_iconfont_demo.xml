@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.iconfont_demo.IconfontDemoActivity">
+    tools:context=".fuction_demo.iconfont_demo.IconfontDemoActivity">
 
 
-    <demo.minifly.com.iconfont_demo.IconFontTextview
+    <demo.minifly.com.fuction_demo.iconfont_demo.IconFontTextview
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:textSize="50dp"
@@ -16,7 +16,7 @@
         android:clickable="true"
         />
 
-    <demo.minifly.com.iconfont_demo.IconFontTextview
+    <demo.minifly.com.fuction_demo.iconfont_demo.IconFontTextview
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:textSize="50dp"

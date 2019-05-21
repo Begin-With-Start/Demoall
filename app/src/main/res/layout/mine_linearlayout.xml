@@ -4,28 +4,28 @@
     android:id="@+id/progress_lin_id"
     android:layout_height="300dp">
 
-    <demo.minifly.com.project_progress_new.ProgressView
+    <demo.minifly.com.fuction_demo.project_progress_new.ProgressView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:id="@+id/progress_id_1"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         />
-    <demo.minifly.com.project_progress_new.ProgressView
+    <demo.minifly.com.fuction_demo.project_progress_new.ProgressView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:id="@+id/progress_id_2"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         />
-    <demo.minifly.com.project_progress_new.ProgressView
+    <demo.minifly.com.fuction_demo.project_progress_new.ProgressView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:id="@+id/progress_id_3"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         />
-    <demo.minifly.com.project_progress_new.ProgressView
+    <demo.minifly.com.fuction_demo.project_progress_new.ProgressView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:id="@+id/progress_id_4"

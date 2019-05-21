@@ -22,7 +22,7 @@
                 android:text="一个移动canvas画布的操作"
                 />
 
-            <demo.minifly.com.canvas_test.canvas_painting_new.CanvasTranslateView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasTranslateView
                 android:layout_width="wrap_content"
                 android:layout_height="120dp" />
 
@@ -33,7 +33,7 @@
                 android:text="一个缩放canvas画布的操作"
                 />
 
-            <demo.minifly.com.canvas_test.canvas_painting_new.CanvasScaleView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasScaleView
                 android:layout_width="match_parent"
                 android:layout_height="120dp" />
 
@@ -44,7 +44,7 @@
                 android:text="一个新的缩放canvas画布的操作"
                 />
 
-            <demo.minifly.com.canvas_test.canvas_painting_new.CanvasScaleNewView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasScaleNewView
                 android:layout_width="match_parent"
                 android:layout_height="180dp" />
 
@@ -56,7 +56,7 @@
                 android:text="一个旋转canvas画布的操作"
                 />
 
-            <demo.minifly.com.canvas_test.canvas_painting_new.CanvasRotateView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasRotateView
                 android:layout_width="match_parent"
                 android:layout_height="180dp" />
             <!--一个旋转canvas画布的操作-->
@@ -66,7 +66,7 @@
                 android:text="一个文字 "
                 />
 
-            <demo.minifly.com.canvas_test.canvas_painting_new.CanvasTextView
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasTextView
                 android:layout_width="match_parent"
                 android:layout_height="180dp" />
 

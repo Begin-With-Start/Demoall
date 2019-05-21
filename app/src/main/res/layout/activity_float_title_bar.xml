@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.float_titlebar.FloatTitleBarActivity">
+    tools:context=".fuction_demo.float_titlebar.FloatTitleBarActivity">
 
     <RelativeLayout
         android:id="@+id/float_titlebar_rel_id"

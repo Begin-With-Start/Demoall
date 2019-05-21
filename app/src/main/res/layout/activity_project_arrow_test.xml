@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.project_arrow_test.ProjectArrowTestActivity">
+    tools:context=".fuction_demo.project_arrow_test.ProjectArrowTestActivity">
 
-    <demo.minifly.com.project_arrow_test.ArrowLinearlayout
+    <demo.minifly.com.fuction_demo.project_arrow_test.ArrowLinearlayout
         android:id="@+id/arrow_arrowlinearlayout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,6 +77,6 @@
             </LinearLayout>
 
         </RelativeLayout>
-    </demo.minifly.com.project_arrow_test.ArrowLinearlayout>
+    </demo.minifly.com.fuction_demo.project_arrow_test.ArrowLinearlayout>
 
 </android.support.constraint.ConstraintLayout>

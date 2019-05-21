@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="demo.minifly.com.finger_print_demo.FingerPrintActivity"
+    tools:context=".fuction_demo.finger_print_demo.FingerPrintActivity"
     tools:showIn="@layout/activity_finger_print">
 
 </RelativeLayout>

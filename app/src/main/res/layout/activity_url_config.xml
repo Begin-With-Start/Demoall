@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="demo.minifly.com.url_config.UrlConfigActivity">
+    tools:context=".fuction_demo.url_config.UrlConfigActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

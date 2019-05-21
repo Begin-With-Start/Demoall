@@ -8,7 +8,7 @@
         view 的随手指进行滑动
         第一种实现方式 view的滑动 通过layout onlayout 来进行。
     -->
-    <demo.minifly.com.pull_moveview_test.LayoutDragview1
+    <demo.minifly.com.fuction_demo.pull_moveview_test.LayoutDragview1
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@color/grey"

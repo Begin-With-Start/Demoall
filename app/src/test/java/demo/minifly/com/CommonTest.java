@@ -3,7 +3,7 @@ package demo.minifly.com;
 import org.junit.Assert;
 import org.junit.Test;
 
-import demo.minifly.com.utils.Common;
+import demo.minifly.com.fuction_demo.utils.Common;
 
 /**
  * author ：minifly
