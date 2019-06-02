@@ -82,7 +82,8 @@ dependencies {
 //    implementation 'com.leoao:lib_leoao_business:0.1.253'
 
     implementation 'com.leoao:lib_common_ui:0.0.106'
-    compile project(path: ':network_lib')
+    implementation project(path: ':network_lib')
+    implementation 'org.objectweb.asm:com.springsource.org.objectweb.asm:3.2.0'
 
     // in the individual module build.gradle files
 }

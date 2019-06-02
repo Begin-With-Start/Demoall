@@ -1,4 +1,4 @@
-package demo.minifly.com.DesignPattern.decorator;
+package demo.minifly.com.designpattern.decorator;
 
 public abstract class InsuranceIDecorator implements Car{
     protected Car car;

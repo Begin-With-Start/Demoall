@@ -16,9 +16,12 @@ import android.widget.TextView;
 
 import java.util.LinkedList;
 
+import demo.minifly.com.asm.AopDemoActivity;
+import demo.minifly.com.designpattern.abstractfactory.ZFactoryDemoActivity;
+import demo.minifly.com.designpattern.simplefactory.SimpleFactoryDemoActivity;
 import demo.minifly.com.fuction_demo.ActivityAnimation.ActivityAnimation;
 import demo.minifly.com.fuction_demo.ActivityAnimation.PhotoFragmentActivity;
-import demo.minifly.com.DesignPattern.decorator.DecoratorDemoActivity;
+import demo.minifly.com.designpattern.decorator.DecoratorDemoActivity;
 import demo.minifly.com.R;
 import demo.minifly.com.fuction_demo.RippleShow.MyRippleShowActivity;
 import demo.minifly.com.fuction_demo.android_hot_fix.AndroidHotfixActivity;
@@ -478,6 +481,23 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("网络监听：");
         myBean.setClassName(com.fitness.network.demo.MainActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("虚拟工厂类");
+        myBean.setClassName(ZFactoryDemoActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("简单工厂类");
+        myBean.setClassName(SimpleFactoryDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("aop相关demo");
+        myBean.setClassName(AopDemoActivity.class);
         list.add(myBean);
 
 

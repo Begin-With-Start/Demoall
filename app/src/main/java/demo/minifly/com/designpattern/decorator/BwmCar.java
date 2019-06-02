@@ -1,4 +1,4 @@
-package demo.minifly.com.DesignPattern.decorator;
+package demo.minifly.com.designpattern.decorator;
 
 import demo.minifly.com.fuction_demo.utils.LogUtils;
 

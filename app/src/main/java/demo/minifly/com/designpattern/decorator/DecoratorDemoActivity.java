@@ -1,4 +1,4 @@
-package demo.minifly.com.DesignPattern.decorator;
+package demo.minifly.com.designpattern.decorator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
