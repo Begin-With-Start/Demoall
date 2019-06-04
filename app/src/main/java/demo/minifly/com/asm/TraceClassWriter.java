@@ -11,6 +11,7 @@ public class TraceClassWriter extends ClassWriter {
         this.loader = loader;
     }
 
+    @Override
     protected String getCommonSuperClass(final String type1, final String type2) {
         Class c, d;
         try {

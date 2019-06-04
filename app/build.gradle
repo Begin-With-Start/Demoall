@@ -85,6 +85,10 @@ dependencies {
     implementation project(path: ':network_lib')
     implementation 'org.objectweb.asm:com.springsource.org.objectweb.asm:3.2.0'
 
+//    compile group: 'org.ow2.asm', name: 'asm', version: '5.0.4'
+//    compile group: 'org.ow2.asm', name: 'asm-commons', version: '5.0.4'
+    
+
     // in the individual module build.gradle files
 }
 repositories {

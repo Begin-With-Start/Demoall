@@ -9,7 +9,7 @@ public class MyAop {
      */
     public String aopMethod(){
 
-        LogUtils.showErrLog("aopMethod 方法执行了。");
+        System.out.println("aopMethod 方法执行了。");
         return "\"aopMethod 方法执行了。\"";
     }
 }

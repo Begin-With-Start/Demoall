@@ -15,11 +15,7 @@ public class AopDemoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_aop_demo);
 
         GeneratorAop generatorAop = new GeneratorAop();
-        try {
-            generatorAop.generator();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        generatorAop.generator();
 
         MyAop myAop = new MyAop();
         myAop.aopMethod();
