@@ -79,7 +79,7 @@ dependencies {
     implementation "com.airbnb.android:lottie:1.5.3"
 //    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-//    implementation 'com.leoao:lib_leoao_business:0.1.253'
+    implementation 'com.leoao:lib_leoao_business:0.1.253'
 
     implementation 'com.leoao:lib_common_ui:0.0.106'
     implementation project(path: ':network_lib')
@@ -87,7 +87,7 @@ dependencies {
 
 //    compile group: 'org.ow2.asm', name: 'asm', version: '5.0.4'
 //    compile group: 'org.ow2.asm', name: 'asm-commons', version: '5.0.4'
-    
+
 
     // in the individual module build.gradle files
 }

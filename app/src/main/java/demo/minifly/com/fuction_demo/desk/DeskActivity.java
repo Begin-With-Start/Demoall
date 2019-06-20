@@ -90,6 +90,7 @@ import demo.minifly.com.fuction_demo.user_defined_animator.OwnAnimatorActivity;
 import demo.minifly.com.fuction_demo.user_defined_animator.OwnAnimatorActivity2;
 import demo.minifly.com.fuction_demo.webview.WebviewActivity;
 import demo.minifly.com.fuction_demo.weex_test.WeexTest1Activity;
+import demo.minifly.com.handler_core_theory.test_for_handler.TestForHandlerActivity;
 
 public class DeskActivity extends Activity {
     private RecyclerView deskRecycleView;
@@ -498,6 +499,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("aop相关demo");
         myBean.setClassName(AopDemoActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("handler相关；");
+        myBean.setClassName(TestForHandlerActivity.class);
         list.add(myBean);
 
 

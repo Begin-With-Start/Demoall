@@ -1,1 +1,1 @@
-include ':app', ':myplugin', ':network_lib', ':animationlib'
+include ':app', ':myplugin', ':network_lib', ':animationlib', ':handframecode'

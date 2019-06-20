@@ -22,7 +22,8 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".asm.AopDemoActivity"></activity>
+        <activity android:name=".handler_core_theory.test_for_handler.TestForHandlerActivity"></activity>
+        <activity android:name=".asm.AopDemoActivity" />
         <activity android:name=".designpattern.simplefactory.SimpleFactoryDemoActivity" />
         <activity android:name=".designpattern.abstractfactory.ZFactoryDemoActivity" />
         <activity android:name="com.fitness.network.demo.MainActivity" /> <!-- listview的粘性处理，但是在该例子中，当没有拖动到设定的那个值时候，不能够弹回去。 -->

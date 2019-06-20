@@ -1,9 +1,8 @@
 package demo.minifly.com.asm;
 
-import android.support.v7.app.AppCompatActivity;
+import android.os.AsyncTask;
 import android.os.Bundle;
-
-import java.io.IOException;
+import android.support.v7.app.AppCompatActivity;
 
 import demo.minifly.com.R;
 
@@ -19,5 +18,6 @@ public class AopDemoActivity extends AppCompatActivity {
 
         MyAop myAop = new MyAop();
         myAop.aopMethod();
+
     }
 }
