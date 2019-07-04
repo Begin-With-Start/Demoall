@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.demo.hexiaofei.handframecode.handler_frame.test.HandlerFrameTestActivity;
+
 import java.util.LinkedList;
 
 import demo.minifly.com.asm.AopDemoActivity;
@@ -505,6 +507,12 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("handler相关；");
         myBean.setClassName(TestForHandlerActivity.class);
+        list.add(myBean);
+
+
+        myBean = new MyBean();
+        myBean.setTitle("handler相关测试哦；");
+        myBean.setClassName(HandlerFrameTestActivity.class);
         list.add(myBean);
 
 

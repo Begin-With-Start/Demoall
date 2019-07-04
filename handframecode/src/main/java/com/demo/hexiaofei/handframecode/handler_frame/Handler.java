@@ -17,8 +17,9 @@ public abstract class Handler {
     public Handler(Looper looper) {
         if(looper != null){
             this.looper = looper;
+        }else{
+            this.looper = Looper.myLooper();
         }
-        this.looper = Looper.myLooper();
         this.queue = looper.queue;
     }
 

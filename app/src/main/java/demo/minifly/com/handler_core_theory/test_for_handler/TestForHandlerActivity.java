@@ -61,10 +61,6 @@ public class TestForHandlerActivity extends AppCompatActivity {
          *
          *
          *
-         *
-         *
-         *
-         *
          *         解决方案：  https://blog.csdn.net/goodlixueyong/article/details/50831958
          *         ViewRootImpl是在onResume执行之后创建的。这也就解释了为什么直接在Activity的onCreate中在子线程更新UI不会报错，而在延时一段时间后却出现崩溃。
          *

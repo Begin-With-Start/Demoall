@@ -22,7 +22,7 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".handler_core_theory.test_for_handler.TestForHandlerActivity"></activity>
+        <activity android:name=".handler_core_theory.test_for_handler.TestForHandlerActivity" />
         <activity android:name=".asm.AopDemoActivity" />
         <activity android:name=".designpattern.simplefactory.SimpleFactoryDemoActivity" />
         <activity android:name=".designpattern.abstractfactory.ZFactoryDemoActivity" />

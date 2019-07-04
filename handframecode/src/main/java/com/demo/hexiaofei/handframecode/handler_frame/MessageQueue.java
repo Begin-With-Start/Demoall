@@ -11,8 +11,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class MessageQueue {
 
     private Message[] messages;
-    private Condition pullQueue;
-    private Condition pushQueue;
+    private Condition pullQueueCondition;
+    private Condition pushQueueCondition;
 
     Lock lock;//互斥锁； 互斥锁只有两种状态,即上锁( lock )和解锁( unlock )
 
@@ -28,8 +28,8 @@ public class MessageQueue {
     public MessageQueue() {
         messages = new Message[50];
         lock = new ReentrantLock();
-        pullQueue = lock.newCondition();
-        pushQueue = lock.newCondition();
+        pullQueueCondition = lock.newCondition();
+        pushQueueCondition = lock.newCondition();
 
         pullIndex = 0;
         pushIndex = 0;
@@ -44,7 +44,7 @@ public class MessageQueue {
         try {
             lock.lock();
             if (count == messages.length) {
-                pushQueue.await(); // 队列中的消息数量到达了上限之后应该停止添加；
+                pushQueueCondition.await(); // 队列中的消息数量到达了上限之后应该停止添加；
             }
             messages[pushIndex] = message;
             pushIndex = (++pushIndex == messages.length ? 0 : pushIndex);
@@ -65,7 +65,7 @@ public class MessageQueue {
         try {
             lock.lock();
             if (count == 0) {
-                pullQueue.await();
+                pullQueueCondition.await();
             }
             message = messages[pullIndex];
             messages[pullIndex] = null;

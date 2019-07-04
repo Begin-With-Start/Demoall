@@ -224,9 +224,6 @@ public class NetworkManager implements NetChangeObserver {
 //
 //            }
         }
-
-
-
     }
 
     @Override

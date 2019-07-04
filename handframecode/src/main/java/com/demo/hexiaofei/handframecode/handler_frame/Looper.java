@@ -11,9 +11,9 @@ public class Looper {
      * treadlocal : 一个tread对应一个looper；
      */
     private static ThreadLocal<Looper> mThreadLoacel = new ThreadLocal<>();
-    public MessageQueue queue;
+    public static MessageQueue queue;
 
-    public void prepare(){
+    public static void prepare(){
         if(mThreadLoacel.get() != null){
             throw  new RuntimeException("one thread can have one looper");
         }
@@ -31,7 +31,7 @@ public class Looper {
     /**
      * 没有调用的时候，相当于没有进行发动机发动一样；
      */
-    public void loop(){
+    public static void loop(){
         Looper looper = myLooper();
         if(looper == null){
             throw new RuntimeException("you should call prepare() at first !   ");

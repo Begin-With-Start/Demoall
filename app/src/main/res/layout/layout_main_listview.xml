@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/list_title_bar_rel"
-        android:layout_width="match_parent"
-        android:layout_height="45dp">
-        <!--toolbar应该在21的版本上来进行支持。所以在需要这个效果的时候，应该进行处理，但是relativelayout又不能移出位置-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="返回"
-            />
-    </android.support.v7.widget.Toolbar>
+    <!-- <android.support.v7.widget.Toolbar
+         android:id="@+id/list_title_bar_rel"
+         android:layout_width="match_parent"
+         android:layout_height="45dp">
+         &lt;!&ndash;toolbar应该在21的版本上来进行支持。所以在需要这个效果的时候，应该进行处理，但是relativelayout又不能移出位置&ndash;&gt;
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="返回"
+             />
+     </android.support.v7.widget.Toolbar>-->
+
 
     <demo.minifly.com.fuction_demo.listview_test.MyListView
         android:id="@+id/minifly_listview_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/minifly_listview_top_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

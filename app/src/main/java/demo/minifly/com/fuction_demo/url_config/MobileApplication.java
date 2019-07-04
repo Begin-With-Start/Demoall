@@ -59,9 +59,9 @@ public class MobileApplication extends Application {
         NoHttp.initialize(getApplicationContext());
 
         /** weex的初始化操作 **/
-        InitConfig config=new InitConfig.Builder().setImgAdapter(new IImageLoaderAdapter()).build();
-        WXSDKEngine.initialize(this,config);
-        
+        InitConfig config = new InitConfig.Builder().setImgAdapter(new IImageLoaderAdapter()).build();
+        WXSDKEngine.initialize(this, config);
+
 
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
                                                @Override
