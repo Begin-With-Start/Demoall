@@ -29,7 +29,7 @@ public class Looper {
     }
 
     /**
-     * 没有调用的时候，相当于没有进行发动机发动一样；
+     * 没有调用的时候，相当于没有进行发动机发动一样；没有启动发动机一样
      */
     public static void loop(){
         Looper looper = myLooper();

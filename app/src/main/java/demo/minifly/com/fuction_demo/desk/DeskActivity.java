@@ -48,9 +48,11 @@ import demo.minifly.com.fuction_demo.ear_listener_demo.AudioTestActivity;
 import demo.minifly.com.fuction_demo.ear_listener_demo.LightDemoActivity;
 import demo.minifly.com.fuction_demo.finger_print_demo.FingerPrintActivity;
 import demo.minifly.com.fuction_demo.float_titlebar.FloatTitleBarActivity;
+import demo.minifly.com.fuction_demo.gilde_display_error.GlideErrorDisplayActivity;
 import demo.minifly.com.fuction_demo.iconfont_demo.IconfontDemoActivity;
 import demo.minifly.com.fuction_demo.image_compress_demo.ImageCompressActivity;
 import demo.minifly.com.fuction_demo.image_compress_demo.ImageCompressActivity2;
+import demo.minifly.com.fuction_demo.image_compress_demo.ImageDemoActivity;
 import demo.minifly.com.fuction_demo.intent_test.Intent1Activity;
 import demo.minifly.com.fuction_demo.layout_animation.LayoutAnimationActivity;
 import demo.minifly.com.fuction_demo.textviewlineheight.TextViewLineHeightActivity;
@@ -513,6 +515,16 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("handler相关测试哦；");
         myBean.setClassName(HandlerFrameTestActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("阴影测试：：：：");
+        myBean.setClassName(ImageDemoActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("显示图片");
+        myBean.setClassName(GlideErrorDisplayActivity.class);
         list.add(myBean);
 
 

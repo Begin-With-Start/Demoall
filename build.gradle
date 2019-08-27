@@ -46,3 +46,46 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// 自定义task task执行之前，执行之后的处理脚本；
+//判断property是否存在；包含task 与 property
+task ex36Hello {
+}
+ex36Hello.doFirst {
+    println 'ex36hello first'
+}
+ex36Hello.doLast {
+    println 'ex36hello last'
+//    在gradle 脚本中，task property 属性都可用hasproperty进行判断；
+    println 'is have property ex36hello' + project.hasProperty("ex36Hello")
+    println 'is have property systemPro.myself' + project.hasProperty("systemPro.myself")
+}
+
+//ext 添加额外的属性  比起局部变量来说，ext的属性和变量更能够被外部和其他project访问到；
+// moudle 中也可以访问到；
+ext.age = 18
+
+ext {
+    phone = 18367161206
+    adress = "哈哈哈地址"
+}
+task outputExt {
+    doFirst {
+        println("main project outputExt dofirst ....")
+    }
+    doLast {
+        println "main project outputExt dolast phone:   ${phone}"
+        println "main project age:   ${age}"
+        println "main project adress:   ${adress}"
+    }
+}
+
+//我们自定义的3个Task都位于TaskContainer中，Project中的tasks属性即表示该TaskContainer
+task showTasks{
+    doLast{
+        println("task.class :" + tasks.class)
+        println("task.size 大小: " + tasks.size())
+    }
+}
+
+
