@@ -1,1 +1,0 @@
-include ':app', ':myplugin', ':network_lib', ':animationlib', ':handframecode', ':lint_rules', ':lint_aar'
