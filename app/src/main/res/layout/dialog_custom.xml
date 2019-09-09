@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/dialog_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/bg_dialog"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:gravity="center"
+            tools:background="@android:color/holo_blue_light">
+            <!--排队成功-->
+            <ImageView
+                android:id="@+id/wait_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:scaleType="center"
+                android:src="@mipmap/empty_2"
+                android:visibility="gone" />
+            <!--问号-->
+            <ImageView
+                android:id="@+id/ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:scaleType="center"
+                android:src="@mipmap/popup_icon_sure"
+                android:visibility="gone" />
+            <!--成功-->
+            <ImageView
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:scaleType="center"
+                android:src="@mipmap/empty_1"
+                android:visibility="gone" />
+            <!--失败-->
+            <ImageView
+                android:id="@+id/fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:scaleType="center"
+                android:src="@mipmap/empty_3"
+                android:visibility="gone" />
+            <!--升级-->
+            <ImageView
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:scaleType="center"
+                android:src="@mipmap/empty_11"
+                android:visibility="gone" />
+            <!--自定义顶部提示-->
+            <!--<ImageView-->
+            <!--android:id="@+id/custom_title_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:minHeight="120dp"-->
+            <!--android:minWidth="120dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:visibility="gone" />-->
+
+            <com.leoao.commonui.view.CustomImageView
+                android:id="@+id/custom_title_img"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="25dp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+        <!--title-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="系统提示"
+            android:textColor="@color/color_black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <View
+            android:id="@+id/v"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/text_color_grey" />
+        <!--内容体-->
+        <ScrollView
+            android:id="@+id/content_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center"
+                    android:text="如因时间安排不能正常到课，请及时在“我的课程”里取消课程，多次旷课将会导致限制."
+                    android:textColor="@color/text_color_black60"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+                <!--
+                视图容器,用来放自定义的视图
+                支持自定义扩展弹窗
+                -->
+                <LinearLayout
+                    android:id="@+id/content_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/content_scroll"
+            android:background="#D2D3D5"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/line1"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <Button
+                android:id="@+id/btn_cancer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_red_rectangle"
+                android:text="取消"
+                android:textColor="@color/text_color_black60"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/btn_line"
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_red_btn_rectangle"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <!--loading 动画-->
+        <LinearLayout
+            android:id="@+id/loading_box"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_loading"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+            <!--loading-->
+            <!--<ImageView-->
+            <!--android:id="@+id/loading_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/loading_anima"-->
+            <!--android:visibility="visible" />-->
+            <!--<com.leoao.commonui.view.CustomImageView-->
+                <!--android:id="@+id/loading_img"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="80dp" />-->
+            <com.leoao.commonui.view.CustomImageView
+                android:id="@+id/loading_img"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:paddingLeft="28dp"
+                android:paddingRight="28dp"
+                android:paddingTop="26dp"
+                android:paddingBottom="30dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/loading_shadow"
+                />
+            <!--<TextView-->
+            <!--android:id="@+id/loading_text"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:text="正在加载，么么哒"-->
+            <!--android:textColor="@color/text_color_black60"-->
+            <!--android:textSize="12sp" />-->
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

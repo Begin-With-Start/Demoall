@@ -1,0 +1,14 @@
+/build
+*.iml
+.gradle
+local.properties
+.idea
+.DS_Store
+build
+captures
+static_analysis/reports
+/build
+/captures
+/static_analysis/reports
+
+/modules

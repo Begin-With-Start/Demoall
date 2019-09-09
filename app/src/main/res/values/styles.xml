@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="harf_transparents">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <!--做了沉浸式的状态栏之后，为了5.0一下的进行的定制.都没有给actionbar的设置-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="DeepTheme" parent="AppTheme">
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!--做了沉浸式的状态栏之后，为了5.0一下的进行的定制.-->
+
+    <style name="NormalTextView">
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:textSize">@dimen/textSize_normal</item>
+    </style>
+
+    <style name="SmallGreyTextView">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/textSize_small</item>
+    </style>
+
+    <declare-styleable name="RangeBar">
+        <attr name="textStyle" format="enum">
+            <enum name="NORMAL" value="0" />
+            <enum name="TEXT" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ClipImageLayout">
+        <!-- 水平间距 -->
+        <attr name="horizontal_padding" format="dimension" />
+        <attr name="image_drawable" format="reference" />
+    </declare-styleable>
+    <!--popupWindow底部菜单动画-->
+    <style name="anim_menu_top_bar">
+        <item name="android:windowEnterAnimation">@anim/menu_top_bar_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_top_bar_out</item>
+    </style>
+
+    <style name="allActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="mainActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+
+    <!--editText的风格-->
+    <style name="common_edit_text_style">
+        <item name="android:textCursorDrawable">@drawable/shape_cursor</item>
+        <item name="android:textColorHint">@color/common_color_c8_d5d7dc</item>
+        <item name="android:textColor">@color/common_color_c5_45494e</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="commonbns_anim_inout_dialog_new">
+        <item name="android:windowEnterAnimation">@anim/modal_two_in</item>
+        <item name="android:windowExitAnimation">@anim/modal_out</item>
+    </style>
+</resources>

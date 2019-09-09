@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fuction_demo.textviewlineheight.TextViewLineHeightActivity">
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮按钮按钮"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/common_dimen_dp20"
+        android:textSize="12dp"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮按钮按钮"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        android:textSize="12dp"
+        android:layout_marginTop="@dimen/common_dimen_dp5"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文字测试文字测试文字测试"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        android:textSize="14dp"
+        android:layout_marginTop="@dimen/common_dimen_dp30"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文字测试文字测试文字测试"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        android:textSize="14dp"
+        android:layout_marginTop="@dimen/common_dimen_dp5"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+
+    <TextView
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_dimen_dp12"
+        android:text="文字测试文字测试文字测试"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        android:textSize="12dp"
+        android:gravity="top"
+        android:layout_marginTop="@dimen/common_dimen_dp30"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_dimen_dp12"
+        android:text="文字测试文字测试文字测试"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        android:textSize="12dp"
+        android:layout_marginTop="@dimen/common_dimen_dp5"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/view7"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_dimen_dp14"
+        android:text="文字测试文字测试文字测试"
+        app:layout_constraintTop_toBottomOf="@+id/view6"
+        android:textSize="@dimen/common_dimen_dp14"
+        android:gravity="top"
+        android:layout_marginTop="@dimen/common_dimen_dp30"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/view8"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/common_dimen_dp14"
+        android:text="文字测试文字测试文字测试"
+        app:layout_constraintTop_toBottomOf="@+id/view7"
+        android:textSize="@dimen/common_dimen_dp14"
+        android:layout_marginTop="@dimen/common_dimen_dp5"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+    <demo.minifly.com.fuction_demo.project_all_demo.button.StateButton
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/view8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/common_dimen_dp20"
+        android:layout_marginTop="@dimen/common_dimen_dp20"
+        android:text="按钮那妞"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp"
+        android:paddingRight="7.5dp"
+        android:paddingLeft="7.5dp"
+        app:normalStrokeWidth="@dimen/common_dimen_dp1"
+        app:normalStrokeColor="#979797"
+        app:radiusButton="@dimen/common_dimen_dp4"
+        app:normalBackgroundColor="#d8d8d8"
+        android:textSize="@dimen/common_dimen_dp12"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

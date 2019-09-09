@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个背景色的自定义view"
+                />
+            <!--一个背景色的自定义view-->
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasColorView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                />
+
+
+            <!--一个自定义画点的view  CanvasPointView-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个自定义画点的view"
+                />
+            <!--一个背景色的自定义view-->
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasPointView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+            <!--一个自定义画线的view  CanvasPointView-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个自定义画线的view"
+                />
+            <!--一个背景色的自定义view-->
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasLineView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+
+            <!--一个自定义矩形的view  CanvasPointView-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个自定义矩形的view"
+                />
+            <!--一个背景色的自定义view-->
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasRectView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+            <!--一个自定义椭圆的view  CanvasPointView-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个自定义椭圆的view"
+                />
+            <!--一个背景色的自定义view-->
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasOvalView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                />
+
+
+            <!--一个自定义圆弧的view  有圆心的和没圆心的两种rect-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个自定义圆弧的view"
+                />
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasArcView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                />
+
+
+
+            <!--一个自定义圆的view  三种的填充方式的不同。 -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个不同的style的圆的view"
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasCircleView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                />
+            <!--一个进度的圆饼view -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个进度的圆饼view"
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_new.CanvasPieView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/canvas_all_pieview_id"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

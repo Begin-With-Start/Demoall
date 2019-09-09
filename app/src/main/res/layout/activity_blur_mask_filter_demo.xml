@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fuction_demo.canvas_pathmesure_demo.BlurMaskFilterDemoActivity">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="outer模式"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            />
+
+        <demo.minifly.com.fuction_demo.canvas_pathmesure_demo.BlurMaskFilterView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/mask_filter_id1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NORMAL模式"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            />
+        <demo.minifly.com.fuction_demo.canvas_pathmesure_demo.BlurMaskFilterView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/mask_filter_id2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INNER模式"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            />
+        <demo.minifly.com.fuction_demo.canvas_pathmesure_demo.BlurMaskFilterView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/mask_filter_id3"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOLID模式"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            />
+        <demo.minifly.com.fuction_demo.canvas_pathmesure_demo.BlurMaskFilterView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/mask_filter_id4"
+            />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

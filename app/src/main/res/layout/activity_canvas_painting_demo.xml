@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <!--一个移动canvas画布的操作-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个移动canvas画布的操作"
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasTranslateView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp" />
+
+            <!--一个缩放canvas画布的操作-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个缩放canvas画布的操作"
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasScaleView
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <!--一个新的缩放canvas画布的操作-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个新的缩放canvas画布的操作"
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasScaleNewView
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+
+            <!--一个旋转canvas画布的操作-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个旋转canvas画布的操作"
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasRotateView
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+            <!--一个旋转canvas画布的操作-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一个文字 "
+                />
+
+            <demo.minifly.com.fuction_demo.canvas_test.canvas_painting_new.CanvasTextView
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

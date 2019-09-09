@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#ececec</color>
+    <color name="bill_bg">#f31e2122</color>
+
+    <color name="water_color">#03a9f4</color>
+
+    <!--进度调颜色设置-->
+    <color name="task_red">#fe7171</color>
+    <color name="task_yellow">#f4c923</color>
+    <color name="task_blue">#45acf1</color>
+    <color name="gray">#999999</color>
+
+
+    <color name="start_color">#00bff6</color>
+    <color name="end_color">#0094f6</color>
+    <!--进度调颜色设置-->
+
+
+    <color name="blueStatus">#1680E2</color>
+    <color name="orders_number">#666666</color>
+    <color name="gray_progress">#acacac</color>
+
+    <color name="dark">#424242</color>
+
+    <color name="common_color_c1_337cff">#337cff</color>
+    <color name="common_color_c2_f7a82f">#f7a82f</color>
+    <color name="common_color_c3_ffffff">#ffffff</color>
+    <color name="common_color_c4_121417">#121417</color>
+    <color name="common_color_c5_45494e">#45494e</color>
+    <color name="common_color_c6_585d62">#585d62</color>
+    <color name="common_color_c7_96999e">#96999e</color>
+    <color name="common_color_c8_d5d7dc">#d5d7dc</color>
+    <color name="common_color_c9_e8e9eb">#e8e9eb</color>
+    <color name="common_color_c10_eceff3">#eceff3</color>
+    <color name="common_color_c11_ff1f1f">#ff1f1f</color>
+    <color name="common_color_c12_836fdb">#836fdb</color>
+    <color name="common_color_c13_23c0b1">#23c0b1</color>
+
+    <color name="common_color_c1_0971ce">#0971ce</color>
+    <color name="common_color_c2_ffa409">#ffa409</color>
+    <color name="common_color_c3_ff910b">#ff910b</color>
+    <color name="common_color_c4_ff1f1f">#ff1f1f</color>
+    <color name="common_color_c5_ffffff">#fff</color>
+    <color name="common_color_c6_000000">#000</color>
+    <color name="common_color_c7_333333">#333</color>
+    <color name="common_color_c8_666666">#666</color>
+    <color name="common_color_c9_999999">#999</color>
+    <color name="common_color_c10_b8b8b8">#b8b8b8</color>
+    <color name="common_color_c11_cccccc">#ccc</color>
+    <color name="common_color_c12_dcdcdc">#dcdcdc</color>
+    <color name="common_color_c13_ececec">#ececec</color>
+    <color name="common_color_c14_e5e9ee">#e5e9ee</color>
+    <color name="common_color_c1cur_0869c2">#0869c2</color>
+    <color name="common_color_c3cur_f0880a">#f0880a</color>
+
+    <color name="common_color_bcc6d2">#bcc6d2</color>
+    <color name="common_color_ff4200">#ff4200</color>
+    <color name="common_color_ff6000">#ff6000</color>
+    <color name="common_color_dd2727">#dd2727</color>
+    <color name="common_color_c2c7cd">#c2c7cd</color>
+
+    <!--按钮颜色值 F28D35-->
+    <color name="common_btn_color_FF9138">#FF9138</color>
+    <color name="common_btn_color_F2A833">#F2A833</color>
+    <color name="common_btn_color_30F2A833">#30F2A833</color>
+    <color name="common_btn_color_F28D35">#F28D35</color>
+    <color name="common_btn_color_30DCDCDC">#30DCDCDC</color>
+    <color name="common_btn_color_FFB136">#FFB136</color>
+    <color name="common_btn_color_30FFB136">#30FFB136</color>
+    <color name="common_btn_color_0b83ee">#0b83ee</color>
+    <color name="common_btn_color_0971ce">#0971ce</color>
+    <color name="common_btn_color_0869c2">#0869c2</color>
+    <color name="common_btn_color_007ae2">#007ae2</color>
+    <!--按键不可点击状态颜色-->
+    <color name="common_btn_color_55ffffff">#55FFFFFF</color>
+
+    <!--Search C13 80%不透明度-->
+    <color name="common_color_search_ececec">#ccececec</color>
+    <!-- ImageView 背景 C13 40%不透明度 -->
+    <color name="common_color_upload_image_99ececec">#99ececec</color>
+    <!-- ProgressBar C6 15%不透明度 -->
+    <color name="common_color_upload_progress_21000000">#21000000</color>
+    <!-- Border C6 5%不透明度 -->
+    <color name="common_color_upload_border_f2000000">#f2000000</color>
+    <!-- ImageView 上传失败 C6 40%不透明度 -->
+    <color name="common_color_upload_fail_99000000">#99000000</color>
+    <!-- Top Bar C7 不透明度90% -->
+    <color name="common_color_upload_edit_1A333333">#1A333333</color>
+
+
+    <!--自定义的view颜色-->
+    <color name="canvas_own_color">#cfd8dc</color>
+    <color name="canvas_own_point_color">#b0bec5</color>
+    <color name="canvas_own_line_color">#90a4ae</color>
+    <color name="canvas_own_rect_color">#78909c</color>
+    <color name="canvas_own_1_color">#607d8b</color>
+    <color name="canvas_own_2_color">#546e7a</color>
+    <color name="canvas_own_3_color">#455a64</color>
+    <color name="canvas_own_4_color">#37474f</color>
+
+
+    <color name="canvas_own_green_1_color">#d0f8ce</color>
+    <color name="canvas_own_green_2_color">#a3e9a4</color>
+    <color name="canvas_own_green_3_color">#72d572</color>
+    <color name="canvas_own_green_4_color">#42bd41</color>
+    <color name="canvas_own_green_5_color">#2baf2b</color>
+    <color name="canvas_own_green_6_color">#259b24</color>
+    <color name="canvas_own_green_7_color">#0a8f08</color>
+    <color name="canvas_own_green_8_color">#0a7307</color>
+    <color name="canvas_own_green_9_color">#056f00</color>
+    <color name="canvas_own_green_10_color">#0d5302</color>
+
+    <color name="canvas_own_red_1_color">#fde0dc</color>
+    <color name="canvas_own_red_2_color">#f9bdbb</color>
+    <color name="canvas_own_red_3_color">#f69988</color>
+    <color name="canvas_own_red_4_color">#f36c60</color>
+    <color name="canvas_own_red_5_color">#e84340</color>
+    <color name="canvas_own_red_6_color">#e51c23</color>
+    <color name="canvas_own_red_7_color">#dd191d</color>
+    <color name="canvas_own_red_8_color">#d01716</color>
+    <color name="canvas_own_red_9_color">#c41411</color>
+    <color name="canvas_own_red_10_color">#b0120a</color>
+
+</resources>

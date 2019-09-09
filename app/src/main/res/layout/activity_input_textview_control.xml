@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<demo.minifly.com.fuction_demo.map.KeyboardEditLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/all_layout"
+    tools:context=".fuction_demo.map.InputTextviewControlActivity">
+
+
+    <demo.minifly.com.fuction_demo.map.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/task_addpoint_step5_showall_inputlayout"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <demo.minifly.com.fuction_demo.map.KeyBoardEditText
+            android:id="@+id/task_addpoint_step5_showall_edittext"
+            style="@style/common_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="提示"
+            android:singleLine="true" />
+
+    </demo.minifly.com.fuction_demo.map.TextInputLayout>
+
+
+    <demo.minifly.com.fuction_demo.map.TextInputLayout
+        app:layout_constraintTop_toBottomOf="@+id/task_addpoint_step5_showall_inputlayout"
+        android:id="@+id/task_addpoint_step5_showall_inputlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <demo.minifly.com.fuction_demo.map.KeyBoardEditText
+            android:id="@+id/task_addpoint_step5_showall_edittext2"
+            style="@style/common_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="提示"
+            android:singleLine="true" />
+
+    </demo.minifly.com.fuction_demo.map.TextInputLayout>
+
+
+    <demo.minifly.com.fuction_demo.map.TextInputLayout
+        android:id="@+id/task_addpoint_step5_showall_inputlayout3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <demo.minifly.com.fuction_demo.map.KeyBoardEditText
+            android:id="@+id/task_addpoint_step5_showall_edittext3"
+            style="@style/common_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="提示"
+            android:singleLine="true" />
+
+    </demo.minifly.com.fuction_demo.map.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <demo.minifly.com.fuction_demo.map.TextInputLayout
+            android:id="@+id/task_addpoint_step5_showall_inputlayout4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <demo.minifly.com.fuction_demo.map.KeyBoardEditText
+                android:id="@+id/task_addpoint_step5_showall_edittext4"
+                style="@style/common_edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="提示"
+                android:singleLine="true" />
+
+        </demo.minifly.com.fuction_demo.map.TextInputLayout>
+
+        <demo.minifly.com.fuction_demo.map.TextInputLayout
+            android:id="@+id/task_addpoint_step5_showall_inputlayout5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <demo.minifly.com.fuction_demo.map.KeyBoardEditText
+                android:id="@+id/task_addpoint_step5_showall_edittext5"
+                style="@style/common_edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="提示"
+                android:singleLine="true" />
+
+        </demo.minifly.com.fuction_demo.map.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:text="上一个"
+        android:id="@+id/button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <Button
+        android:text="下一个"
+        android:id="@+id/button_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/control_btn"
+        android:text="控制"
+        />
+</demo.minifly.com.fuction_demo.map.KeyboardEditLayout>

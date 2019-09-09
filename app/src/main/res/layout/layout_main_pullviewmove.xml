@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <!--
+        作者：minifly on 2016/11/25 16:05
+        view 的随手指进行滑动
+        第一种实现方式 view的滑动 通过layout onlayout 来进行。
+    -->
+    <demo.minifly.com.fuction_demo.pull_moveview_test.LayoutDragview1
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/grey"
+        android:clickable="true"
+        android:id="@+id/myview_id"
+        />
+
+
+</LinearLayout>
