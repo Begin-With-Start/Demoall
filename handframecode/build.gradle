@@ -31,6 +31,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'commons-lang:commons-lang:20030203.000129'
 }
 //这里的“<<”表示追加的意思，即向hello中加入执行过程 我们还可以使用doLast来达到同样的效果：如果需要向Task的最前面加入执行过程，我们可以使用doFirst
 // << 操作符就是dolast的短标记形式，可以代替dolast；

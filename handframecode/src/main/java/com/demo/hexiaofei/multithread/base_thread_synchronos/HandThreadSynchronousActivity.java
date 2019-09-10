@@ -8,8 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.demo.hexiaofei.handframecode.R;
+import com.demo.hexiaofei.multithread.singleton.TestForSingleton;
 
 import java.util.concurrent.Executor;
 
@@ -46,7 +48,7 @@ public class HandThreadSynchronousActivity extends AppCompatActivity {
 //            new MyAsycTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,7);
 //        }
 
-
+        Toast.makeText(this,"是否相等吧：" + new TestForSingleton().isEqual(), Toast.LENGTH_LONG).show();
             new MyThread(0).start();
     }
 
