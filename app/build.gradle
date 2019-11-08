@@ -49,6 +49,12 @@ android {
     }
 }
 
+//kapt {
+//    arguments {
+//        arg("AROUTER_MODULE_NAME", project.getName())
+//    }
+//}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {

@@ -28,6 +28,7 @@ import demo.minifly.com.designpattern.decorator.DecoratorDemoActivity;
 import demo.minifly.com.R;
 import demo.minifly.com.fuction_demo.RippleShow.MyRippleShowActivity;
 import demo.minifly.com.fuction_demo.android_hot_fix.AndroidHotfixActivity;
+import demo.minifly.com.fuction_demo.android_touch_event.SimpleEventActivity;
 import demo.minifly.com.fuction_demo.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.fuction_demo.androidl_animation.AndroidLTouchFeedbackActivity;
 import demo.minifly.com.fuction_demo.bottomnavgationview_demo.BottomNavigationDemoActivity;
@@ -95,6 +96,7 @@ import demo.minifly.com.fuction_demo.user_defined_animator.OwnAnimatorActivity;
 import demo.minifly.com.fuction_demo.user_defined_animator.OwnAnimatorActivity2;
 import demo.minifly.com.fuction_demo.webview.WebviewActivity;
 import demo.minifly.com.fuction_demo.weex_test.WeexTest1Activity;
+import demo.minifly.com.hand_make_android_dev.HandViewpagerActivity;
 import demo.minifly.com.handler_core_theory.test_for_handler.TestForHandlerActivity;
 
 public class DeskActivity extends Activity {
@@ -531,6 +533,16 @@ public class DeskActivity extends Activity {
         myBean = new MyBean();
         myBean.setTitle("多线程相关");
         myBean.setClassName(HandThreadSynchronousActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("事件拦截");
+        myBean.setClassName(SimpleEventActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("展示一个viewpager");
+        myBean.setClassName(HandViewpagerActivity.class);
         list.add(myBean);
 
 

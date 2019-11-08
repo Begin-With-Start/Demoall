@@ -22,7 +22,9 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fuction_demo.gilde_display_error.GlideErrorDisplayActivity"></activity>
+        <activity android:name=".hand_make_android_dev.HandViewpagerActivity"></activity>
+        <activity android:name=".fuction_demo.android_touch_event.SimpleEventActivity" />
+        <activity android:name=".fuction_demo.gilde_display_error.GlideErrorDisplayActivity" />
         <activity android:name=".fuction_demo.image_compress_demo.ImageDemoActivity" />
         <activity android:name=".handler_core_theory.test_for_handler.TestForHandlerActivity" />
         <activity android:name=".asm.AopDemoActivity" />

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/simple_rootview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fuction_demo.android_touch_event.SimpleEventActivity">
+
+    <demo.minifly.com.fuction_demo.android_touch_event.MineRelativeLayout
+        android:id="@+id/simple_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/cmbkb_dark_red"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <demo.minifly.com.fuction_demo.android_touch_event.MineView
+            android:id="@+id/simple_layout1_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:contextClickable="true"
+            />
+
+    </demo.minifly.com.fuction_demo.android_touch_event.MineRelativeLayout>
+
+    <demo.minifly.com.fuction_demo.android_touch_event.MineRelativeLayout
+        android:id="@+id/simple_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/ysf_edit_text_border_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/common_dimen_dp20"
+        app:layout_constraintTop_toBottomOf="@+id/simple_layout1">
+
+        <demo.minifly.com.fuction_demo.android_touch_event.MineView
+            android:id="@+id/simple_layout2_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:contextClickable="true"
+            />
+
+    </demo.minifly.com.fuction_demo.android_touch_event.MineRelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
