@@ -35,14 +35,14 @@ public class HandViewpagerActivity extends AppCompatActivity {
         mHandViewpagerVp.setOffscreenPageLimit(5); //设置显示3个缓存
         mHandViewpagerVp.setPageMargin(DisplayUtil.dp2px(this,30));
 
-        int [] imgArray = new int[6];
+        int [] imgArray = new int[3];
         imgArray[0] = R.drawable.test_cup;
         imgArray[1] = R.drawable.test_cup;
         imgArray[2] = R.drawable.test_cup;
-        imgArray[3] = R.drawable.test_cup;
-        imgArray[4] = R.drawable.test_cup;
-        imgArray[5] = R.drawable.test_cup;
-
+//        imgArray[3] = R.drawable.test_cup;
+//        imgArray[4] = R.drawable.test_cup;
+//        imgArray[5] = R.drawable.test_cup;
+//
 
         mHandViewpagerVp.setAdapter(new PagerAdapter() {
             @Override

@@ -6,24 +6,23 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import demo.minifly.com.fuction_demo.utils.LogUtils;
-
 /**
  * create by minifly on 2019-11-07 19:10
- * description: viewpager的滑动动效
+ * description: viewpager scoll anmator ...  depends on view animator
  */
 public class ViewpagerMixTransform implements ViewPager.PageTransformer {
 
     private static final float DEFAULT_CENTER = 0.5f;
     private static float MIN_ALPH = 0.5f;
-    private static float NORMAL_SCALE = 2f/3;
+    private static float NORMAL_SCALE = 2f / 3;
 
     /**
      * set alpha and scalesize for viewpager
-     * @param minAlph  min alph for viewpager next child and previous child
+     *
+     * @param minAlph     min alph for viewpager next child and previous child
      * @param normalScale min scal for viewpager next child and previous child
      */
-    public ViewpagerMixTransform(float minAlph , float normalScale) {
+    public ViewpagerMixTransform(float minAlph, float normalScale) {
         MIN_ALPH = minAlph;  //透明度设置
         NORMAL_SCALE = normalScale; //大小变换变化设置
     }
@@ -36,7 +35,7 @@ public class ViewpagerMixTransform implements ViewPager.PageTransformer {
     public void transformPage(@NonNull View page, float position) {
         int pageWidth = page.getWidth();
         int pageHeight = page.getHeight();
-        page.setPivotY(pageHeight / 2 );
+        page.setPivotY(pageHeight / 2);
         page.setPivotX(pageWidth);
 
         page.setScaleX(NORMAL_SCALE);

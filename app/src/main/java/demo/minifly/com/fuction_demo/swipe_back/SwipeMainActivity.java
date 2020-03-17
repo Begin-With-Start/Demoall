@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+
 import demo.minifly.com.BaseActivity;
 import demo.minifly.com.R;
 
@@ -11,6 +13,7 @@ import demo.minifly.com.R;
  * 左划退出页面
  * 主页面不能左划退出，其他衍生页面都需要左划退出了
  */
+@Route(path = "/swipnext/main")
 public class SwipeMainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button mSwipeActivityBtn;

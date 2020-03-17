@@ -46,6 +46,6 @@ public class WebviewActivity extends AppCompatActivity {
         }
         mWebviewId.setWebChromeClient(new WebChromeClient());
 
-        mWebviewId.loadUrl("https://test-h5-app.leoao.com/multiple/activities/world-cup.html");
+        mWebviewId.loadUrl("http://172.16.12.24:9800/annual-report-2019.html");
     }
 }

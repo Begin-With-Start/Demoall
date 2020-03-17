@@ -21,7 +21,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.50"
         // NOTE: Do not place your application dependencies here
         classpath "com.minifly.demo:myplugin:1.0.0"
     }
@@ -85,6 +85,22 @@ task showTasks{
     doLast{
         println("task.class :" + tasks.class)
         println("task.size 大小: " + tasks.size())
+    }
+}
+
+//打印所有的tast ；
+gradle.getTaskGraph().whenReady {
+    project.tasks.all {
+        Task t = it
+        String taskName = it.name
+        println("--------taskName-----------:" + taskName + " :" + it.getPath())
+        it.getTaskDependencies().any {
+            println("-----------------taskName----dependsOn-----------------:")
+            it.getDependencies(t).findAll() {
+                println("----------------------------------:" + it.getPath())
+            }
+        }
+
     }
 }
 

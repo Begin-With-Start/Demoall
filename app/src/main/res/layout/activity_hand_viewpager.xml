@@ -5,8 +5,7 @@
     android:layout_width="290dp"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:layout_gravity="center"
-    tools:context=".hand_make_android_dev.HandViewpagerActivity">
+    android:layout_gravity="center">
 
 
     <android.support.v4.view.ViewPager

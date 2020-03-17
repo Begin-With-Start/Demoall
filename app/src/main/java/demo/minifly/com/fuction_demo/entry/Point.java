@@ -8,6 +8,13 @@ public class Point {
     float x;
     float y;
 
+    private void test(){
+        String start = "start";
+        int i = 0 ;
+        String end = "end";
+
+    }
+
     public Point(float x, float y) {
         this.x = x;
         this.y = y;

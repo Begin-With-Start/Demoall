@@ -8,7 +8,6 @@ import com.android.build.api.transform.TransformInput
 import com.android.build.api.transform.TransformOutputProvider
 import com.android.build.gradle.internal.pipeline.TransformManager
 import org.gradle.api.Project
-import sun.instrument.TransformerManager
 
 class TransformTest extends Transform{
 

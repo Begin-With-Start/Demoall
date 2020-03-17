@@ -31,6 +31,8 @@ import demo.minifly.com.fuction_demo.android_hot_fix.AndroidHotfixActivity;
 import demo.minifly.com.fuction_demo.android_touch_event.SimpleEventActivity;
 import demo.minifly.com.fuction_demo.androidl_animation.AndroidLCircularRevealActivity;
 import demo.minifly.com.fuction_demo.androidl_animation.AndroidLTouchFeedbackActivity;
+import demo.minifly.com.fuction_demo.banner.NewViewpagerActivity;
+import demo.minifly.com.fuction_demo.banner.TextSwithMainActivity;
 import demo.minifly.com.fuction_demo.bottomnavgationview_demo.BottomNavigationDemoActivity;
 import demo.minifly.com.fuction_demo.canvas_pathmesure_demo.BlurMaskFilterDemoActivity;
 import demo.minifly.com.fuction_demo.canvas_pathmesure_demo.PathMesureDemoActivity;
@@ -455,11 +457,6 @@ public class DeskActivity extends Activity {
         list.add(myBean);
 
         myBean = new MyBean();
-        myBean.setTitle("webview例子。。。。");
-        myBean.setClassName(WebviewActivity.class);
-        list.add(myBean);
-
-        myBean = new MyBean();
         myBean.setTitle("lottie动画");
         myBean.setClassName(LottieShowActivity.class);
         list.add(myBean);
@@ -546,6 +543,22 @@ public class DeskActivity extends Activity {
         list.add(myBean);
 
 
+        myBean = new MyBean();
+        myBean.setTitle("webview例子。。。。");
+        myBean.setClassName(WebviewActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("viewpager页面。。。。");
+        myBean.setClassName(NewViewpagerActivity.class);
+        list.add(myBean);
+
+        myBean = new MyBean();
+        myBean.setTitle("文字切换动画");
+        myBean.setClassName(TextSwithMainActivity.class);
+        list.add(myBean);
+
+
         MyAdapter myAdapter = new MyAdapter(this,list);
         deskRecycleView.setAdapter(myAdapter);
         myAdapter.notifyDataSetChanged();
@@ -579,6 +592,11 @@ public class DeskActivity extends Activity {
         }
 
         getWindow().getDecorView().setSystemUiVisibility(uiFlags);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     class MyAdapter extends RecyclerView.Adapter{
