@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -13,7 +13,8 @@
         android:inAnimation="@anim/in_animation"
         android:outAnimation="@anim/out_animation"
         android:layout_gravity="center"
-        android:onClick="next"></TextSwitcher>
+        android:background="@color/grey"
+        android:onClick="next" />
 
     <demo.minifly.com.fuction_demo.banner.TextSwitchView
         android:id="@+id/switcher2"
@@ -23,7 +24,64 @@
         android:inAnimation="@anim/in_animation"
         android:outAnimation="@anim/out_animation"
         android:layout_gravity="center"
-        android:onClick="next"></demo.minifly.com.fuction_demo.banner.TextSwitchView>
+        android:background="@color/grey"
+        android:onClick="next" />
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/common_dimen_dp300"
+        >
+        <LinearLayout
+            android:id="@+id/animator_linearlayout"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:background="@color/grey"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/animator_img"
+                android:layout_width="@dimen/common_dimen_dp15"
+                android:layout_height="@dimen/common_dimen_dp15"
+                />
+            <TextView
+                android:id="@+id/animator_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是文字111111"
+                android:textSize="@dimen/common_dimen_dp10"
+                android:textColor="@color/common_color_c7_333333"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/animator_linearlayout2"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:background="@color/grey"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/animator_img2"
+                android:layout_width="@dimen/common_dimen_dp15"
+                android:layout_height="@dimen/common_dimen_dp15"
+                />
+            <TextView
+                android:id="@+id/animator_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是文字22222"
+                android:textSize="@dimen/common_dimen_dp10"
+                android:textColor="@color/common_color_c7_333333"
+
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
 
 
-</LinearLayout>
+</RelativeLayout>
